@@ -19,11 +19,10 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "webrick", "~> 1.7"
-  gem "jekyll-feed", "~> 0.17.0"
-  gem "jekyll-archives", "~> 2.2"
-  gem "jekyll-timeago", "~> 0.14.0"
-  gem "jekyll-paginate-v2", "~> 3.0"
+  gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-archives'
+  gem 'jekyll-timeago'
+  gem 'jekyll-paginate-v2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
