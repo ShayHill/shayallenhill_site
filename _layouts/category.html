@@ -1,0 +1,56 @@
+---
+layout: default
+template: archive
+pagination:
+    enabled: true
+---
+
+{% assign page_title = page.title %}
+{% assign cat = page_title | capitalize %}
+{% if cat == "Editors-pick" %}
+    {% assign cat = "editors-pick" %}
+{% endif %}
+{% assign posts = site.posts | where: "categories", cat  %}
+
+
+<!--/// Blog Area /// -->
+<div class="blog-area pb-5">
+
+    <div class="themeix-page-title-area py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Category - {{cat | downcase }}</h2>
+                    <p>Total Posts : {{posts.size}} {% if posts.size == 1 %} Post {% else %} Posts {% endif %} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-5">
+
+        <div class="row">
+            <div class="col-md-7 col-lg-8">
+                <div class="row">
+                    {% for post in posts %}
+                        <div class="col-md-12 nf-post-item">
+                            {% include blog-style/blog-style-02.html %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <button class="btn btn-light mb-2 w-100 loadmore-cat">
+                            Load More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5">
+                {% include sidebar.html %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include cta-section.html %}

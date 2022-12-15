@@ -1,0 +1,63 @@
+---
+layout: default
+post_layout: 3
+---
+{% assign author = site.authors | where: 'author_id', page.author_id | first %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="featured-image pb-3">
+                    <div class="image-frame image-hover-style-1">
+                        <a href="{{page.url | relative_url}}"> <img src="{{page.post_image | relative_url}}"
+                                alt="{{page.title}}" class="w-100 "></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mx-auto">
+
+
+                <div class="mb-3">
+
+                    <div class="my-1">
+                        <h1>{{page.title}}</h1>
+                        <p class="lead">{{page.excerpt}}</p>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="author-name-full justify-content-start flex-row">
+
+                                <img class="avata rounded-circle" src="{{author.image | relative_url}}"
+                                    alt="author image" />
+                                <div class="ps-1 d-flex align-items-start justify-content-between flex-column">
+                                    <a href="{{author.url | relative_url}}"><strong>{{author.name}}</strong></a>
+                                    <p class="small">{{author.designation}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="mb-0">
+                        <p class="m-0 small">Posted on {{page.date}}</p>
+
+                    </div>
+
+                </div>
+
+                <div class="entry-content pb-3 typofix">
+                    {{page.content}}
+                </div>
+
+                {% include after-content.html %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% include cta-section.html %}

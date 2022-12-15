@@ -1,0 +1,52 @@
+---
+layout: default
+title: FAQ
+permalink: /faq
+---
+
+<div class="blog-area pb-5">
+
+   <div class="themeix-page-title-area py-4 bg-light">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1>{{page.title}}</h1>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container pt-5">
+
+
+      <div class="row">
+         <div class="col-md-12">
+            <div id="accordion-faq">
+               <div class="accordion pb-4 accordion-flush" id="accordionFlushExample">
+               {% assign i = 0 %}
+               {% for faq in site.data.faqs %}
+               {% assign i = i | plus:1 %}
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="flush-heading-{{i}}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#flush-collapse-{{i}}" aria-expanded="false" aria-controls="flush-collapse-{{i}}">
+                           {{faq.question}}
+                        </button>
+                     </h2>
+                     <div id="flush-collapse-{{i}}" class="accordion-collapse collapse" aria-labelledby="flush-heading-{{i}}"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{faq.answer}}</div>
+                     </div>
+                  </div>
+               {% endfor %}
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+
+   </div>
+
+</div>
+
+{% include cta-section.html %}

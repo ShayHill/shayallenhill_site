@@ -1,0 +1,31 @@
+{% assign featured_posts = site.posts | where: "featured", true %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area pt-3 pb-3 pt-lg-2 pb-lg-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                {% for post in featured_posts %}
+                    {% if forloop.index < 3 %}
+                        {% include blog-style/blog-style-04.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                {% for post in featured_posts %}
+                    {% if forloop.index == 3 %}
+                        {% include blog-style/blog-style-03.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-lg-3 col-md-6 pt-md-0 pt-3">
+                {% for post in featured_posts %}
+                    {% if forloop.index > 3 and forloop.index < 6 %}
+                        {% include blog-style/blog-style-04.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

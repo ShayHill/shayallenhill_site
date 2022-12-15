@@ -1,0 +1,64 @@
+---
+layout: default
+title: Authors
+permalink: /all-authors
+---
+<div class="blog-area pb-5">
+    <div class="themeix-page-title-area py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{page.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/// Blog Area /// -->
+
+    <div class="container pt-5">
+        <div class="row">
+            {% for author in site.authors %}
+                <div class="col-md-6 col-lg-6  mb-3">
+                    <div class="border border-light box-hover p-3">
+                        <div class="author-name-full m-0"><img class="avata-big rounded-circle "
+                                src="{{author.image | relative_url}}" alt="{{author.name}}" />
+                            <div class="author-bio-content">
+                                <h4 class="mb-0"><a href="{{author.url | relative_url}}">{{author.name}}</a></h4>
+                                <p class="small mb-1">{{author.designation}}</p>
+                                <ul class="list-inline mb-3">
+                                    <li class="list-inline-item">
+                                        <a class="social-icon" href="{{author.facebook | relative_url}}">
+                                            <i class="me-1 fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-icon" href="{{author.twitter | relative_url}}">
+                                            <i class="me-1 fab fa-twitter">
+
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-icon" href="{{author.instagram | relative_url}}">
+                                            <i class="me-1 fab fa-instagram"></i>
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        {% if author.bio %}
+                        <p class="bio border-top border-light pt-2 ">{{author.bio}}</p>
+                        {% endif %}
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% include cta-section.html %}

@@ -1,0 +1,18 @@
+<article data-aos="fade-in" class="blog-style5 d-flex  d-md-block d-xl-flex align-items-center mb-3">
+    <a href="{{post.url}}" aria-label="{{post.title}}">
+       <div class="post-img-wrap position-relative overflow-hidden">
+          <img class="lazyload post-img" src="{{post.post_image | relative_url}}"
+             data-src="{{post.post_image | relative_url}}" alt="{{post.title}}">
+       </div>
+    </a>
+    <div class="post-content pt-md-2 pt-xl-0 pt-0">
+       <h6 class="post-title"><a href="{{post.url | relative_url}}">{{post.title}}</a>
+       </h6>
+       <div class="post-meta">
+          <span class="date-info small">
+             <span>{{ post.date | date: '%d %b %Y' }}</span>
+             {% include reading-time.html %}
+          </span>
+       </div>
+    </div>
+ </article>

@@ -1,0 +1,99 @@
+--- 
+layout: default
+title: Contact
+permalink: /contact
+---
+<!--/// Blog Area /// -->
+<div class="blog-area pb-5">
+    <div class="themeix-page-title-area py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{page.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-xl-7 col-lg-7">
+                <div class="contact-info-block mb-3 pe-5">
+
+                    <p class="pb-2  ">Of often she the of from word this have generality freshlybrewed roasted on
+                        the concise plans. Back to essential about why that salutary.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>New South Sales Road, Toronto, CA
+                        </li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+1 (123) 123 456</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>support@themeix.com</li>
+                    </ul>
+                </div>
+
+                <div id="accordion-faq">
+                    {% assign i = 0 %}
+                    {% for faq in site.data.faqs limit:3 %}
+                    {% assign i = i | plus:1 %}
+                        <div class="card">
+                            <div class="card-header  mb-1" id="heading-{{i}}">
+                                <button class="btn btn-link bg-light" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-{{i}}" aria-expanded="{% if i == 1 %}true{% else %}false{% endif %}">
+                                    {{faq.question}}
+                                </button>
+                            </div>
+
+                            <div id="collapse-{{i}}" class="collapse {% if i == 1 %}show{% endif %}" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    {{faq.answer}}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5">
+                <div class="contact-form">
+                    <h2 class="text-secondary mb-2">Send Us Message</h2>
+                    <p>Please fill up the form bellow with your valuable opinion, feedback or any suggession to us
+                    </p>
+                    <form data-aos="fade-in" class="form pt-2" action="https://formspree.io/f/xdoyzzoz" method="post">
+                        <div class="row">
+                            <div class="col-xl-6 mb-2">
+                                <input class="form-control contact-input" name="Name" type="text" placeholder="Full Your Name">
+                            </div>
+                            <div class="col-xl-6 mb-2">
+                                <input class="form-control contact-input" name="Email" type="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 mb-2">
+                                <input class="form-control contact-input" name="Phone" type="text" placeholder="Phone Number">
+                            </div>
+                            <div class="col-xl-6 mb-2">
+                                <input class="form-control contact-input" name="Subject" type="text" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <textarea class="form-control contact-input" name="Message"
+                                    placeholder="Write Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="subs-btn">
+                                    <button class="btn btn-danger bg-hover-danger text-white" type="submit">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% include cta-section.html %}

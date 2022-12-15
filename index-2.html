@@ -1,0 +1,84 @@
+---
+layout: default
+title: Home v2
+home: 02
+permalink: /home-v2
+ads: true
+---
+
+<!-- Featured posts -->
+{% include featured-widget-02.html %}
+
+{% if page.ads == true %}
+<!--/// Blog Area /// -->
+<div class="blog-area">
+   <div class="container">
+      <div class="text-center  themeix-ads"><a href="#">
+         <img class="lazyload" src="{{'/assets/images/blog-ads.png' | relative_url}}" alt="image" /></a>
+      </div>
+   </div>
+</div>
+{% endif %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area py-5 ">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-md-7">
+            {% assign cat = "Political" %}
+            {% assign cat_slug = "political" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 7 %}
+            {% include nf-widget-01.html %}
+         </div>
+
+         <div class="col-lg-4 col-md-5">
+            {% include sidebar.html %}
+         </div>
+      </div>
+   </div>
+</div>
+
+{% assign cat = "Editors Pick" %}
+{% assign cat_slug = "editors-pick" %}
+{% assign posts = site.posts | where: "categories", cat_slug %}
+{% assign post_limit = 2 %}
+{% include nf-widget-03.html %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area py-5">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 col-lg-4 pb-3">
+            {% assign cat = "Nature" %}
+            {% assign cat_slug = "nature" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+         <div class="col-md-6 col-lg-4  pb-3">
+            {% assign cat = "Receipe" %}
+            {% assign cat_slug = "receipe" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+         <div class="col-md-6 col-lg-4  pb-3">
+            {% assign cat = "National" %}
+            {% assign cat_slug = "national" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+      </div>
+
+      {% assign cat = "Fashion" %}
+      {% assign cat_slug = "fashion" %}
+      {% assign posts = site.posts | where: "categories", cat %}
+      {% assign limit = 4 %}
+      {% include nf-widget-02.html %}
+
+   </div>
+</div>
+
+{% include cta-section.html %}

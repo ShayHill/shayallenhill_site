@@ -1,0 +1,34 @@
+---
+layout: default
+title: Home v4
+home: 4
+permalink: /home-v4
+---
+
+<div class="blog-area pt-3 pb-3  pt-lg-2 pb-lg-3">
+   <div class="container">
+      <div class="row pt-2">
+         {% assign cat = "Recipe" %}
+         {% assign posts = site.posts | where: "categories", cat %}
+         {% assign i  = 0 %}
+         {% for post in posts %}
+            {% assign i = i | plus:1 %}
+            
+            <div class="{% if i < 3 %} col-lg-6 col-md-12{% else %}col-md-6{% endif %}">
+               {% if i < 3 %}
+                  {% include blog-style/blog-style-02.html %}
+               {% else %}
+                  {% include blog-style/blog-style-03.html %}
+               {% endif %}
+            </div>
+            {% if i == 4 %}
+               {% assign i = 0 %}
+            {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</div>
+<!--/// Blog Area /// -->
+
+{% include cta-section.html %}
+

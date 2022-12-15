@@ -1,0 +1,52 @@
+{% assign navigation = site.data.navigation %}
+
+<ul class="navbar-nav {% if page.home == 4 or page.home == 5 %}mx-auto {% else %}me-auto{% endif %}">
+    {% for link in navigation %}
+        <li class="nav-item {% if link.submenu %} dropdown {% endif %}  {% if link.meganenu == true %} has-megamenu {% endif %} ">
+            <a class="nav-link {% if link.submenu %} dropdown-toggle {% endif %} " href="{{link.url | relative_url}}"> {{link.text}}</a>
+            {% if link.submenu %}
+                {% if link.meganenu == true %}
+                    <div class="dropdown-menu megamenu">
+                        <div class="row">
+                            {% for megamenu in link.submenu %}
+                            <div class="col-md-3">
+                                <h6 class="text-danger">{{megamenu.title}}</h6>
+                                <ul class="list-inline">
+                                    {% for subitem in megamenu.submenuitem %}
+                                    <li><a href="{{subitem.url}}">{{subitem.text}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    <ul class="dropdown-menu">
+                        {% for sublink in link.submenu %}
+                        <li>
+                        <a class="dropdown-item   {% if sublink.sub_submenu %} dropdown-toggle {% endif %}" href="{{sublink.url | relative_url}}"> {{sublink.text}}</a>
+                            {% if sublink.sub_submenu %}
+                                <ul class="submenu dropdown-menu">
+                                    {% for sub_sublink in sublink.sub_submenu %}
+                                    <li>
+                                        <a class="dropdown-item  {% if sub_sublink.sub_sub_submenu %} dropdown-toggle {% endif %}" href="{{sub_sublink.url | relative_url}}"> {{sub_sublink.text}}  </a>
+                                        {% if sub_sublink.sub_sub_submenu %}
+                                        <ul class="submenu dropdown-menu">
+                                            {% for sub_sub_sublink in sub_sublink.sub_sub_submenu %}
+                                            <li><a class="dropdown-item" href="{{sub_sub_sublink.url | relative_url}}"> {{sub_sub_sublink.text}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                        
+                    </ul>
+                {% endif %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

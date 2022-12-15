@@ -1,0 +1,14 @@
+{% assign featured_posts = site.posts | where: "featured", true %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area pt-3 pb-3  pt-lg-2 pb-lg-3">
+    <div class="container">
+       <div class="row">
+           {% for post in featured_posts limit:2 %}
+          <div class="col-lg-6 col-md-12">
+                {% include blog-style/blog-style-03.html %}
+          </div>
+          {% endfor %}
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,50 @@
+---
+layout: default
+title: Categories
+permalink: /categories
+---
+<!--/// Blog Area /// -->
+<div class="blog-area pb-5">
+    <div class="themeix-page-title-area py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{page.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container pt-5">
+        <div class="row">
+            {% for category in site.data.categories %}
+                {% assign cat = category.name %}
+                {% assign posts = site.posts | where: "categories", cat %}
+                {% if posts.size > 0 %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card blog-style1 mb-4 border border-light">
+                            <div class="feature-image">
+                                <div class="image-frame image-hover-style-1">
+                                    <a href="{{'/category/' | relative_url}}{{category.slug}}"> <img src="{{category.image | relative_url}}" alt="{{category.name}}" class="w-100"></a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4><a href="{{'/category/' | relative_url}}{{category.slug}}">{{category.name}}</a></h4>
+                                <span class="small badge bg-danger">{{posts.size}} {% if posts.size == 1 %}Post {% else %}Posts{% endif %}</span>
+                                {% if category.description %}
+                                <p class="mb-0">{{category.description}}</p>
+                                {% endif %}
+                                <a class="fw-bold" href="{{'/category/' | relative_url}}{{category.slug}}">View all posts</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+<!--/// Blog Area /// -->
+
+{% include cta-section.html %}

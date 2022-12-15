@@ -1,0 +1,28 @@
+--- 
+layout: default
+title: Home v5
+home: 5
+permalink: /home-v5
+--- 
+<!--/// Blog Area /// -->
+<div class="blog-area pt-lg-3">
+   <div class="container">
+      <div class="row">
+         {% assign cat = "Sports" %}
+         {% assign posts = site.posts | where: "categories", cat %}
+         {% assign i  = 0 %}
+         {% for post in posts %}
+            {% assign i = i | plus:1 %}           
+            <div class="{% if i < 4 %} col-xl-4 col-lg-6 col-md-12{% else %}col-lg-6 col-md-12{% endif %}">
+               {% include blog-style/blog-style-03.html %}
+            </div>
+            {% if i == 7 %}
+               {% assign i = 0 %}
+            {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+
+{% include cta-section.html %}

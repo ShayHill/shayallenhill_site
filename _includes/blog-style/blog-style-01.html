@@ -1,0 +1,39 @@
+{% assign author = site.authors | where: 'author_id', post.author_id | first %}
+<article data-aos="fade-up" class="blog-style2 card mb-4 ">
+    <div class="feature-image">
+        <div class="image-frame image-hover-style-1">
+            <a href="{{post.url | relative_url}}"> <img class="lazyload" src="{{post.post_image | relative_url}}" alt="{{post.title}}"
+                    class="w-100"></a>
+        </div>
+    </div>
+    <div data-aos="fade-in" class="card-body  d-md-flex align-items-center">
+        <div class="card-flex-content">
+            {% for category in post.categories %}
+                <a href="{{'/category/' | relative_url}}{{ category | slugify }}" class="badge bg-primary">{{category}}</a>
+            {% endfor %}
+
+            <h4><a href="{{post.url | relative_url}}">{{post.title}}</a>
+            </h4>
+            <p>{{post.excerpt}}</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="author-block">
+                        <ul class="avatar list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a class="small" href="{{author.url | relative_url}}">
+                                <img  src="{{author.image | relative_url}}" alt="{{author.name}}" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="{{author.name}}">{{author.name}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6"> <span class="date-info small  float-lg-end">
+                        <span>{{post.date | date: '%d %b %Y'}}</span>
+                        {% include reading-time.html %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

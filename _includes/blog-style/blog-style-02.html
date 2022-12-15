@@ -1,0 +1,63 @@
+{% assign author = site.authors | where: 'author_id', post.author_id | first %}
+<article data-aos="{% if page.home != 4 %}fade-in{% else %}fade-up{% endif %}"
+    class="blog-style2 card mb-4 {% if page.home != 4 %}aos-init aos-animate{% endif %} {% if page.home == 6 or page.template == 'archive' or  page.template == 'blog' %} d-block d-xl-flex {% endif %}">
+    <div class="feature-image">
+        <div class="image-hover-style-1 image-frame">
+            <a href="{{post.url | relative_url}}"> <img class=" ls-is-cached lazyloaded"
+                    src="{{post.post_image | relative_url}}" alt="{{post.title}}"></a>
+        </div>
+    </div>
+    <div data-aos="{% if page.home != 4 %}fade-in{% else %}fade-up{% endif %}" class="card-body d-md-flex align-items-center aos-init aos-animate">
+        <div class="card-flex-content">
+            {% for category in post.categories %}
+            <a href="{{'/category/' | relative_url}}{{ category | slugify }}" class="badge bg-info">{{category}}</a>
+            {% endfor %}
+            <h4><a href="{{post.url | relative_url}}">{{post.title}}</a></h4>
+
+            {% if page.home == 6 or page.template == 'archive' or page.template == 'blog'  %}
+                <p>{{post.excerpt}}</p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="author-block">
+                            <ul class="avatar list-inline mb-0">
+                                <li class="list-inline-item"><a class="small" href="{{author.url | relative_url}}"><img
+                                    src="{{author.image | relative_url}}" alt="{{author.name}}"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                    data-bs-original-title="{{author.name}}"
+                                    aria-label="{{author.name}}">{{author.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <span class="date-info small">
+                            <span>{{post.date | date: '%d %b %Y'}}</span>
+                            {% include reading-time.html %}
+                        </span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="author-block">
+                            <ul class="avatar list-inline mb-0">
+                                <li class="list-inline-item"><a class="small" href="{{author.url | relative_url}}"><img
+                                            src="{{author.image | relative_url}}" alt="{{author.name}}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="{{author.name}}"
+                                            aria-label="{{author.name}}">{{author.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="date-info small  float-lg-end">
+                            {% include reading-time.html %}
+                        </span>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</article>
+
+

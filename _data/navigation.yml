@@ -1,0 +1,116 @@
+- text: Home
+  url: /
+  meganenu: false
+  submenu:
+    - text: Home v1
+      url: /
+    - text: Home v2
+      url: /home-v2
+    - text: Home v3
+      url: /home-v3
+    - text: Home v4
+      url: /home-v4
+    - text: Home v5
+      url: /home-v5
+    - text: Home v6
+      url: /home-v6
+    - text: Post Layouts
+      url: /#
+      sub_submenu: 
+        - text: Blog Layouts 1
+          url: /lifestyle/political/2018/12/06/13-things-about-sports-you-may-not-have-known
+        - text: Blog Layouts 2
+          url: /political/receipe/2019/02/09/free-themes
+        - text: Blog Layouts 3
+          url: /fashion/nature/2018/12/06/should-you-be-using-jquery-3-4
+        - text: Menu level
+          url: /#
+          sub_sub_submenu: 
+            - text: Menu level 4
+              url: /#
+            - text: Menu level 4
+              url: /#
+- text: Explore
+  url: /#
+  meganenu: true
+  submenu:
+    - title: Home Variations 
+      submenuitem:
+      - text: Classic Blog
+        url: /home-v2
+      - text: Corporate Blog
+        url: /home-v3
+      - text: Recipe Blog
+        url: /home-v4
+      - text: Sports Blog
+        url: /home-v5
+      - text: Full Width Blog
+        url: /home-v6
+    - title: Categories 
+      submenuitem:
+      - text: Lifestyle
+        url: /category/lifestyle
+      - text: Sports
+        url: /category/sports
+      - text: Trending
+        url: /category/trending
+      - text: Political
+        url: /category/political
+      - text: Recipe
+        url: /category/recipe
+    - title: Pages
+      submenuitem:
+      - text: Articles
+        url: /blog
+      - text: About
+        url: /about
+      - text: Contact
+        url: /contact
+      - text: FAQ
+        url: /faq
+      - text: Privacy Policy
+        url: /privacy-policy
+    - title: Blog Pages
+      submenuitem:
+      - text: Post Layouts 1
+        url: /lifestyle/political/2018/12/06/13-things-about-sports-you-may-not-have-known
+      - text: Post Layouts 2
+        url: /political/receipe/2019/02/09/free-themes
+      - text: Post Layouts 3
+        url: /fashion/nature/2018/12/06/should-you-be-using-jquery-3-4
+      - text: Blog Layout 1
+        url: /blog
+      - text: Blog Layout 2
+        url: /blog-v2
+- text: Pages
+  url: /#
+  meganenu: false
+  submenu:
+    - text: About Us
+      url: /about
+    - text: Author
+      url: /author/themeix
+    - text: Authors
+      url: /all-authors
+    - text: Category
+      url: /category/trending
+    - text: Categories
+      url: /categories
+    - text: FAQ
+      url: /faq
+    - text: Privacy Policy
+      url: /privacy-policy
+    - text: Blog
+      url: /blog
+    - text: Blog v2
+      url: /blog-v2
+    - text: 404
+      url: /404
+- text: Articles
+  url: /blog
+- text: Contact
+  url: /contact
+- text: Tags
+  url: /tags
+- text: Buy Now <span>New</span>
+  url: https://themeix.com/product/newsfeed-news-magazine-website-html-site-template/

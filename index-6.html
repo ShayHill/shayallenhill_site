@@ -1,0 +1,106 @@
+---
+layout: default
+title: Home v6
+home: 6
+permalink: /home-v6
+ads: true
+---
+
+{% assign featured_posts = site.posts | where: "featured", true %}
+<!--/// Blog Area /// -->
+<div class="blog-area pt-3 pb-3  pt-lg-2 pb-lg-3">
+   <div class="container-fluid">
+      <div class="row">
+         {% for post in featured_posts limit:3 %}
+            <div class="col-lg-4 col-md-12">
+               {% include blog-style/blog-style-03.html %}
+            </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+{% if page.ads == true %}
+<!--/// Blog Area /// -->
+<div class="blog-area">
+   <div class="container">
+      <div class="text-center  themeix-ads"><a href="#">
+         <img class="lazyload" src="{{'/assets/images/blog-ads.png' | relative_url}}" alt="image" /></a>
+      </div>
+   </div>
+</div>
+{% endif %}
+
+<div class="blog-area py-5 ">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="order-2 order-md-1 col-xl-3 col-lg-3 col-md-3">
+            {% include left-sidebar.html %}
+         </div>
+         <div class="order-1 order-md-2 col-xl-6 col-lg-6 col-md-4">
+            {% for post in site.posts %}
+               <div class="nf-post-item">
+                  {% include blog-style/blog-style-02.html %}
+               </div>
+            {% endfor %}
+            <div class="row">
+               <div class="col mt-1">
+                  <button class="btn btn-light mb-2 w-100 loadmore-h">
+                     Load More
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="order-3 order-md-3 col-xl-3 col-lg-3 col-md-3 pt-4 pt-md-0">
+            {% include sidebar.html %}
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{% assign cat = "Editors Pick" %}
+{% assign cat_slug = "editors-pick" %}
+{% assign posts = site.posts | where: "categories", cat_slug %}
+{% assign post_limit = 3 %}
+{% include nf-widget-03.html %}
+
+<!--/// Blog Area /// -->
+<div class="blog-area py-5">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6 col-lg-4 pb-3">
+            {% assign cat = "Nature" %}
+            {% assign cat_slug = "nature" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+         <div class="col-md-6 col-lg-4  pb-3">
+            {% assign cat = "Receipe" %}
+            {% assign cat_slug = "receipe" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+         <div class="col-md-6 col-lg-4  pb-3">
+            {% assign cat = "National" %}
+            {% assign cat_slug = "national" %}
+            {% assign posts = site.posts | where: "categories", cat %}
+            {% assign post_limit = 3 %}
+            {% include nf-widget-05.html %}
+         </div>
+      </div>
+
+      {% assign cat = "Fashion" %}
+      {% assign cat_slug = "fashion" %}
+      {% assign posts = site.posts | where: "categories", cat %}
+      {% assign limit = 4 %}
+      {% include nf-widget-02.html %}
+
+   </div>
+</div>
+
+
+
+{% include cta-section.html %}

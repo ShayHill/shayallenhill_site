@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% assign posts = site.posts %}
+<!--/// Blog Area /// -->
+<div class="blog-area pb-5">
+    <div class="themeix-page-title-area py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{page.title}}</h1>
+
+                    <p>Total Posts : {{posts.size}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container pt-5">
+        <div class="row infinite-scroll-2">
+            {% for post in paginator.posts %}
+            <div class="col-md-6 col-lg-6 post-item">
+                {% include blog-style/blog-style-02.html %}
+            </div>
+            {% endfor %}
+        </div>
+        {% include pagination.html %}
+    </div>
+</div>
