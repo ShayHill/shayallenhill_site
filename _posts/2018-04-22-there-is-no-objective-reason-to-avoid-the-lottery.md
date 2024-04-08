@@ -6,7 +6,7 @@ tags:
 categories: [probability]
 author: Shay Hill
 excerpt: Money can’t buy everything money can buy.
-post_image: "/assets/img/blog/there-is-no-objective-reason-to-avoid-the-lottery/50_asian_experiences_sheep1.jpg"
+post_image: "/assets/img/blog/there-is-no-objective-reason-to-avoid-the-lottery/sheep.png"
 ---
 
 ## When it comes to Reason and Reason*able*…

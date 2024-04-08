@@ -6,7 +6,7 @@ tags:
 categories: [writing]
 author: Shay Hill
 excerpt: What does it mean when we say that a good story needs an ironic premise?
-post_image: "/assets/img/blog/no-story-without-irony/rustoleum.jpg"
+post_image: "/assets/img/blog/no-story-without-irony/rustoleum.png"
 ---
 
 # What is irony?
