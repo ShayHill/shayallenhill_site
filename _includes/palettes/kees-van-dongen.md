@@ -1,0 +1,40 @@
+<style>
+div.palette_image {
+  display: inline-block;
+  width: 70%;
+  max-width: 100%;
+}
+
+div.palette_colors {
+  display: inline-block;
+  width: auto;
+  min-width: 100px;
+  margin-bottom: 40px;
+}
+</style>
+
+### Kees Van Dongen - Femme Arabe
+<div class="palette_image" markdown="span">![](/assets/img/blog/palettes/kees_van_dongen-femme_arabe.jpg)</div>
+<div class="palette_colors">Fog of War: 0c1f33<br>Charlie Brown: 995704<br>Deep Coral: d87c52<br>Buddha Gold: be991b<br>Turkish Stone: 2e7a8e<br>Obscure Olive: 426324</div>
+
+
+### Kees Van Dongen - Gisele
+<div class="palette_image" markdown="span">![](/assets/img/blog/palettes/kees_van_dongen-gisele.jpg)</div>
+<div class="palette_colors">One Minute to Midnight: 082d89<br>Hammerhead Shark: 4e7399<br>Mini Bay: 89afce<br>Farm Straw: d5b04b<br>Brandy Bear: a44d14<br>Eucalyptus: 2f955b</div>
+
+
+### Kees Van Dongen - Lady in a Black Hat
+<div class="palette_image" markdown="span">![](/assets/img/blog/palettes/kees_van_dongen-lady_in_a_black_hat.jpg)</div>
+<div class="palette_colors">Smoky Black: 100e04<br>Vermin Brown: 837600<br>Asparagus Cream: 99ae57<br>Pickled Ginger: ffe252<br>Orange Poppy: e1814c<br>Duvall: 0d8591</div>
+
+
+### Kees Van Dongen - Lou Lou
+<div class="palette_image" markdown="span">![](/assets/img/blog/palettes/kees_van_dongen-lou_lou.jpg)</div>
+<div class="palette_colors">Thistle Green: ccc9a5<br>Peat Swamp Forest: 978e76<br>Brownish Yellow: cbb30c<br>Verdigris Foncé: 626139<br>Halloween Punch: e02810<br>Plum Savor: 906088</div>
+
+
+### Kees Van Dongen - Maria
+<div class="palette_image" markdown="span">![](/assets/img/blog/palettes/kees_van_dongen-maria.jpg)</div>
+<div class="palette_colors">Free Speech Red: c30000<br>Black Hole: 000004<br>Windsor Wine: 562e37<br>Rose Fusion: fa6952<br>Tahini: e0bc72<br>Calabash Clash: 708078<br>Drakenhof Nightshade: 2057a0</div>
+
+

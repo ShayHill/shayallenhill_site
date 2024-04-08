@@ -1,0 +1,119 @@
+
+table.fullpage {
+    /* border: 0.2em solid red; */
+    vertical-align: top;
+    width: 100%;
+}
+table.watertbl {
+    width: 100%;
+    background-color: white;
+}
+
+.fullpage p {
+    font-size: 1.1em !important;
+    line-height: 1.1em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0;
+}
+
+tr {
+    vertical-align: top;
+}
+tr.campsite {
+    background-color: #D1D0CE;
+}
+
+.fullpage td {
+    /* padding-top: 1.5em; */
+    /* padding-bottom: .25em; */
+    /* border: 1px solid green; */
+    font-size: 1.1em !important;
+    line-height: 1.1em !important;
+    padding-bottom: 0.5em !important;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+}
+
+.watertbl td {
+    padding-top: 0.25em;
+    padding-left: 0 !important;
+    /* border: 1px solid black; */
+}
+
+td.mileageWe, td.mileageEw {
+    width: 4em;
+    padding-top: 0.6em;
+    font-family:"Ivar Text",Georgia,serif;
+}
+
+td.mileageEw {
+    font-weight: bold;
+}
+
+div.detour {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    font-style: italic;
+}
+
+p.detour {
+    font-style: italic;
+    font-weight: bold;
+    color: red !important;
+}
+
+p.waternote {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: blue !important;
+}
+
+span.trailhead {
+    white-space: nowrap;
+    background-color: #99FF99;
+}
+span.hlyellow {
+    background-color: #FFFFAA;
+}
+span.hlorange {
+    background-color: #FFDDAA;
+}
+span.hlblue {
+    background-color: #AAAAFF;
+}
+span.hlred {
+    background-color: #FFAAAA;
+}
+
+td.headwater {
+    width: 24%;
+}
+td.headwater, td.goodwater {
+    color: blue;
+    font-weight: bold;
+}
+td.neutwater, td.goodwater {
+    width: 19%;
+}
+td.headwater, td.goodwater, td.neutwater {
+    white-space: nowrap;
+}
+
+td.poorwater {
+    width: 19%;
+    color: red;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: .2em;
+}
+
+
+
+  /* <!--   "poorwater", --> */
+  /* <!--   "hidden", --> */
+  /* <!--   "arrow", --> */
+  /* <!--   "neutwater", --> */
+  /* <!--   "hlred", --> */
+  /* <!--   "trailhead", --> */
+/* detour */
+

@@ -1,0 +1,17 @@
+
+.colleft, .colright {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 50%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+}
+.colleft p, .colright p {
+    font-size: 120%;
+}
+.colright{
+    border-left: 2px solid gray;
+}
+

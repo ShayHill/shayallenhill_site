@@ -1,0 +1,438 @@
+/* extensions to trade-jekyll css classes */
+/* extensions to trade-jekyll css classes */
+/* extensions to trade-jekyll css classes */
+/* extensions to trade-jekyll css classes */
+
+.blog-content img {
+	max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* make links in text look like links */
+.blog-content a {
+    color: #0645ad;
+    text-decoration: underline;
+}
+
+/* figcaptions look terrible by default */
+.blog-content figcaption {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* trade-jekyll uses lists to lay out images, which means they're effectively
+broken for articles. */
+.blog-content ul {
+    color: var(--blog-text-color);
+    list-style: disc;
+    padding-left: 0px;
+    margin-left: 2em;
+}
+
+.blog-content ol {
+    color: var(--blog-text-color);
+    list-style: decimal;
+    padding-left: 0px;
+    margin-left: 2em;
+}
+
+.blog-content li {
+    list-style: inherit;
+    margin-bottom: 1em;
+}
+
+/* blog text was picking up too-light gray from trade-jekyll */
+.blog-content p {
+    font-family: Lato;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--blog-text-color);
+    font-size: 1.1em;
+}
+
+.blog-content blockquote li {
+    font-weight: normal;
+}
+
+
+/* blog titles pick up blog-content a (which I've intentionally styled to look
+ * like links (blue and underlined). Fix that. */
+.blog-title a {
+	color: var(--blog-title-color);
+    text-decoration: none;
+}
+
+/* the title of the blog post on the directory pages */
+.blog-directory h2 {
+    margin-top: 0;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5 {
+    font-family:"Ivar Text",Georgia,serif;   
+    margin-top: 1.5em;
+}
+
+
+.blog-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.blog-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.blog-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* better navigation for jumping to a heading i */
+div.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+/* improve looks from syntax.css, which will be overwritten if you update the code theme */
+/* improve looks from syntax.css, which will be overwritten if you update the code theme */
+/* improve looks from syntax.css, which will be overwritten if you update the code theme */
+/* improve looks from syntax.css, which will be overwritten if you update the code theme */
+
+.highlight code {
+    display: block;
+    padding-inline: 1em;
+    font-size: larger;
+    font-weight: 400;
+    background-color: inherit;
+}
+
+.highlight {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+div .highlight {
+  margin-bottom: 30px;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* heading style names to hide in responsive.css*/
+/* heading style names to hide in responsive.css*/
+/* heading style names to hide in responsive.css*/
+/* heading style names to hide in responsive.css*/
+
+/*header-top-cta has a right margin of 7 pix for text like phone numbers,
+ * e-mail addresses, etc. Remove this margin to add FoundationSafety.com to my
+ * e-mail address when there is room in the header, and hide it when there is
+ * not.*/
+.long-name {
+    display: inline-block;
+    margin-right: 0px;
+}
+.long-name span {
+    margin-right: 0px;
+}
+
+
+/* name the top content margin (previously named mt-100)
+ * to simplify adjustments*/
+
+.content-area-margin {
+	padding-top: 50px;
+}
+
+
+/* explicitly limit the size of images in blog posts*/
+/* explicitly limit the size of images in blog posts*/
+/* explicitly limit the size of images in blog posts*/
+/* explicitly limit the size of images in blog posts*/
+
+
+.blog-figure-75 img {
+	max-width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-figure-50 img {
+	max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-figure-25 img {
+	max-width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* always orange text for links to my personal blog */
+/* always orange text for links to my personal blog */
+/* always orange text for links to my personal blog */
+/* always orange text for links to my personal blog */
+
+.blog-link a:link {color: var(--highlight-color);}
+.blog-link a:visited {color: var(--highlight-color);}
+.blog-link a:hover {color: var(--highlight-color);}
+.blog-link a:active {color: var(--highlight-color);}
+
+
+/* ext emphasis without headings */
+/* ext emphasis without headings */
+/* ext emphasis without headings */
+/* ext emphasis without headings */
+
+p.ext-emphasis {
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+
+p.section-summary {
+    font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: bold;
+    margin-bottom: 2em;
+    color: var(--heading-color);
+}
+
+p.section-summary-head {
+    margin-bottom: 0em;
+    font-size: 1.5em;
+    color: #008181;
+}
+
+p.section-summary-body {
+    font-weight: normal;
+    margin-left: 2em;
+    font-size: 1.25em;
+}
+
+/* p.section-summary { */
+/*     font-family: font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; */
+/*     margin-bottom: 2em; */
+/*     font-size: 1.25em; */
+/*     font-weight: bold; */
+/*     color: var(--heading-color); */
+/* } */
+
+
+/* block styles for various "asides" */
+/* block styles for various "asides" */
+/* block styles for various "asides" */
+/* block styles for various "asides" */
+
+.big-blockquote {
+    font-style: normal;
+}
+
+.summation {
+	font-size:30px;
+	text-align:center;
+	font-family:Times, serif;
+	font-weight:bold;
+	font-style:italic;
+}
+
+.plain-english {
+  padding: 20px, 10px, 20px, 10px;
+  font-size:larger;
+  background-color:#fbf6f0;
+  border-left:3px dashed #d5bc8c;
+  border-right:3px dashed #d5bc8c;
+}
+
+.ludwig {
+  position: relative;
+  padding-left: 1em;
+  border-left: 5px solid #999;
+}
+
+.explanation {
+  background: #eee;
+  padding: 30px 30px 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 40px !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border-left: 0 !important;
+  color: #333;
+  text-align: left;
+  
+  box-shadow: 1px 1px 1px #999,
+              2px 2px 1px #999,
+              3px 3px 1px #999;
+  transition-duration: .3s;
+}
+
+.internal-nav a {
+	color: #222;
+    text-decoration: none !important;
+}
+.internal-nav a:hover {
+	color: #ff5e14;
+}
+
+.internal-nav h2:hover {
+	color: #ff5e14;
+}
+
+.internal-nav a:active {
+	color: #ff5e14;
+}
+
+/*--------------------------------------------------------------
+# blockquote with big quote from NNT Darts article.
+# This one needs ONE paragraph and some specific HTML to look nice
+  <blockquote class="wp-block-quote">
+      <p markdown="span">ONE paragraph here</p>
+      <cite markdown="span">[WHOOP](https://www.whoop.com/)</cite>
+  </blockquote>
+--------------------------------------------------------------*/
+
+
+.large-quote {
+  font-size: 1.8em;
+  font-style: italic;
+  font-family: "Open Sans", serif;
+  padding: .3em 0em .1em 1.5em;
+  margin: 0;
+  position: relative;
+  text-align: left;
+  border-left: 0px;
+}
+
+.large-quote p {
+    line-height: 1.5;
+    }
+
+.wp-block-quote,
+.pull-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
+	padding: 30px 30px 20px 45px !important;
+	margin-bottom: 20px;
+	background-color: #008181;
+	color: #fff;
+	border-radius: 5px;
+	border-left: 0;
+}
+
+.wp-block-quote p,
+.pull-quote p,
+.wp-block-quote.is-style-large p,
+.wp-block-quote.has-text-align-right p {
+	font-size: larger;
+	font-family: "Open Sans", serif;
+	line-height: 1.4;
+	position: relative;
+	padding-top: 0;
+	padding-left: 15px;
+    color: #fff;
+}
+
+.pull-quote p {
+    font-size: 1.8em;
+  line-height: 1.8;
+}
+
+.wp-block-quote p::before,
+.pull-quote p::before,
+.wp-block-quote.is-style-large p::before,
+.wp-block-quote.has-text-align-right p::before {
+	content: "\f10d";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	color: #fff;
+	font-size: 32px;
+	position: absolute;
+	top: -27px;
+	left: -27px;
+}
+
+.wp-block-quote a,
+.pull-quote a,
+.wp-block-quote.is-style-large a,
+.wp-block-quote.has-text-align-right a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.wp-block-quote em,
+.wp-block-quote i,
+.wp-block-quote cite,
+.pull-quote em,
+.pull-quote i,
+.pull-quote cite,
+.wp-block-quote.is-style-large em,
+.wp-block-quote.is-style-large i,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right em,
+.wp-block-quote.has-text-align-right i,
+.wp-block-quote.has-text-align-right cite {
+	font-style: normal;
+}
+
+.wp-block-quote cite,
+.pull-quote cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.has-text-align-right cite {
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	float: right;
+}
+
+/* blockquote.wp-block-quote.has-text-align-right { */
+/* 	border-right: 0; */
+/* } */
+
+/* TODO: move classes from trade_endorsement.css */
+
+.math-par {
+  text-align: left !important;
+  font-size: 130%
+}
+
+.math-plus {
+  font-size: 130%
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+ul.big-list {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
