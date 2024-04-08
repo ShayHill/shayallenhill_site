@@ -33,7 +33,7 @@
         <ul class="sidebar-link">
           {% for category in site.categories %}
             {% assign category_name = category[0] %}
-            {% if category == site.categories.featured %}
+            {% if category[0] == "featured" %}
             {% else %}
                 <li>
                   <a class="text-capitalize" href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
