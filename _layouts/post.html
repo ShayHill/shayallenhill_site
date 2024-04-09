@@ -30,7 +30,10 @@ layout: default
                                 </div>
                                 <!--TODO: fix sharing-->
                                 <div class="col-xl-6 col-lg-6 col-md-6">
-                                    {% include social_share.html %}
+                                    <!-- leaving out this empty div breaks the
+                                        layout! -->
+                                    <div class="blog-share-icon text-left">
+                                    </div>
                                 </div>
                             </div>
                         </div>

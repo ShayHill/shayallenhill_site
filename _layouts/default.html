@@ -25,6 +25,7 @@
     {% if page.title %}<meta name="twitter:title"   content="{{ page.title }}">{% else %}<meta name="twitter:title"   content="{{ site.title }}">{% endif %}	
     {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
     {% if page.post_image %}<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="{{ site.url }}{{ page.post_image }}">{% else %}<meta name="twitter:card"  content="summary"><meta name="twitter:image" content="{{ site.cover_image }}">{% endif %}
+    <meta name="fb.admins" content="{{ shayallenhill }}">
     <!-- post-specific css -->
     <style>
     {% if page.style %} {% include css/{{ page.style }}.css %} {% endif %}

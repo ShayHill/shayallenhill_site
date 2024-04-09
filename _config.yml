@@ -3,8 +3,8 @@ email: "shay_public@hotmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
  programming | probability | writing | physical culture 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com or  https://tradejk.netlify.com
-facebook_url: https://www.facebook.com/jekyll
+url: "https://shayallenhill.com" # the base hostname & protocol for your site, e.g. http://example.com or  https://tradejk.netlify.com
+facebook_url: https://www.facebook.com/shayallenhill
 twitter_url: https://twitter.com/tryghost
 github_url:  https://github.com/TryGhost/Ghost
 pinterest_url: https://www.pinterest.com/rubel8525
@@ -16,7 +16,6 @@ mailchimp_list: "https://themeix.us16.list-manage.com/subscribe/post?u=307862c13
 mailchimp_input_name: "b_307862c135e4548eecf86f389_342411fb35"
 
 permalink: "/:title"
-
 
 # Build settings
 markdown: kramdown
