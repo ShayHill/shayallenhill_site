@@ -57,25 +57,25 @@
     </div>
 </div>
 
-<div class="widget">
-    <h4 class="widget-title">Categories</h4>
-    <div class="widget-link">
-        <ul class="sidebar-link">
-          {% for category in site.categories %}
-            {% assign category_name = category[0] %}
-            {% if category[0] == "featured" %}
-            {% else %}
-                <li>
-                  <a class="text-capitalize" href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
-                </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+<!-- <div class="widget"> -->
+<!--     <h4 class="widget-title">Categories</h4> -->
+<!--     <div class="widget-link"> -->
+<!--         <ul class="sidebar-link"> -->
+<!--             {% for category in site.categories %} -->
+<!--             {% assign category_name = category[0] %} -->
+<!--             {% if category[0] == "featured" %} -->
+<!--             {% else %} -->
+<!--             <li> -->
+<!--                 <a class="text-capitalize" href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a> -->
+<!--             </li> -->
+<!--             {% endif %} -->
+<!--             {% endfor %} -->
+<!--         </ul> -->
+<!--     </div> -->
+<!-- </div> -->
 
-<div class="widget featured-articles-headspace">
-    <h4 class="widget-title">Sharing</h4>
-    <div class="widget-link">
+<div class="widget">
+    <div>
         {% include social_share.html %}
     </div>
 </div>
