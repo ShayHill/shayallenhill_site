@@ -460,3 +460,31 @@ ul.big-list {
 .featured-articles-headspace {
     margin-top: 30px;
 }
+
+
+/* Colors for sharing links */
+
+/* .facebook-blue a { */
+/*     color: #0866ff !important; */
+/* } */
+
+a.facebook-icon {
+    color: #0866ff !important;
+}
+
+a.x-twitter-icon {
+    color: #878787 !important;
+}
+
+a.pinterest-icon {
+    color: #e60023 !important;
+}
+
+/* Give a little less space than the 40px default under the social-sharing
+ * header in the footer. This is necessary because the connect icons are round
+ * with zero space above them while the social-share icons behave more like
+ * text. */
+
+.social-sharing-footspace h3 {
+    margin-bottom: 32px;
+}

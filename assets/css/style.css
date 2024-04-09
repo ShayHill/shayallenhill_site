@@ -1773,13 +1773,14 @@ blockquote {
 	color: #fff;
 }
 .blog-share-icon > span {
-  color: var(--highlight-color);
+  /* color: var(--highlight-color); */
   font-size: 15px;
+  margin-top: 55px;
 }
 
 .blog-share-icon> a {
-  color: var(--highlight-color);
-  font-size: 25px;
+  /* color: var(--highlight-color); */
+  font-size: 30px;
   margin: 0 8px 0 0;
 }
 .blog-share-icon> a:hover{color: var(--highlight-color);}
