@@ -207,7 +207,7 @@ blockquote::after {
 	display: none;
 }
 blockquote {
-	padding: 0;
+	padding: 5px;
 }
 .footer-pattern img {
 	width: 100%;
