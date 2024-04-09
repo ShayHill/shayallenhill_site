@@ -25,7 +25,8 @@
 :root {
   --blog-text-color: #222;
   --heading-color: #000;
-  --highlight-color: #ff5e14;
+  /* --highlight-color: #ff5e14; */
+  --highlight-color: #008181;
 }
 	/* color: #f--f5e14; */
 
@@ -1386,7 +1387,7 @@ label {
 .breadcrumb-area {
 	background-size: cover;
 	background-position: center;
-	height: 300px;
+	height: 150px;
 	display: flex;
 	align-items: center;
 }

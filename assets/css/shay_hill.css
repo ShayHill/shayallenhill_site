@@ -435,3 +435,28 @@ ul.big-list {
     margin-bottom: 1em;
     font-size: 1.05em;
 }
+
+/* format the home button on shayallenhill. This is fine when it's on the right
+ * as on foundationsafety, but the text is blue and the spacing too tight on
+ * shayallenhill. This class replaces top-btn for the big orange button on
+ * shayallenhill */
+
+.home-btn {
+    color: white !important;
+    margin-right: 15px;
+}
+
+.home-btn a {
+    color: white !important;
+}
+
+/* Put just a little space under the top-header for shayallenhill, because
+ * there is no nav bar. */
+.top-header-nudge {
+    margin-bottom: 40px;
+}
+
+/* A bit of space between the subscription form and Featured Articles. */
+.featured-articles-headspace {
+    margin-top: 30px;
+}
