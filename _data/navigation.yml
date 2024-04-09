@@ -7,12 +7,14 @@
     #url: /pages/index-2
   #- text: Home 3
     #url: /pages/index-3
-- text: About
-  url: /pages/about
-- text: Services
-  url: /pages/services
-- text: Featured Artices
-  url: /pages/blog/indexpage.html
+- text: Probability
+  url: /category/probability
+- text: Programming
+  url: /category/programming
+- text: Writing
+  url: /category/writing
+- text: Physical Culture
+  url: /category/physical-culture
 #- text: Pages
   #url: /
   #submenu:
