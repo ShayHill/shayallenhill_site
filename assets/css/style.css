@@ -1554,7 +1554,7 @@ label {
 .widget {
 	background: #fff;
 	overflow: hidden;
-	padding: 10px;
+	/* padding: 10px; */
 }
 .widget-title {
   color: #000;
@@ -1617,7 +1617,7 @@ label {
 	font-size: 13px;
 	margin-bottom: 15px;
 	overflow: hidden;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 .sidebar-rc-post ul li:last-child{border:0;margin:0;padding:0;;}
 .sidebar-rc-post .rc-post-thumb {
@@ -1778,12 +1778,12 @@ blockquote {
 }
 .blog-share-icon> a {
   color: #595959;
-  font-size: 15px;
+  font-size: 25px;
   margin: 0 8px;
 }
 .blog-share-icon> a:hover{color: var(--highlight-color);}
 .blog-share-icon {
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 /* blog comments */
 
