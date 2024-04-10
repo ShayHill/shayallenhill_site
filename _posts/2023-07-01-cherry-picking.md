@@ -58,7 +58,7 @@ table.bk {
 
 {% include sah_uag_blockquote.html content="I cannot tell a lie, I did it with my little hatchet." author='George Washington' %}
 
-One sunny day, as the story goes[^1], a 6-year-old George Washington ventured into his father's garden with a brand new hatchet, feeling industrious (if you want to be generous) or mischevious (if you don't).
+One sunny day, as the story goes[^1], a 6-year-old George Washington ventured into his father's garden with a brand new hatchet, feeling industrious (if you want to be generous) or mischievous (if you don't).
 
 Lo and behold, what did the boy spy in the center of the garden but a majestic cherry tree, standing tall and proud, the prize of his father's orchard. Finding no other outlet for his boyish ambition (I'll be generous), young George set about testing his mettle, and the blade of his hatchet, against the trunk of that cherry tree.
 
@@ -75,7 +75,7 @@ In perhaps *the* most famous moment of Colonial-American folklore, young George 
 
 [Cherry picking](https://en.wikipedia.org/wiki/Cherry_picking) (or if you prefer, [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias)) has a deservedly negative connotation. When you accuse someone of cherry picking, you accuse them of intentionally, unscrupulously discarding information that does not support their argument. I'm still feeling generous, so I'm going to propose that almost all instances of cherry picking are *un*intentional and innocent: When you observe something interesting, you tell people about it. When you don't, you don't.
 
-When it comes to [statistics](/introduction-to-statistical-tests), "something interesting" is "an event with less than or equal to a 1 in 20 chance of happening randomly". So flipping a coin and seeing 6 of the same side (heads or tails) in a row on the first try is "something interesting".
+When it comes to [statistics](/introduction-to-statistical-tests), "something interesting" is "an event with less than or equal to a 1 in 20 chance of happening randomly". So, flipping a coin and seeing 6 of the same side (heads or tails) in a row on the first try is "something interesting".
 
 <ul class="tight-list">
 <li>one consecutive &rarr; 20:20</li>
@@ -86,17 +86,17 @@ When it comes to [statistics](/introduction-to-statistical-tests), "something in
 <li><span class="red" markdown="span">six consecutive &rarr; 0.625:20</span></li>
 </ul>
 
-If 20 people in your company each pull a coin from their pocket and flip it 6 times, 19 of them won't have anything to talk about. That's reporting bias (cherry picking), and in this case it's completely innocent. Unfortunately, that last, red line is still going to end up in your Power BI report—while the rest wont. This leads to the same problems as *malicious* cherry picking. [I've covered that topic before](/the-chances).
+If 20 people in your company each pull a coin from their pocket and flip it 6 times, 19 of them won't have anything to talk about. That's reporting bias (cherry picking), and in this case it's completely innocent. Unfortunately, that last, red line is still going to end up in your Power BI report—while the rest won't. This leads to the same problems as *malicious* cherry picking. [I've covered that topic before](/the-chances).
 
 *This* article is about a way to spot cherry picking (innocent or otherwise) on the net or in media, because I know a lot of extremely smart people who still believe that if [the scientific method](https://en.wikipedia.org/wiki/Scientific_method) is followed, the result *must* be valid.
 
 ## Confluence
 
-We frequenly hear how some "bellwether demographic"[^2] is moving out of major cities, shifting politically, dying younger, buying pets, retiring earlier, etc. Friends who repeat these reports often offer to show us "*the* data", and if we examine the data they offer, we'll see the same result they did. You've already guessed the problem: we're only seeing the *reported* data. To see *the* data, we'd have to see all the data no one bothered to report.
+We frequently hear how some "bellwether demographic"[^2] is moving out of major cities, shifting politically, dying younger, buying pets, retiring earlier, etc. Friends who repeat these reports often offer to show us "*the* data", and if we examine the data they offer, we'll see the same result they did. You've already guessed the problem: we're only seeing the *reported* data. To see *the* data, we'd have to see all the data no one bothered to report.
 
 [^2]: The term "bellwether" originally comes from the practice of placing a bell on a sheep or a wether (a castrated ram) within a flock. The bellwether would lead the flock, and the behavior of this leading sheep was believed to reflect the behavior of the entire flock.
 
-Confluence is an intersection of vectors, and the larger the confluence (the more vectors), the greater the difference between the reported data and *the* data. If you want a rule of thumb, be suspicios of any group name with a comma.
+Confluence is an intersection of vectors, and the larger the confluence (the more vectors), the greater the difference between the reported data and *the* data. If you want a rule of thumb, be suspicious of any group name with a comma.
 
 Let's see an example.
 

@@ -48,11 +48,11 @@ Occasionally you'd run into "some kid" who's first job straight out of college w
 
 ## Plugging In
 
-Then comes the Internet, and we all "meet" people who have up to 1,000,000x times more than we do---and a lot of them look and talk like the janitors at our parent's office. Some of us (at least this is how I hear it) assume these rich people are 1,000,000 times better than the rest of us. They worship the rich like lesser gods, scour the Net for scraps of information about them, buy their 6x9" books, and repeat their hackneyed witicisms like holy scripture.
+Then comes the Internet, and we all "meet" people who have up to 1,000,000x times more than we do---and a lot of them look and talk like the janitors at our parent's office. Some of us (at least this is how I hear it) assume these rich people are 1,000,000 times better than the rest of us. They worship the rich like lesser gods, scour the Net for scraps of information about them, buy their 6x9" books, and repeat their hackneyed witticisms like holy scripture.
 
 I don't personally know anyone like that, but I hear they're out there and I know those 6x9" books are selling.
 
-We all get a little star struck by *someone*, but the people I know personally, even the most stridently non-intellectual, process 1MMx outcomes as a mathematical, philosophical problem to be solved. Their first priority is to adjust the rule. Because, if you have the "right" rule, you can buy the "right" 6x9" books, repeat the "right" hackneyed witicisms, have the "right" position, feel the "right" way about yourself, and in general *be* "right" ... which, given the role of luck---we're coming to that---in so many other forms of success, may be the most *right*eous measure of a person we have.
+We all get a little star struck by *someone*, but the people I know personally, even the most stridently non-intellectual, process 1MMx outcomes as a mathematical, philosophical problem to be solved. Their first priority is to adjust the rule. Because, if you have the "right" rule, you can buy the "right" 6x9" books, repeat the "right" hackneyed witticisms, have the "right" position, feel the "right" way about yourself, and in general *be* "right" ... which, given the role of luck---we're coming to that---in so many other forms of success, may be the most *right*eous measure of a person we have.
 
 So, we end up throwing around a few terms: *outliers*, *fat tails*, and *privilege* are useful to describe the phenomenon of 1MMx outcomes and *halo effect* is used to describe the mindset of people who aren't savvy enough to recognize the role of luck.
 

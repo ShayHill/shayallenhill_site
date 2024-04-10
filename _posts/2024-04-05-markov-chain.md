@@ -16,7 +16,7 @@ p.bold-text {
 }
 </style>
 
-AI doesn't have to be complicated. In this article, I'm going to show you how to build an artificial intelligence that can "live" on the back of a napkin. This is a carbon-based lifeform you can create with the carbon in your pencil, and your great grandmother could have done the same. This AI was invented in 1906.
+AI doesn't have to be complicated. In this article, I'm going to show you how to build an artificial intelligence that can "live" on the back of a napkin. This is a carbon-based lifeform you can create with the carbon in your pencil, and your great grandmother could have done the same---this AI was invented in 1906.
 
 ## The Markov Chain
 
@@ -116,7 +116,7 @@ Nice sentences, but most of them are directly from the story, because most of th
 
 ## Will more data help?
 
-Yes. These sentences were produced by a Markov Chain trained on the novel Moby Dick (it's not a thin book), looking one word back:
+Yes. These sentences were produced by a Markov Chain trained on the novel [*Moby Dick*](https://www.barnesandnoble.com/w/moby-dick-herman-melville/1116670757?ean=9780142437247) (it's not a thin book), looking one word back:
 
 * Beware of classical engravings from him out the door to but the fishery.
 * Morning the special leviathanic proportions the mechanical I fill to dart it and fought my butter-boxes cried Stubb then so that had assured indeed they all legs and said no means of the whole affair.
@@ -134,7 +134,8 @@ And here's the same thing looking two words back:
 
 These make a bit more sense---maybe---but we're already 43% deterministic. That's 43% of two-word strings found, not 43% of *unique* two-word strings, which would be much higher (82%).
 
-Some of these are fine. The word pair `a sort` appears 53 times, always followed by `of`. It's not a terrible thing to copy such patterns verbatim, but our AI is nevertheless becoming more deterministic.
+Some of these are fine. The word pair `a sort` appears 53 times, always followed by `of`. It's not a terrible thing to copy such patterns verbatim, but our AI is nevertheless becoming more deterministic, and not all word triplets are canonical. `glided by as`, `sea fell over`, `of pale forked` and around 90 thousand other phrases are have now been "hard coded" into our AI.
+
 
 Here's the same thing looking three words back:
 
@@ -156,4 +157,4 @@ You could make a nice start with ALL of the books. Not just all of the [Melville
 
 The Markov Chain is just one criterion you can use to select a next word. You can do more with the same amount of data if you leverage other criteria, but all such criteria will face the same data limitations. Your AI is **HUNGRY**, and no amount of processing power will ever change that. 
 
-[^1]: [Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) published *Moby Dick* in 1851. He was a prolific writer who wrote several other novels, short stories, and volumes of poetry.
+[^1]: [Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) was a prolific American author in the 19th century. He wrote [Moby Dick](https://www.barnesandnoble.com/w/moby-dick-herman-melville/1116670757?ean=9780142437247) (1951) along with several other novels, short stories, and volumes of poetry.
