@@ -6,9 +6,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shayallenhill.com" # the base hostname & protocol for your site, e.g. http://example.com or  https://tradejk.netlify.com
 facebook_url: https://www.facebook.com/shayallenhill
 twitter_url: https://twitter.com/tryghost
-github_url:  https://github.com/TryGhost/Ghost
+github_url:  https://github.com/ShayHill
 pinterest_url: https://www.pinterest.com/rubel8525
-linkedin_url: https://www.linkenin.com/rubel8525
+linkedin_url: https://www.linkedin.com/in/shayhill
 instagram_url: https://www.instagram.com/rubel8525
 logo: "/assets/img/logo/logo.png"
 logo_2: "/assets/img/logo/logo_2.png"
