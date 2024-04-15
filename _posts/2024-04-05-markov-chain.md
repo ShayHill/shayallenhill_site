@@ -5,7 +5,7 @@ date: 2024-04-05 12:27:51 -0600
 tags:
 categories: [probability, programming, featured]
 author: Shay Hill
-excerpt: I'm going to show you how to build an artificial intelligence that can "live" on the back of a napkin.
+excerpt: I'm going to show you how to build an artificial intelligence that can 'live' on the back of a napkin.
 post_image: "/assets/img/blog/markov-chain/drawn_ai.png"
 ---
 

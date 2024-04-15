@@ -480,6 +480,14 @@ a.pinterest-icon {
     color: #e60023 !important;
 }
 
+a.linkedin-icon {
+    color: #3063c3 !important;
+}
+
+a.email-icon {
+    color: #f8bf00 !important;
+}
+
 /* Give a little less space than the 40px default under the social-sharing
  * header in the footer. This is necessary because the connect icons are round
  * with zero space above them while the social-share icons behave more like
