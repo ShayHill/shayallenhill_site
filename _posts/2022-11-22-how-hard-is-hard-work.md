@@ -5,7 +5,7 @@ date: 221122 11:48:58 -0500
 tags:
 categories: [physical culture, featured]
 author: Shay Hill
-excerpt: We commonly dismiss another person's hard day at work with, "Sure, but they didn't exactly run a marathon." Let's look at that.
+excerpt: We commonly dismiss another person's hard day at work with, 'Sure, but they didn't exactly run a marathon.' Let's look at that.
 post_image: "/assets/img/blog/how-hard-is-hard-work/runners.png"
 ---
 

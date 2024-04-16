@@ -86,7 +86,7 @@ When it comes to [statistics](/introduction-to-statistical-tests), "something in
 <li><span class="red" markdown="span">six consecutive &rarr; 0.625:20</span></li>
 </ul>
 
-If 20 people in your company each pull a coin from their pocket and flip it 6 times, 19 of them won't have anything to talk about. That's reporting bias (cherry picking), and in this case it's completely innocent. Unfortunately, that last, red line is still going to end up in your Power BI report—while the rest won't. This leads to the same problems as *malicious* cherry picking. [I've covered that topic before](/the-chances).
+If 20 people in your company each pull a coin from their pocket and flip it 6 times, 19 of them won't have anything to talk about. That's reporting bias (cherry picking), and in this case it's completely innocent. Unfortunately, that last, red line is still going to end up in your Power BI report—while the rest won't. This innocent cherry picking leads to the same problems as *malicious* cherry picking. [I've covered that topic before](/the-chances).
 
 *This* article is about a way to spot cherry picking (innocent or otherwise) on the net or in media, because I know a lot of extremely smart people who still believe that if [the scientific method](https://en.wikipedia.org/wiki/Scientific_method) is followed, the result *must* be valid.
 
@@ -221,7 +221,7 @@ additional experiments might have been done with
 </tr>
 </table>
 
-or any of myriad combinations or additions. "Something interesting" is always taking place, and not even replication keep us safe. The chance of 2 consecutive interesting events is 1:400. Sounds small, but 7 x 7 x 7 x 7 chances as 1:400 is still *greater than* 99.999%
+or any of myriad combinations or additions. "Something interesting" is always taking place, and not even replication keep us safe. The chance of 2 consecutive interesting events is 1:400. Sounds small, but 7 x 7 x 7 x 7 chances at 1:400 is still *greater than* 99.999%
 
 ## Is this really a problem?
 

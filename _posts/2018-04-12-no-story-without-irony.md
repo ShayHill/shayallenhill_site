@@ -25,7 +25,7 @@ It isn’t news when the train’s on time.
 I laughed at the joke.
 </blockquote>
 
-That sentence is clear and informative, but it isn’t ironic—it isn’t a story. Laughing is what *should* happen when you hear a joke.
+That sentence is clear and informative, but it isn’t ironic---it isn’t a story. Laughing is what *should* happen when you hear a joke.
 
 {% include ext-emphasis.html content="Let's try the same with some explicit irony." %}
 
@@ -52,7 +52,7 @@ There would be no Superman without kryptonite. Which premise would you rather re
 * Demigod defeats man.
 * Man defeats demigod.
 
-Now, which would you rather *write*? Most writers want to write a badass, and tragedy is unfashionable, so we lose the advantage of an ironic premise (until the third act—the second act is necessarily some form of kryptonite).
+Now, which would you rather *write*? Most writers want to write a badass, and tragedy is unfashionable, so we lose the advantage of an ironic premise (until the third act---the second act is necessarily some form of kryptonite).
 
 In that case, we rely heavily on *explicit* irony. In other words, we tell the reader what *should* have happened. Nearly everything that happens in a good novel is
 
