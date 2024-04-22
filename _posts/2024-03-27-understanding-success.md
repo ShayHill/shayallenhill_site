@@ -78,7 +78,7 @@ I have read, and enjoyed, and still enjoy 6x9" books about the role of luck in o
 
 I blog about probability and statistics, cautioning others not the be *Fooled by Randomness*.
 
-## But don't be fooled by *Fooled my Randomness*.
+## But don't be fooled by *Fooled by Randomness*.
 
 The *work, talent, and luck<sup>10</sup>* rule is probably right, but is it worth saying out loud? By repeating the rule, I scored a point in an argument with a friend, but I scored the wrong point. Because, as right as the rule may be, IT MEANS NOTHING unless you're trying to pick out a book or win an argument.
 
