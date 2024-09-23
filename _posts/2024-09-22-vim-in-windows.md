@@ -25,7 +25,7 @@ post_image: "/assets/img/blog/vim-in-windows/chemistry_set.png"
 
 This one is easy, because we're not going to compile Vim, but there are some tricks if you aren't familiar with Windows.
 
-Go the [the Vim.org download page](https://www.vim.org/download.php), download the exe file for your architecture (32 or 64 bit), run it, and accept all the defaults. This will add a few icons to your desktop that you probably don't want, but it's easy to delete them later.
+Go to [Releases · vim/vim-win32-installer (github.com)](https://github.com/vim/vim-win32-installer/releases), download the exe file for your architecture (32 or 64 bit), run it, and accept all the defaults. This will add a few icons to your desktop that you probably don't want, but it's easy to delete them later.
 
 The installer will add Vim to your Path environment variable, but it may *not* update an existing Vim path. So, if you have `C:\Program Files\Vim\vim90` in your path, the installer may not update that to `C:\Program Files\Vim\vim91` (or whatever the current version is as you are reading this).
 
@@ -55,7 +55,7 @@ However, once you create your own configuration in
 ~\vimfiles\vimrc
 ```
 
-Vim gets (arguably) worse! This because is is because Bram and others configured some nice default behaviors in
+Vim gets (arguably) worse! This is because Bram and others configured some nice default behaviors in
 
 ```
 C:\Program Files\Vim\vim91\defaults.vim
@@ -75,7 +75,7 @@ and create a simple vimrc with this content:
 vim9script
 
 ## nice defaults from Bram and the The Vim Project
-source $VIMRUNTIME/defaults.vim 
+source $VIMRUNTIME/defaults.vim
 ```
 
 This will preserve the nice defaults. The `vim9script` is optional, but the rest of this guide will assume you have it set.
@@ -83,9 +83,17 @@ This will preserve the nice defaults. The `vim9script` is optional, but the rest
 # Install Cross-Platform PowerShell
 
 
-There are two versions of PowerShell: Windows PowerShell (blue icon) and cross-platform PowerShell (black icon). Windows comes pre-installed with blue-icon PowerShell, but if you open it, you will see a prompt to install cross-platform (black-icon) PowerShell. Ctrl-click the link in this prompt and [install the latest version of "PowerShell 7"](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.4) (cross-platform, black-icon PowerShell). Accept all defaults during install.
+There are two versions of PowerShell: Windows PowerShell (blue icon) and cross-platform PowerShell (black icon). Windows comes with blue-icon PowerShell pre-installed, but if you open it, you will see a prompt to install cross-platform (black-icon) PowerShell. Ctrl-click the link in this prompt and [install the latest version of "PowerShell 7"](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.4) (cross-platform, black-icon PowerShell). Accept all defaults during install.
 
 Once installed, PowerShell 7 will be the default when you run Windows Terminal. You can run Windows Terminal by searching for it in the start menu or by holding the `windows key`, pressing `x`, then releasing both keys and pressing `i`. When I use the name "PowerShell" from here on, I am referring to cross-platform, black-icon, PowerShell 7.
+
+If PowerShell 7 is not the default, or if you don't see black-icon PowerShell as a choice when adding a tab with the Windows Terminal down arrow in the tab bar, it's safe to go to
+
+```
+C:\Users\username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+```
+
+and delete `settings.json` and `state.json`. They will almost instantly regenerate, leaving your Windows Terminal in a default configuration (which should include PowerShell 7). Of course, you'll lose any configuration you've done, but it was probably broken anyway. Make a backup if you're worried about it.
 
 ## Configuration
 
@@ -130,28 +138,32 @@ function prompt {
 ```
 
 Now, close and reopen PowerShell, then press `Ctrl+Shift+D` (D for Duplicate) in PowerShell to to open a new tab in the same directory as the current tab.
+
 ### Tell Vim About PowerShell
 
 Start PowerShell (`winkey-x` then `i`), open Vim inside PowerShell, then add this to `~vimfiles\vimrc`.
 
 ```vim
 if has("windows")
-    set shell=pwsh
+	set shell=pwsh
 endif
 ```
 
 To let Vim know to open terminals in cross-platform PowerShell. The options `shell=pwsh` and `shell=powershell` are not the same. The latter is for Windows (blue-icon) PowerShell, which isn't a nice experience.
 
-
 # Install Python
 
-Don't do it *yet*, but you're going to go to [Python.org](https://www.python.org/downloads/) and install every version of Python you intend to support with your projects.
+Don't do it *yet*, but you're going to install every version of Python you intend to support with your projects. As I write this, this is the range of current Python versions. Update and run these commands in PowerShell to install them all. But not yet!
 
-But, again, don't do that yet, particularly if you've already installed some plugins with Vim.
+```powershell
+winget install --id Python.Python.3.8 --source winget
+winget install --id Python.Python.3.9 --source winget
+winget install --id Python.Python.3.10 --source winget
+winget install --id Python.Python.3.11 --source winget
+winget install --id Python.Python.3.12 --source winget
+```
 
-First, start with a relatively new and stable version of Python. No prereleases and no new releases. Vim doesn't ship with it's own version of Python. It will try to use the newest version of Python you have. We'll first have to tell Vim *which* version of Python we want to use.
-
-Open your `~vimfiles\vimrc` file and add the following (if your "relatively new and stable" version of Python is 3.11):
+First, start with a relatively new and stable version of Python. No prereleases and no new releases. Vim doesn't ship with it's own version of Python. Vim and it's plugins will try to use the newest version of Python you have. We'll first have to tell Vim *which* version of Python we want to use. Install one version to test, then open your `~vimfiles\vimrc` file and add the following (if your "relatively new and stable" version of Python is 3.11):
 
 ```vim
 if has("windows")
@@ -161,46 +173,43 @@ if has("windows")
 endif
 ```
 
-There are a few different formats Vim will accept for Windows links. This `execute` version is the one I prefer, because we're going to keep adding links to our `local_programs` folder.
+From Vim, run the command `:py3 print("test")` to make sure you have it set up correctly.
 
-You may find that Vim and all your plugins will work just fine without setting `pythonthreehome` and `pythonthreedll`. Vim is pretty smart about finding your Python install. However, that could break at any time if you install a version of Python Vim or one of your plugins doesn't support.
+You may find that Vim and all your plugins will work just fine without setting `pythonthreehome` and `pythonthreedll`. Vim knows where to look for a typical Python install. However, that could break at any time if you install a version of Python Vim or one of your plugins doesn't support.
 
-**OK, now** install the other versions of Python you intend to support. To follow along with this guide, accept all defaults when installing.
+As I write this, Python 13 is in prerelease, and Vim itself is not compatible. So not even `vim -u NONE` will get you past the errors. So, go ahead and explicitly set these values in your vimrc.
+
+---
+
+**OK, NOW** install the other versions of Python you intend to support.
 
 ### Older Python Versions
 
 Having the exact Python versions you intend to support installed on your machine is less important than it used to be, because we can test whatever versions we like with continuous integration. So, when it comes to older versions of Python, you don't *have* to compile the latest security release.
 
-If you find a source only release of  an older Python, you can scroll down to find the note
+If you visit [python.org/downloads](https://www.python.org/downloads/), you will see more recent minor versions of older major versions. For instance, right now, winget installs 3.8.10. The latest (source-only) security release for Python 3.8 is 3.8.20. If you navigate to the install page for one of these source-only releases, you will see a note like this one:
 
 > **No installers**
 > According to the release calendar specified in [PEP 569](https://www.python.org/dev/peps/pep-0569/), Python 3.8 is now in the "security fixes only" stage of its life cycle: 3.8 branch only accepts security fixes and releases of those are made irregularly in source-only form until October 2024. Python 3.8 isn't receiving regular bug fixes anymore, and binary installers are no longer provided for it. **Python 3.8.10** was the last full _bugfix release_ of Python 3.8 with binary installers.
 
-... which will direct you to the latest binary. Or you can just not install it at all and rely on ci for your tests. The latter version will be safer, but my brother still works at a company running Python 2.7 in 2024.
+... which will direct you to the latest binary (which is probably the binary winget installed). If you're not comfortable *not* having the latest security releases for these older versions, you can just not install those at all and rely on ci for your tests. For what it's worth, my brother works at a company running Python 2.7 in 2024.
 
 ### The Python Launcher
 
-Windows does not add `python` to your path. Instead it adds [the Python launcher](https://docs.python.org/3/using/windows.html#launcher), `py`. If you want to run `python` from PowerShell, run `py` to run the latest version. Run `py -3.12` to run another version. To run another version by default, create a new User Environment Variable, `PY_PYTHON` and set the value to the default you'd like to run. For example, `3.12`.
+Windows does not add `python` to your path. Instead it adds [the Python launcher](https://docs.python.org/3/using/windows.html#launcher), `py`. If you want to run `python` from PowerShell, run `py` to run the latest version. Run `py -3.11` to run another version. To run another version by default, create a new User Environment Variable, `PY_PYTHON` and set the value to the default you'd like to run. For example, `3.11`.
 
 I like this setup, because `python` will *only* work from inside a virtual environment. So, any script you set up to run `python` will only work from a virtual environment.
 
-
 # Install Git
 
-Go to [git-scm.com](https://git-scm.com/download/win) and click `64-bit Git for Windows Setup.` (or 32-bit if you're on a 32-bit system). Run the installer.
+```
+winget install Git.Git --source winget
+```
 
-This is the only time in this guide I will suggest you change a default. Keep every default except one:
-
-"Adjusting the name of the initial branch in new repositories" has it's own page in the install dialog. The choices are
-
-*  Let Git decide (the default)
-*  Override the default branch name for new repositories
-
-As of this writing, Git and GitHub are using different default branch names, which can get annoying. A lot of online help uses Git's `master`, but the scripts on GitHub use `main`. I suggest you change the default branch name (select the Override option) to `main` to match GitHub to save the headaches.
-
-### Configure Git from PowerShell
+## Configure Git from PowerShell
 
 Open PowerShell and run the following commands:
+
 ```powershell
 git config --global user.email "your@email.com"
 git config --global user.name "Your Name"
@@ -208,11 +217,14 @@ git config --global core.editor "'C:\Program Files\Vim\vim91\vim.exe' -f -i NONE
 git config --global merge.tool vimdiff
 git config --global diff.tool vimdiff
 git config --global core.excludesFile "$Env:USERPROFILE\.gitignore"
+git config --global init.defaultBranch main
 ```
 
-You already selected Vim during install, but maybe a Git internal Vim. Whatever Vim it is, it doesn't source your vimrc. You'll want to set up Vim here.
+Don't let the `--global` flag misinform you. These are settings for one user. These commands update a file in your home directory called `.gitconfig`. You can edit this file later or re-run the commands if you don't like what I've put here, but these are the standard settings for Vim users.
 
-Don't let the `--global` flag misinform you. These are settings for one user. These commands update a file in your home directory called `.gitconfig`. You can edit this file later or re-run the commands if you don't like what I've put here, but these are the standard settings for Vim users. If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. In fact, gvim is a little quicker on Windows than Git through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
+If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. GVim is a little quicker on Windows than Vim through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
+
+You can also name your default branch whatever you like. If you don't configure it here, you'll get the default `master`. GitHub uses `main`, so if you're using GitHub, you'll save a bit of work by matching what they use there.
 
 ### Other Things That Come With Git
 
@@ -223,29 +235,13 @@ The Git installer also provides Curl and Bash. Curl will be on your path for plu
 ```powershell
 Set-Alias -Name bash -Value 'C:\Program Files\Git\bin\bash.exe'
 ```
-
-
 # Install Ripgrep
 
 "Grepping" is a big part of navigating through projects. In Windows, Vim will try to use a grep alternative. I don't remember the name. It works in cmd, but it freezes PowerShell, so we don't want it. Ripgrep is a nice alternative.
 
-*  Go to [github.com/BurntSushi/ripgrep/releases](https://github.com/BurntSushi/ripgrep/releases)
-*  Click the version number with (Latest) printed beside it.
-*  Scroll down to "Assets".
-*  Download the `msvc.zip` file for your architecture (64 or 32 bit). Example: `ripgrep-14.1.1-i686-pc-windows-msvc.zip`
-*  Extract the zipfile somewhere. Windows doesn't have a dedicated `bin` folder. Some extract executables to
-
 ```
-C:\Windows\Program Files\
+winget install BurntSushi.ripgrep.MSVC --source winget
 ```
-
-I prefer to extract them to
-
-```
-~\AppData\Local\Programs\
-```
-
-That is the folder I will link to in the next step.
 
 ### Tell Vim to use Ripgrep
 
@@ -253,10 +249,8 @@ Add the following to your `~\vimfiles\vimrc` file. This will tell Vim to use Rip
 
 ```vim
 if has("windows")
-    var local_programs = expand('$HOME/AppData/Local/Programs')
-    var rg = local_programs ..  '/ripgrep-13.0.0-x86_64-pc-windows-msvc/rg.exe'
-    if executable(rg)
-        set grepprg = rg\ --vimgrep\ --no-heading
+    if executable('rg')
+        set grepprg=rg\ --vimgrep\ --no-heading
     else
         echoerr "rg not found. Install ripgrep to use :grep"
     endif
@@ -265,19 +259,20 @@ endif
 
 Once you get everything set up, consider the [ctrl-sf](https://github.com/dyng/ctrlsf.vim) plugin, which will make use of your newly installed and nicely linked ripgrep.
 
-
 # Install Lua
 
-This step is optional. Lua is required for a few Vim plugins, which you may or may not want to use. I use it for `vim-instant-markdown`.
+This step is optional. Lua is required for a few Vim plugins, which you may or may not want to use.
 
-*  Go to [https://luabinaries.sourceforge.net/download.html](https://luabinaries.sourceforge.net/download.html)
-*  Download [lua-5.4.2_win64_dllw6_lib.zip](https://sourceforge.net/projects/luabinaries/files/5.4.2/windows%20libraries/dynamic/lua-5.4.2_win64_dllw6_lib.zip/download\|lua-5.4.2_win64_dllw6_lib.zip).
-*  You will find another file there, `lua-5.4.2_Win64_bin.zip`. You do not need that file.
-
-Extract [lua-5.4.2_win64_dllw6_lib.zip](https://sourceforge.net/projects/luabinaries/files/5.4.2/windows%20libraries/dynamic/lua-5.4.2_win64_dllw6_lib.zip/download\|lua-5.4.2_win64_dllw6_lib.zip) somewhere. I use
+In PowerShell, run
 
 ```
-~\AppData\Local\Programs\
+winget install DEVCOM.Lua --source winget
+```
+
+This will install the file you need (`lua54.dll`) to
+
+```
+~\AppData\Local\Programs\Lua\bin\lua54.dll
 ```
 
 ### Tell Vim Where to find Lua
@@ -287,15 +282,23 @@ Edit `~\vimfiles\vimrc` and add the following:
 ```vim
 if has("windows")
     var local_programs = expand('$HOME/AppData/Local/Programs')
-    execute 'set luadll=' .. local_programs .. '/lua-5.4.2_Win64_dll17_lib/lua54.dll'
+    execute 'set luadll=' .. local_programs .. '/Lua/bin/lua54.dll'
 endif
 ```
+
+run
+
+```vim
+:lua print("test")
+```
+
+to make sure everything is set up correctly.
 
 # Gvim Fullscreen
 
 This step is optional, but if you dislike the toolbar's intruding into your immersive coding experience, you might not feel that way. This executable will allow you to fullscreen gVim.
 
-*  Compile from source: [https://github.com/movsb/gvim_fullscreen](https://github.com/movsb/gvim_fullscreen) ... download [https://github.com/movsb/gvim_fullscreen/releases](https://github.com/movsb/gvim_fullscreen/releases).
+*  Compile from source: [https://github.com/movsb/gvim_fullscreen](https://github.com/movsb/gvim_fullscreen) ... or download [https://github.com/movsb/gvim_fullscreen/releases](https://github.com/movsb/gvim_fullscreen/releases).
 *  Copy gvimfullscreen.dll to `~/vimfiles/`.
 
 ### Tell Vim Where to Find the DLL
@@ -312,21 +315,28 @@ Now you can fullscreen gVim with `Ctrl+F11` and toggle transparency with `Ctrl+F
 
 For what it's worth, PowerShell will fullscreen Vim when you press `F11` at the cost of stealing this mapping from [vimspector](https://github.com/puremourning/vimspector).
 
-
 # Install Visual Studio Build Tools
 
-This step is optional. It's a fairly big install, but you will need this for some Python libraries like [llama_index](https://github.com/run-llama/llama_index). If you're into things like that, you're going to need it at some point. Here's the quick way to get the important parts up and running.
+This step is optional. It's a fairly big install, but you will need this for some Python libraries like [llama_index](https://github.com/run-llama/llama_index). If you're into things like that, you're going to need it at some point. You can start off by running
 
-*  Got to [visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-*  click `Download Build Tools`
-*  run the installer
-*  select the C++ compiler when running the installer
-*  Install "Desktop development with C++"
+```
+winget install Microsoft.VisualStudio.2022.BuildTools --source winget
+```
+
+This takes several minutes, but only installs the Visual Studio Installer. Once that's done, run the Visual Studio Installer from the Windows menu.
+
+*  Click 'Modify'.
+*  Select "Desktop development with C++".
+*  Click 'Modify' again.
 *  You could *probably* go into "Individual Components" and install "C++ CMake tools for Windows" and "Windows 11 SDK" only, but the entire "Workload" is only 1.75GB and it's not worth the hassle to figure out what you need and what you don't.
-
-
+*  There's also a way, I'm sure to [Use command-line parameters to install Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022#use-winget-to-install-or-modify-visual-studio), but I'm not too proud to use the menus.
+ 
 # Install Lazygit
 
-This step is optional, but [Lazygit](https://github.com/jesseduffield/lazygit/) is fun and cool and useful. Like all Git interfaces, it's got [issues](https://github.com/jesseduffield/lazygit/issues)—as I write this, 666 open issues—but in addition to being fun and cool, it's a chance to try out a new Windows tool: `winget`. And don't let the open issues put you off. As I said (and if you'll excuse a little fun with the coincidence), it's *the nature of the beast*. Which may be a big part of the reason you're installing Vim in the first place (fewer interfaces).
+This step is optional, but [Lazygit](https://github.com/jesseduffield/lazygit/) is fun and cool and useful. Like all Git interfaces, it's got [issues](https://github.com/jesseduffield/lazygit/issues)---as I write this, 666 open issues---but don't let the open issues put you off. As I said (and if you'll excuse a little fun with the coincidence), it's *the nature of the beast*---which may be a big part of the reason you're installing Vim in the first place (fewer interfaces).
 
-Run `winget install -e --id=JesseDuffield.lazygit`, and winget will install Lazygit for you. Close and restart your Windows Terminal, navigate to a Git project, and type `lazygit` to have a look.
+```
+winget install JesseDuffield.lazygit --source winget
+```
+
+Close and restart your Windows Terminal, navigate to a Git project, and type `lazygit` to have a look.
