@@ -32,6 +32,7 @@ broken for articles. */
     list-style: disc;
     padding-left: 0px;
     margin-left: 2em;
+    font-size: 16px;
 }
 
 .blog-content ol {
@@ -39,6 +40,7 @@ broken for articles. */
     list-style: decimal;
     padding-left: 0px;
     margin-left: 2em;
+    font-size: 16px;
 }
 
 .blog-content li {
@@ -46,15 +48,15 @@ broken for articles. */
     margin-bottom: 1em;
 }
 
+
 /* blog text was picking up too-light gray from trade-jekyll */
 .blog-content p {
-    font-family: Lato;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
     line-height: 24px;
     color: var(--blog-text-color);
-    /* font-size: 1.1em; */
+    font-size: 16px;
 }
 
 .blog-content blockquote li {
