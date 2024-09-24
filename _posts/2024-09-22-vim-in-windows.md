@@ -22,7 +22,7 @@ code {
 
 # Install Vim
 
-This one is easy, because we're not going to compile Vim, but there are some tricks if you aren't familiar with Windows.
+This is an obvious first step, and it's an easy one, because we're not going to compile Vim. But there are some tricks if you aren't familiar with Windows.
 
 Go to [Releases · vim/vim-win32-installer (github.com)](https://github.com/vim/vim-win32-installer/releases), download the exe file for your architecture (32 or 64 bit), run it, and accept all the defaults. This will add a few icons to your desktop that you probably don't want, but it's easy to delete them later. Elsewhere in this guide, we're going to use `winget`, but Vim itself suggests downloading and installing from GitHub.
 
@@ -30,7 +30,7 @@ The installer will not add `vim` and `gvim` to your Path environment variable. Y
 
 ## Editing the Path Environment Variable
 
-If you are completely unfamiliar with Windows, let's quickly go through this. You don't *have to* have Vim in your path, you could just use shell aliases, but if you want to, there are multiple ways to do it. I'll describe two. I prefer Option Two, because there's less room for error, and you'll probably end up there eventually to clean up mistakes made with Option One.
+If you are completely unfamiliar with Windows, let's quickly go through this. You don't *have to* have Vim in your path, you could just use shell aliases, but if you want to, there are multiple ways to do it. I'll describe two. I prefer Option Two, because there's less room for error, and you'll probably end up there eventually to clean up mistakes made with Option One. Option One is for people who wish to script their entire device configuration.
 
 ### Option One, Command Line
 
@@ -93,7 +93,7 @@ This will preserve the nice defaults. The `vim9script` is optional, but the rest
 
 There are two versions of PowerShell: Windows PowerShell (blue icon) and cross-platform PowerShell (black icon). Windows comes with blue-icon PowerShell pre-installed, but if you open it, you will see a prompt to install cross-platform (black-icon) PowerShell.
 
-Either ctrl-click the link in this prompt to [install the latest version of "PowerShell 7"](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.4) (cross-platform, black-icon PowerShell) or sun this in blue-icon PowerShell
+Either ctrl-click the link in this prompt to [install the latest version of "PowerShell 7"](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.4) or run this command in blue-icon PowerShell
 
 ```powershell
 winget install Microsoft.Powershell --source winget
@@ -136,7 +136,7 @@ Set-Alias -Name isort -Value 'C:\Users\USERNAME\AppData\Local\Programs\Python\Py
 
 When you open a new tab in PowerShell, that tab will be open to a system folder or your home directory, depending on how you have it configured. If you're working on a project in Vim, and you want to open a tab to run git or pre-commit or something else, then you probably want to open a new tab in the project directory.
 
-[This page](https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory) explains how to configure PowerShell to open a new tab in the same directory as the current tab. It explains a few-dozen other approaches as well, so I'll put the relevant information here.
+[This page](https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory) explains how to configure PowerShell to open a new tab in the same directory as the current tab. It explains a few-dozen other approaches as well, so I'll excerpt the relevant information here.
 
 Copy this code into your PowerShell profile:
 
@@ -198,7 +198,7 @@ From Vim, run the command `:py3 print("test")` to make sure you have it set up c
 
 You may find that Vim and all your plugins "just work" without setting `pythonthreehome` and `pythonthreedll`. Vim knows where to look for a typical Python install. However, that could break at any time if you install a version of Python that Vim or one of your plugins does not support.
 
-As I write this, Python 13 is in prerelease, and Vim itself is not compatible. So not even `vim -u NONE` will get you past the errors. So, go ahead and explicitly set these values in your vimrc.
+As I write this, Python 13 is in prerelease, and Vim itself is not compatible. So not even `vim -u NONE` will get you past the errors. Go ahead and explicitly set these values in your vimrc.
 
 ---
 
@@ -215,9 +215,9 @@ C:\Users\shaya\AppData\Local\Programs\Python\Python311\Scripts\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python311\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python310\Scripts\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python310\;
-C:\Users\shaya\AppData\Local\Programs\Python\Python38\Scripts\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python39\Scripts\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python39\;
+C:\Users\shaya\AppData\Local\Programs\Python\Python38\Scripts\;
 C:\Users\shaya\AppData\Local\Programs\Python\Python38\;
 C:\Users\shaya\AppData\Local\Programs\Python\Launcher\;
 ```
@@ -280,7 +280,7 @@ git config --global init.defaultBranch main
 
 Don't let the `--global` flag misinform you. These are settings for one user. These commands update a file in your home directory called `.gitconfig`. You can edit this file later or re-run the commands if you don't like what I've put here, but these are the standard settings for Vim users.
 
-If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. GVim is a little quicker on Windows than Vit through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
+If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. GVim is a little quicker on Windows than Vim through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
 
 You can also name your default branch whatever you like. If you don't configure it here, you'll get the default `master`. GitHub uses `main`, so if you're using GitHub, you'll save a bit of work by matching what they use there.
 
@@ -288,7 +288,7 @@ You can also name your default branch whatever you like. If you don't configure 
 
 The installer will add `git` to your "System environment" Path (not your "User variables" Path).
 
-The Git installer also provides Curl and Bash. Curl will be on your path for plugins like vim-instant-markdown. You can add bash to your path or just create an alias in your PowerShell profile. It's not necessary for Vim, but it's convenient and already installed if you know Bash. Add this to your PowerShell profile.
+The Git installer also provides Curl and Bash. Curl will be on your path for plugins like [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown). You can add bash to your path or just create an alias in your PowerShell profile. It's not necessary for Vim, but it's convenient and already installed if you know Bash. Add this to your PowerShell profile.
 
 ```powershell
 Set-Alias -Name bash -Value 'C:\Program Files\Git\bin\bash.exe'
@@ -353,6 +353,22 @@ run
 
 to make sure everything is set up correctly. As with Python discussed previously, Vim will probably find your Lua without adding this line to the vimrc, but making it explicit can save surprises later on.
 
+# Install Node
+
+This step is optional. If you need Node for [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown) or another plugin, this is a good time to install it. There's not much to it, but it is a JavaScript runtime environment, and some people don't want that weight. Unless you're coming from something extraordinarily light, the editor you were using most likely installed Node without asking you. Your choice.
+
+```powershell
+winget install OpenJS.NodeJS.LTS --source winget
+```
+
+You run type
+
+```powershell
+node -v
+```
+
+to check the install.
+
 # Gvim Fullscreen
 
 This step is optional, but if you dislike the toolbar's intruding into your immersive coding experience, you might not feel that way. This executable will allow you to fullscreen gVim.
@@ -388,7 +404,7 @@ This takes several minutes, but only installs the Visual Studio Installer. Once 
 * Select "Desktop development with C++".
 * Click 'Modify' again.
 * You could *probably* go into "Individual Components" and install "C++ CMake tools for Windows" and "Windows 11 SDK" only, but the entire "Workload" is only 1.75GB and it's not worth the hassle to figure out what you need and what you don't.
-* There's also a way, I'm sure to [Use command-line parameters to install Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022#use-winget-to-install-or-modify-visual-studio), but I'm not too proud to use the menus.
+* There's also a way, I'm sure to [Use command-line parameters to install Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022#use-winget-to-install-or-modify-visual-studio), but I'm not too proud to use the gui installer.
 
 # Install Lazygit
 
