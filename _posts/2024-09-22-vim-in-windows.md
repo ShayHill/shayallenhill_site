@@ -921,7 +921,7 @@ Vimspector will need a configuration file. Once you get accustomed to reading an
     "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
     "configurations": {
         "run": {
-            "adapter": "debugpy",
+			"adapter": "debugpy",
             "configuration": {
                 "name": "run this Python file",
                 "request": "launch",
