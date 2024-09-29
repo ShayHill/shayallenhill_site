@@ -20,6 +20,8 @@ code {
 }
 </style>
 
+If you intend to work your way through this article, go [here](https://github.com/ShayHill/article_install_vim_in_windows/tree/main) for the version-controlled source.
+
 # Introduction
 
 The traditional ethos of Vim has been "Vim is my text editor; my OS is my IDE", meaning Vim users would write or edit a program in Vim then use git, grep, sed, awk, find, build, etc., etc., etc. through each application's command-line interface instead of a graphical *interface to an interface* built into an IDE.
