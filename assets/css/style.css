@@ -33,7 +33,8 @@
 /* 1. Theme default css */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
  body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	line-height: 1.5;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 14px;
