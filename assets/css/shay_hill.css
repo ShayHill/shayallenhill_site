@@ -5,66 +5,66 @@
 
 .blog-content img {
 	max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* make links in text look like links */
 .blog-content a {
-    color: #0645ad;
-    text-decoration: underline;
+	color: #0645ad;
+	text-decoration: underline;
 }
 
 /* figcaptions look terrible by default */
 .blog-content figcaption {
-    font-size: 12px;
-    color: #666;
-    text-align: center;
-    margin-top: 10px;
-    font-style: italic;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	margin-top: 10px;
+	font-style: italic;
 }
 
 /* trade-jekyll uses lists to lay out images, which means they're effectively
 broken for articles. */
 .blog-content ul {
-    color: var(--blog-text-color);
-    list-style: disc;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    font-size: 16px;
+	color: var(--blog-text-color);
+	list-style: disc;
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	font-size: 16px;
 }
 
 .blog-content ol {
-    color: var(--blog-text-color);
-    list-style: decimal;
-    padding-left: 0px;
-    margin-left: 2em;
-    font-size: 16px;
+	color: var(--blog-text-color);
+	list-style: decimal;
+	padding-left: 0px;
+	margin-left: 2em;
+	font-size: 16px;
 }
 
 .blog-content li {
-    display: list-item;
-    list-style: inherit;
+	display: list-item;
+	list-style: inherit;
 }
 
 
 /* blog text was picking up too-light gray from trade-jekyll */
 .blog-content p {
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    color: var(--blog-text-color);
-    font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	color: var(--blog-text-color);
+	font-size: 16px;
 }
 
 .blog-content blockquote li {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 
@@ -72,52 +72,54 @@ broken for articles. */
  * like links (blue and underlined). Fix that. */
 .blog-title a {
 	color: var(--blog-title-color);
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /* the title of the blog post on the directory pages */
 .blog-directory h2 {
-    margin-top: 0;
+	margin-top: 0;
 }
+
 .blog-content h1,
 .blog-content h2,
 .blog-content h3,
 .blog-content h4,
 .blog-content h5 {
-    font-family:"Ivar Text",Georgia,serif;   
-    margin-top: 1.5em;
+	margin-top: 1em;
+	font-weight: 400;
+	light-height: 1.25;
+	border-bottom: 1px solid #cccccc;
 }
 
-
 .blog-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+	font-size: 2em;
+	margin-bottom: 0.5em;
 }
 
 .blog-content h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
 }
 
 .blog-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
 }
 
 .blog-content code {
-    background-color: #818b981f;
-    color: #000000;
-    border-radius: 0.3em;
-    padding: 4px 5px 6px;
-    font-family: monospace;
+	background-color: #818b981f;
+	color: #000000;
+	border-radius: 0.3em;
+	padding: 4px 5px 6px;
+	font-family: monospace;
 }
 
 /* better navigation for jumping to a heading i */
 div.anchor {
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
 }
 
 /* improve looks from syntax.css, which will be overwritten if you update the code theme */
@@ -126,11 +128,11 @@ div.anchor {
 /* improve looks from syntax.css, which will be overwritten if you update the code theme */
 
 .highlight code {
-    display: block;
-    padding-inline: 1em;
-    font-size: larger;
-    font-weight: 400;
-    background-color: inherit;
+	display: block;
+	padding-inline: 1em;
+	font-size: larger;
+	font-weight: 400;
+	background-color: inherit;
 }
 
 .highlight {
@@ -156,11 +158,11 @@ div .highlight {
  * e-mail address when there is room in the header, and hide it when there is
  * not.*/
 .long-name {
-    display: inline-block;
-    margin-right: 0px;
+	display: inline-block;
+	margin-right: 0px;
 }
 .long-name span {
-    margin-right: 0px;
+	margin-right: 0px;
 }
 
 
@@ -180,23 +182,23 @@ div .highlight {
 
 .blog-figure-75 img {
 	max-width: 75%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .blog-figure-50 img {
 	max-width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .blog-figure-25 img {
 	max-width: 25%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* always orange text for links to my personal blog */
@@ -216,30 +218,30 @@ div .highlight {
 /* ext emphasis without headings */
 
 p.ext-emphasis {
-    margin-top: 1.5em;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--heading-color);
+	margin-top: 1.5em;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--heading-color);
 }
 
 
 p.section-summary {
-    font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-    margin-bottom: 2em;
-    color: var(--heading-color);
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	font-weight: bold;
+	margin-bottom: 2em;
+	color: var(--heading-color);
 }
 
 p.section-summary-head {
-    margin-bottom: 0em;
-    font-size: 1.5em;
-    color: #008181;
+	margin-bottom: 0em;
+	font-size: 1.5em;
+	color: #008181;
 }
 
 p.section-summary-body {
-    font-weight: normal;
-    margin-left: 2em;
-    font-size: 1.25em;
+	font-weight: normal;
+	margin-left: 2em;
+	font-size: 1.25em;
 }
 
 /* p.section-summary { */
@@ -257,7 +259,7 @@ p.section-summary-body {
 /* block styles for various "asides" */
 
 .big-blockquote {
-    font-style: normal;
+	font-style: normal;
 }
 
 .summation {
@@ -295,14 +297,14 @@ p.section-summary-body {
   text-align: left;
   
   box-shadow: 1px 1px 1px #999,
-              2px 2px 1px #999,
-              3px 3px 1px #999;
+	          2px 2px 1px #999,
+	          3px 3px 1px #999;
   transition-duration: .3s;
 }
 
 .internal-nav a {
 	color: #222;
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 .internal-nav a:hover {
 	color: #ff5e14;
@@ -320,8 +322,8 @@ p.section-summary-body {
 # blockquote with big quote from NNT Darts article.
 # This one needs ONE paragraph and some specific HTML to look nice
   <blockquote class="wp-block-quote">
-      <p markdown="span">ONE paragraph here</p>
-      <cite markdown="span">[WHOOP](https://www.whoop.com/)</cite>
+	  <p markdown="span">ONE paragraph here</p>
+	  <cite markdown="span">[WHOOP](https://www.whoop.com/)</cite>
   </blockquote>
 --------------------------------------------------------------*/
 
@@ -338,8 +340,8 @@ p.section-summary-body {
 }
 
 .large-quote p {
-    line-height: 1.5;
-    }
+	line-height: 1.5;
+	}
 
 .wp-block-quote,
 .pull-quote,
@@ -363,11 +365,11 @@ p.section-summary-body {
 	position: relative;
 	padding-top: 0;
 	padding-left: 15px;
-    color: #fff;
+	color: #fff;
 }
 
 .pull-quote p {
-    font-size: 1.8em;
+	font-size: 1.8em;
   line-height: 1.8;
 }
 
@@ -436,18 +438,18 @@ p.section-summary-body {
 }
 
 .center {
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .center-text {
-    text-align: center;
+	text-align: center;
 }
 
 
 ul.big-list {
-    margin-bottom: 1em;
-    font-size: 1.05em;
+	margin-bottom: 1em;
+	font-size: 1.05em;
 }
 
 /* format the home button on shayallenhill. This is fine when it's on the right
@@ -456,23 +458,23 @@ ul.big-list {
  * shayallenhill */
 
 .home-btn {
-    color: white !important;
-    margin-right: 15px;
+	color: white !important;
+	margin-right: 15px;
 }
 
 .home-btn a {
-    color: white !important;
+	color: white !important;
 }
 
 /* Put just a little space under the top-header for shayallenhill, because
  * there is no nav bar. */
 .top-header-nudge {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 /* A bit of space between the subscription form and Featured Articles. */
 .featured-articles-headspace {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 
 
@@ -483,23 +485,23 @@ ul.big-list {
 /* } */
 
 a.facebook-icon {
-    color: #0866ff !important;
+	color: #0866ff !important;
 }
 
 a.x-twitter-icon {
-    color: #878787 !important;
+	color: #878787 !important;
 }
 
 a.pinterest-icon {
-    color: #e60023 !important;
+	color: #e60023 !important;
 }
 
 a.linkedin-icon {
-    color: #3063c3 !important;
+	color: #3063c3 !important;
 }
 
 a.email-icon {
-    color: #f8bf00 !important;
+	color: #f8bf00 !important;
 }
 
 /* Give a little less space than the 40px default under the social-sharing
@@ -508,5 +510,5 @@ a.email-icon {
  * text. */
 
 .social-sharing-footspace h3 {
-    margin-bottom: 32px;
+	margin-bottom: 32px;
 }
