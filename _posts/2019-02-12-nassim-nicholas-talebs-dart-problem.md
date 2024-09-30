@@ -134,22 +134,22 @@ $$ \mathcal{P}(4) = \{[1, 1, 1, 1], [1, 1, 2], [2, 2], [1, 3], [4]\} \hspace{100
 
 ~~~ python
 def partitions(n):
- """Integer partitions
+    """Integer partitions
 
- Start with the partition of 1 and keep updating until you
- reach the partition of :n:.
- """
- current = [[1]]
- while current[-1] != [n]:
- next_partition = []
- for p in current:
- # orange arrow
- next_partition.append([1] + p)
- # teal arrow
- if len(p) == 1 or p[0] < p[1]:
- next_partition.append([p[0] + 1] + p[1:])
- current = next_partition
- return current
+    Start with the partition of 1 and keep updating until you
+    reach the partition of :n:.
+    """
+    current = [[1]]
+    while current[-1] != [n]:
+        next_partition = []
+        for p in current:
+            # orange arrow
+            next_partition.append([1] + p)
+            # teal arrow
+            if len(p) == 1 or p[0] < p[1]:
+                next_partition.append([p[0] + 1] + p[1:])
+        current = next_partition
+    return current
 
 >>> partitions(8)
  [
@@ -169,14 +169,14 @@ def partitions(n):
 -- integer partitions
 partitions :: Integral p => p -> [[p]]
 partitions n = nextPartition [[1]]
- where
- -- orange arrow
- oneAdded = map (\xs -> 1:xs)
- -- teal arrow
- headIncd ps = [x+1:xs | x:xs <- ps, null xs || x < xs !! 0]
- nextPartition ps
- | last ps == [n] = ps
- | otherwise = nextPartition $ oneAdded ps ++ headIncd ps
+  where
+    -- orange arrow
+    oneAdded = map (\xs -> 1:xs)
+    -- teal arrow
+    headIncd ps = [x + 1 : xs | x : xs <- ps, null xs || x < xs !! 0]
+    nextPartition ps
+      | last ps == [n] = ps
+      | otherwise = nextPartition $ oneAdded ps ++ headIncd ps
 ~~~
 
 ## factorial
@@ -218,11 +218,11 @@ $$ {4! = 1 * 2 * 3 * 4 = 24} \hspace{100cm} $$
 
 ~~~ python
 def factorial(n):
- """How many ways can :n: items be lined up?"""
- total = 1
- for i in range(2, n + 1):
- total *= i
- return total
+    """How many ways can :n: items be lined up?"""
+    total = 1
+    for i in range(2, n + 1):
+        total *= i
+    return total
 
 >>> factorial(8)
 40320
@@ -275,11 +275,11 @@ $$ {\mathcal{A}([1, 1, 2]) = \frac{4!}{1!1!2!} = 12} \hspace{100cm} $$
 
 ~~~ python
 def arrangements(partition):
- """How many ways can multiple groups of like items be lined up?"""
- denominator = 1
- for summand in partition:
- denominator *= factorial(summand)
- return factorial(sum(partition)) // denominator
+    """How many ways can multiple groups of like items be lined up?"""
+    denominator = 1
+    for summand in partition:
+        denominator *= factorial(summand)
+    return factorial(sum(partition)) // denominator
 
 >>> arrangements([2, 1, 1])
 12
@@ -294,7 +294,7 @@ def arrangements(partition):
 -- count arrangements with (potentially) matching items
 arrangements :: Integral a => [a] -> a
 arrangements xs = factorial (sum xs) `div`
- product (map factorial xs)
+                  product (map factorial xs)
 ~~~
 
 ## caution with duplicates!
@@ -359,18 +359,18 @@ Here’s what we just counted. Each of the 10 selections below can be arranged 1
 
 ~~~ python
 def same_size_groups(partition):
- """Frequency of partition elements."""
- return [partition.count(x) for x in set(partition)]
+    """Frequency of partition elements."""
+    return [partition.count(x) for x in set(partition)]
 
 >>> same_size_groups([3, 3, 1, 1, 1])
 [2, 3]
 
 def selections(partition):
- """How many ordered lists with (p in partition)-sized groups?"""
- denominator = 1
- for member_count in same_size_groups(partition):
- denominator *= factorial(member_count)
- return factorial(len(partition)) // denominator
+    """How many ordered lists with (p in partition)-sized groups?"""
+    denominator = 1
+    for member_count in same_size_groups(partition):
+        denominator *= factorial(member_count)
+    return factorial(len(partition)) // denominator
 
 >>> selections([3, 3, 1, 1, 1])
 10
@@ -385,8 +385,12 @@ def selections(partition):
 -- run lengths
 sameSizeGroups :: Eq a => [a] -> [Int]
 sameSizeGroups [] = []
-sameSizeGroups (x:xs) = [length (takeWhile (==x) xs) + 1] ++
- sameSizeGroups (dropWhile (==x) xs)
+sameSizeGroups (x:xs) =
+  let
+    currentGroupLength = length (takeWhile (== x) xs) + 1
+    remainingGroups = sameSizeGroups (dropWhile (== x) xs)
+  in
+    [currentGroupLength] ++ remainingGroups
 
 Prelude> sameSizeGroups [1, 1, 1, 1, 2, 2, 2, 4, 4]
 [4, 3, 2]
@@ -394,7 +398,7 @@ Prelude> sameSizeGroups [1, 1, 1, 1, 2, 2, 2, 4, 4]
 -- count ordered lists with (p in ps)-sized groups
 selections :: Eq a => [a] -> Int
 selections ps = factorial (length ps) `div`
- product (map factorial $ sameSizeGroups ps)
+                product (map factorial $ sameSizeGroups ps)
 ~~~
 
 ### Don’t miss this!
@@ -470,11 +474,11 @@ $$ {\mathcal{S'}(5, [1, 1, 2]) = \mathcal{S}([1, 1, 2, 0, 0]) = 30} \hspace{100c
 
 ~~~ python
 def subselections(choices, partition):
- """Count ordered lists of :choices: items
- with (p in partition)-sized groups.
- """
- unused = choices - len(partition)
- return selections(list(partition) + [0] * unused)
+    """Count ordered lists of :choices: items
+    with (p in partition)-sized groups.
+    """
+    unused = choices - len(partition)
+    return selections(list(partition) + [0] * unused)
 
 >>> subselections(5, [1, 1, 2])
 30
@@ -579,13 +583,13 @@ $$ {\mathcal{D}(n, d, m) = \frac{\sum{ \mathcal{S'}(d, P_i) \mathcal{A}(P_i)}}{\
 
 ~~~ python
 def darts(n, d, m):
- """You throw n darts uniformly randomly on a map with d squares.
- What's the probability of getting m darts in a single square
- (any square)?
- """
- qualified = [p for p in partitions(n) if max(p) >= m]
- m_size_groups = sum(subselections(d, p) * arrangements(p) for p in qualified)
- return m_size_groups / d ** n
+    """You throw n darts uniformly randomly on a map with d squares.
+    What's the probability of getting m darts in a single square
+    (any square)?
+    """
+    qualified = [p for p in partitions(n) if max(p) >= m]
+    m_size_groups = sum(subselections(d, p) * arrangements(p) for p in qualified)
+    return m_size_groups / d**n
 
 >>> darts(5, 17, 3)
 0.03162078998096287
@@ -603,9 +607,9 @@ def darts(n, d, m):
 -- probability of getting m darts in a single square (any square)?
 darts :: Int -> Int -> Int -> Ratio Int
 darts n d m = mSizeGroups % (d ^ n)
- where
- qualified = [p | p <- partitions n, maximum p >= m]
- mSizeGroups = sum [subselections d q * arrangements q | q <- qualified]
+  where
+    qualified = [p | p <- partitions n, maximum p >= m]
+    mSizeGroups = sum [subselections d q * arrangements q | q <- qualified]
 
 Prelude> darts 5 17 3
 2641 % 83521
