@@ -85,25 +85,27 @@ broken for articles. */
 .blog-content h3,
 .blog-content h4,
 .blog-content h5 {
-	margin-top: 1em;
+	margin-top: 1.2em;
 	font-weight: 400;
 	light-height: 1.25;
-	border-bottom: 1px solid #cccccc;
+	margin-bottom 16px
+	margin-inline-end 0px
+	margin-inline-start 0px
+	margin-top 24px
 }
 
 .blog-content h1 {
-	font-size: 2em;
-	margin-bottom: 0.5em;
+	font-size: 32px;
+	border-bottom: 1px solid #cccccc;
 }
 
 .blog-content h2 {
-	font-size: 1.5em;
-	margin-bottom: 0.5em;
+	font-size: 24px;
+	border-bottom: 1px solid #cccccc;
 }
 
 .blog-content h3 {
-	font-size: 1.5em;
-	margin-bottom: 0.5em;
+	font-size: 20px;
 }
 
 .blog-content code {
