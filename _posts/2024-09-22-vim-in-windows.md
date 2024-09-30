@@ -11,13 +11,6 @@ post_image: "/assets/img/blog/vim-in-windows/chemistry_set.png"
 
 <style>
 
-code {
-    background-color: #666666;
-    color: #f8f8f2;
-    border-radius: 0.3em;
-    padding: 4px 5px 6px;
-    %% white-space: nowrap;
-}
 </style>
 
 If you intend to work your way through this article, go [here](https://github.com/ShayHill/article_install_vim_in_windows/tree/main) for the version-controlled source.
