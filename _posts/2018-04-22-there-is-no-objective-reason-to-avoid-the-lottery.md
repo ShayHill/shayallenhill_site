@@ -45,9 +45,9 @@ Not only can money not buy everything, money can’t even buy everything money *
 
 The first part is common sense, I’ll highlight the second part, because it’s easy to miss—at least, it was easy for *me* to miss.
 
-<blockquote class="pull-quote">
-    <p markdown="span">Money can’t buy everything money can buy.</p>
-</blockquote>
+<aside markdown="1">
+Money can't buy everything money can buy."
+</aside>
 
 $250,000 is “a quarter of a million dollars.” You can buy a gently used Rolls Royce for a quarter of of a million dollars. However, for a quarter of one dollar, you *cannot* buy one millionth of a Rolls Royce (at least, not in any useful way). For a quarter you can buy a gumball.
 

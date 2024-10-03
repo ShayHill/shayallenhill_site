@@ -50,19 +50,18 @@ This image is a model of our coin game.
 
 I’m sure you’ve seen the error by now: much of this *assumes* a **50%** chance (underlined in the picture) that I’d give you either coin.
 
-The game did not begin with “You receive a coin at random” or even “You pick a coin.” No, **I*** *picked the coin, and you don’t know me well enough to know how often I’d just give away my special coin.
+The game did not begin with “You receive a coin at random” or even “You pick a coin.” No, **I** picked the coin, and you don’t know me well enough to know how often I’d just give away my special coin.
 
-**And getting to know me well enough is the ***real*** game**,
+<aside markdown="1">
+And getting to know me well enough is the *real* game.
+</aside>
 
 because in *real* life, the question is rarely “What did I get?” rather “How do I [not] get it again?”
 
 Back to that underlined **50%**. In probability terms, we assumed a *prior* of 50%. We didn’t have any reason to (actually, we did; keep reading), but we had to choose *something*.
 
-<blockquote class="explanation" markdown="1">
-*The word “assume” has an ugly connotation. Instead of “assumed”, let’s use “estimated”. We’ll say that we estimated a prior of 50%.*
-
-*As estimates go, 50% isn’t bad. By picking the exact middle, we will at most be “half wrong”. Right?*
-
+<blockquote class="fourth-wall" markdown="1">
+The word “assume” has an ugly connotation. Instead of “assumed”, let’s use “estimated”. We’ll say that we *estimated* a prior of 50%. As estimates go, 50% isn’t bad. By picking the exact middle, we will at most be “half wrong”. Right?
 </blockquote>
 
 So, given 50% as a starting point, where can we go?
@@ -71,16 +70,20 @@ Here’s where it hurts. You’ll need over 1000 turns to *approach* a prior wit
 
 Here’s that sentence again.
 
-<blockquote class="pull-quote" markdown="1">
+<aside markdown="1">
 You’ll need over 1000 turns to *approach* a prior with any useful measure of confidence.
+</aside>
 
-</blockquote>
+Let’s look at a specific example. I will give you the normal coin 2/3 of the time, but you won't know that. How often I give you the normal coins what your're trying to guess.
 
-Let’s look at a specific example. if I gave you the normal coin 2/3 of the time, you’d have an even chance, on seeing heads, of having received the normal or special coin.
+Your strategy, as above:
+
+* Tails means you definitely got the normal coin.
+* Heads means a `p%` chance that you got the normal coin.
 
 {% include image.html url="/assets/img/blog/why-is-inference-so-hard/bayes_coins_2_3.jpg" description="with heads, it’s “anybody’s guess”" %}
 
-Given this 2/3 prior, 1000 turns would give you a 69% chance of estimating within 3%.
+Starting with no information (prior = 50%), 1000 turns would give you a 69% chance of estimating within 3%.
 
 That is, you’d have a reasonable chance at a decent guess–**after 1000 turns**. And you’d better have one Hell of a margin to come out ahead on a guess like that–**after 1000 turns**.
 
@@ -102,7 +105,6 @@ If you’re Google, Amazon, or Walmart, this need for data won’t be a problem.
 If you enjoy topics like this, please subscribe. And check out
 
 * [Matti Heino](https://mattiheino.com/)‘s articles on probability, complexity, social science methodology, and research transparency.
-* [Aerin Kim](https://medium.com/@aerinykim)‘s somewhat-lower-level “notepad for Applied Math / CS / Deep Learning topics.”
 * [Nancy Pi](https://www.youtube.com/channel/UCRGXV1QlxZ8aucmE45tRx8w)‘s even-lower-level whiteboard talks on all the Calculus you might have slept (or cried) through in school.
 
 </blockquote>

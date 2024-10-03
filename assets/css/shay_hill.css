@@ -1,83 +1,167 @@
-/* extensions to trade-jekyll css classes */
-/* extensions to trade-jekyll css classes */
-/* extensions to trade-jekyll css classes */
-/* extensions to trade-jekyll css classes */
+
+/* ----------------------------------------------------------------------------            
+ * Override styles that came with the theme.
+---------------------------------------------------------------------------- */
+
+/* font definition from GitHub */
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: inherit;
+}
+
+p {
+  font-size: inherit;
+}
+
+/* no style for aside exists outside this file */
+aside {
+  font-size: 1.75em; 
+  text-align: center; 
+  color: #0f5b53; 
+  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif; 
+  margin: 0 0.25em; 
+}
+
+
+/* The links from foundationsafety selected articles to shayallenhill.com */
+a.shayallenhill-link {
+  color: #008181;
+}
+
+/* /* Make the main menu (home probability programming ... ) thinner. */
+/*  * This is a visual improvement on both sites. */ */
+/* .main-menu ul li a { */
+/* 	padding: 15px 0; */
+/* } */
+
+
+/* Decrease the vertical space between articles in the main blog menu. */
+.blog-wrapper {
+  color: #ff0000;
+	margin-bottom: 200px !important;
+}
+
+
+/* Change the image seen when hovering over services menu items on
+ * foundationsafety. */
+.features-wrap:hover {
+	background-image: url(../img/about/lightbulb.jpg);
+}
+
+/* Prevent 13px font size specified for e-mail and phone number. */
+.header-top-cta span {
+	font-size: 14px;
+}
+
+/* Prevent 13px font size specified for "Connect:" */
+.top-social-links span {
+	font-size: 14px;
+}
+
+/* Tighten up spacing on main blog menu (less space beneath large images) */
+.blog-thumb {
+	margin-bottom: 0;
+}
+
+/* Tighten up spacing between sidebar and content. */
+.widget {
+	padding: 0;
+}
+
+/* Lighten up text in black footer. */
+.footer-text p {
+  color: #7e7e7e;
+}
+
+/* ----------------------------------------------------------------------------            
+ * Improve the layout of the blog menu and sidebar.
+---------------------------------------------------------------------------- */
+
+/* Increase the size of the share icons in the sidebar. */
+.blog-share-icon> a {
+  font-size: 30px;
+  margin-left: 0;
+}
+
+/* Decrease spacing between "Share This Article" and the links below it. */
+.blog-share-icon {
+  margin-top: 0;
+}
+
+/* Vertically align the share icons with the "Share This Article" text above
+ * them. */
+a.linked-icon {
+  margin-left: 0;
+}
+
+/* Tighten up spacing in sidebar. */
+.sidebar-rc-post ul li {
+	padding-bottom: 10px;
+}
+
+/* Reduce vertical space between blog images and blog titles. */
+.blog-title {
+  margin-top: 0;
+}
+
+/* ----------------------------------------------------------------------------            
+ * Trade jekyll wraps all blog content in a blog-content div.
+---------------------------------------------------------------------------- */
 
 .blog-content img {
-	max-width: 100%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* blog text was picking up too-light gray from trade-jekyll */
+.blog-content p {
+  /* font-size: 16px; */
+  color: #000;
+  font-weight: normal;
+}
+
+/* no bold text in blockquotes */
+.blog-content blockquote {
+  font-weight: inherit;
 }
 
 /* make links in text look like links */
 .blog-content a {
-	color: #0645ad;
-	text-decoration: underline;
+  color: #0645ad;
+  text-decoration: underline;
 }
 
 /* figcaptions look terrible by default */
 .blog-content figcaption {
-	font-size: 12px;
-	color: #666;
-	text-align: center;
-	margin-top: 10px;
-	font-style: italic;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
 }
 
 /* trade-jekyll uses lists to lay out images, which means they're effectively
 broken for articles. */
-.blog-content ul {
-	color: var(--blog-text-color);
-	list-style: disc;
-	display: block;
-	list-style-type: disc;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 40px;
-	font-size: 16px;
-}
 
-.blog-content ol {
-	color: var(--blog-text-color);
-	list-style: decimal;
-	padding-left: 0px;
-	margin-left: 2em;
-	font-size: 16px;
+.blog-content ul {
+  display: block;
+  margin: 1em 0;
+  padding-inline-start: 40px;
+  list-style: disc;
 }
 
 .blog-content li {
-	display: list-item;
-	list-style: inherit;
+  list-style: inherit;
 }
 
+/* blog titles pick up `blog-content a` (which I've intentionally styled to
+ * look like links (blue and underlined). Fix that. */
 
-/* blog text was picking up too-light gray from trade-jekyll */
-.blog-content p {
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	color: var(--blog-text-color);
-	font-size: 16px;
-}
-
-.blog-content blockquote li {
-	font-weight: normal;
-}
-
-
-/* blog titles pick up blog-content a (which I've intentionally styled to look
- * like links (blue and underlined). Fix that. */
 .blog-title a {
-	color: var(--blog-title-color);
-	text-decoration: none;
-}
-
-/* the title of the blog post on the directory pages */
-.blog-directory h2 {
-	margin-top: 0;
+  color: var(--blog-title-color);
+  text-decoration: none;
 }
 
 .blog-content h1,
@@ -85,199 +169,196 @@ broken for articles. */
 .blog-content h3,
 .blog-content h4,
 .blog-content h5 {
-	margin-top: 1.2em;
-	font-weight: 400;
-	light-height: 1.25;
-	margin-bottom 16px
-	margin-inline-end 0px
-	margin-inline-start 0px
-	margin-top 24px
+  font-weight: 400;
+  margin: 24px 0 16px;
 }
 
 .blog-content h1 {
-	font-size: 32px;
-	border-bottom: 1px solid #cccccc;
+  font-size: 2em;
+  border-bottom: 1px solid #ccc;
 }
 
 .blog-content h2 {
-	font-size: 24px;
-	border-bottom: 1px solid #cccccc;
+  font-size: 1.5em;
+  border-bottom: 1px solid #ccc;
 }
 
 .blog-content h3 {
-	font-size: 20px;
+  font-size: 1.25em;
 }
 
 .blog-content code {
-	background-color: #818b981f;
-	color: #000000;
-	border-radius: 0.3em;
-	padding: 4px 5px 6px;
-	font-family: monospace;
+  background-color: #818b981f;
+  color: #000;
+  border-radius: 0.3em;
+  padding: 0.25em 0.35em;
+  font-family: monospace;
 }
 
 /* better navigation for jumping to a heading i */
 div.anchor {
-	display: block;
-	position: relative;
-	top: -100px;
-	visibility: hidden;
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
 }
 
-/* improve looks from syntax.css, which will be overwritten if you update the code theme */
-/* improve looks from syntax.css, which will be overwritten if you update the code theme */
-/* improve looks from syntax.css, which will be overwritten if you update the code theme */
-/* improve looks from syntax.css, which will be overwritten if you update the code theme */
+/* ----------------------------------------------------------------------------            
+ * Improve looks from syntax.css code theme. I added a border, which looks nice
+ * but breaks the padding. Without `background-color: inherit`, every space
+ * character is highlighted.
+---------------------------------------------------------------------------- */
 
 .highlight code {
-	display: block;
-	padding-inline: 1em;
-	font-size: larger;
-	font-weight: 400;
-	background-color: inherit;
+  display: block;
+  padding: 0 1em;
+  background-color: inherit;
 }
 
 .highlight {
-  border-radius: 10px;
+  border-radius: 0.625em;
   border: 1px solid #ccc;
 }
 
 div .highlight {
-  margin-bottom: 30px;
+  margin-bottom: 2em;
 }
 
 .highlight pre {
   margin-bottom: 0;
 }
 
-/* heading style names to hide in responsive.css*/
-/* heading style names to hide in responsive.css*/
-/* heading style names to hide in responsive.css*/
-/* heading style names to hide in responsive.css*/
 
-/*header-top-cta has a right margin of 7 pix for text like phone numbers,
+/* ----------------------------------------------------------------------------            
+ * Heading style names to hide in `responsive.css`.
+ * 
+ * `header-top-cta` has a right margin of 7px for text like phone numbers,
  * e-mail addresses, etc. Remove this margin to add FoundationSafety.com to my
  * e-mail address when there is room in the header, and hide it when there is
- * not.*/
+ * not.
+---------------------------------------------------------------------------- */
+
+
 .long-name {
-	display: inline-block;
-	margin-right: 0px;
+  display: inline-block;
+  margin-right: 0;
 }
+
 .long-name span {
-	margin-right: 0px;
+  margin-right: 0;
 }
 
-
-/* name the top content margin (previously named mt-100)
- * to simplify adjustments*/
+/* name the top content margin (previously named mt-100) to simplify
+ * adjustments */
 
 .content-area-margin {
-	padding-top: 50px;
+  padding-top: 50px;
 }
 
 
-/* explicitly limit the size of images in blog posts*/
-/* explicitly limit the size of images in blog posts*/
-/* explicitly limit the size of images in blog posts*/
-/* explicitly limit the size of images in blog posts*/
+/* ----------------------------------------------------------------------------            
+ * Explicitly limit the size of images in blog posts.
+---------------------------------------------------------------------------- */
 
 
 .blog-figure-75 img {
-	max-width: 75%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-figure-50 img {
-	max-width: 50%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-figure-25 img {
-	max-width: 25%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* always orange text for links to my personal blog */
-/* always orange text for links to my personal blog */
-/* always orange text for links to my personal blog */
-/* always orange text for links to my personal blog */
+/* ----------------------------------------------------------------------------            
+ * always highlight-color (orange or teal) text for links to foundation safety
+ * or personal blog
+---------------------------------------------------------------------------- */
 
-.blog-link a:link {color: var(--highlight-color);}
-.blog-link a:visited {color: var(--highlight-color);}
-.blog-link a:hover {color: var(--highlight-color);}
-.blog-link a:active {color: var(--highlight-color);}
+.blog-link a:link {
+  color: var(--highlight-color);
+}
 
+.blog-link a:visited {
+  color: var(--highlight-color);
+}
 
-/* ext emphasis without headings */
-/* ext emphasis without headings */
-/* ext emphasis without headings */
-/* ext emphasis without headings */
+.blog-link a:hover {
+  color: var(--highlight-color);
+}
+
+.blog-link a:active {
+  color: var(--highlight-color);
+}
+
+/* ----------------------------------------------------------------------------            
+ * Extra emphasis without headings.
+---------------------------------------------------------------------------- */
 
 p.ext-emphasis {
-	margin-top: 1.5em;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: var(--heading-color);
+  margin-top: 1.5em;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
+/* ----------------------------------------------------------------------------            
+ * A colorful header plus a line of bold text. Used in the secret-of-success
+ * article.
+---------------------------------------------------------------------------- */
 
 p.section-summary {
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-weight: bold;
-	margin-bottom: 2em;
-	color: var(--heading-color);
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times,
+    "Times New Roman", serif;
+  font-weight: bold;
+  margin-bottom: 2em;
 }
 
 p.section-summary-head {
-	margin-bottom: 0em;
-	font-size: 1.5em;
-	color: #008181;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: #008181;
 }
 
 p.section-summary-body {
-	font-weight: normal;
-	margin-left: 2em;
-	font-size: 1.25em;
+  font-weight: normal;
+  margin-left: 2em;
+  font-size: 1.25em;
 }
 
-/* p.section-summary { */
-/*     font-family: font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; */
-/*     margin-bottom: 2em; */
-/*     font-size: 1.25em; */
-/*     font-weight: bold; */
-/*     color: var(--heading-color); */
-/* } */
-
-
-/* block styles for various "asides" */
-/* block styles for various "asides" */
-/* block styles for various "asides" */
-/* block styles for various "asides" */
+/* ----------------------------------------------------------------------------            
+ * Block sides for various quotes and asides. Only some of these are used.
+---------------------------------------------------------------------------- */
 
 .big-blockquote {
-	font-style: normal;
+  font-style: normal;
 }
 
 .summation {
-	font-size:30px;
-	text-align:center;
-	font-family:Times, serif;
-	font-weight:bold;
-	font-style:italic;
+  font-size: 30px;
+  text-align: center;
+  font-family: Times, serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .plain-english {
   padding: 20px, 10px, 20px, 10px;
-  font-size:larger;
-  background-color:#fbf6f0;
-  border-left:3px dashed #d5bc8c;
-  border-right:3px dashed #d5bc8c;
+  font-size: larger;
+  background-color: #fbf6f0;
+  border-left: 3px dashed #d5bc8c;
+  border-right: 3px dashed #d5bc8c;
 }
 
 .ludwig {
@@ -286,231 +367,230 @@ p.section-summary-body {
   border-left: 5px solid #999;
 }
 
+/* .explanation { */
+/*   background: #eee; */
+/*   padding: 30px 30px 20px; */
+/*   border-radius: 10px; */
+/*   margin-bottom: 40px !important; */
+/*   margin-left: auto; */
+/*   margin-right: auto; */
+/*   width: 90%; */
+/*   border-left: 0 !important; */
+/*   color: #333; */
+/*   text-align: left; */
+/*   box-shadow: */
+/*     1px 1px 1px #999, */
+/*     2px 2px 1px #999, */
+/*     3px 3px 1px #999; */
+/*   transition-duration: 0.3s; */
+/* } */
+
 .explanation {
-  background: #eee;
-  padding: 30px 30px 20px 30px;
-  border-radius: 10px;
-  margin-bottom: 40px !important;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  border-left: 0 !important;
-  color: #333;
-  text-align: left;
-  
-  box-shadow: 1px 1px 1px #999,
-	          2px 2px 1px #999,
-	          3px 3px 1px #999;
-  transition-duration: .3s;
+  color: #4e4e4e; 
+  /* background: #0085f21a; */
+  border-left: 8px solid #0085f2;
+  padding: 1em;
+  padding-bottom: 0.1em;
+  font-style: normal;
+  /* border: 3px dotted red; */
+  /* border-radius: 10px; */
+  /* margin-bottom: 40px !important; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* width: 90%; */
+  /* border-left: 0 !important; */
+  /* color: #333; */
+  /* text-align: left; */
+  /* box-shadow: */
+  /*   1px 1px 1px #999, */
+  /*   2px 2px 1px #999, */
+  /*   3px 3px 1px #999; */
+  /* transition-duration: 0.3s; */
 }
 
-.internal-nav a {
-	color: #222;
-	text-decoration: none !important;
+.explanation p {
+  color: #4e4e4e; 
 }
+
+.fourth-wall {
+  color: #4e4e4e; 
+  background: #ffe5644d;
+  border-left: 8px solid #ffe564;
+  padding: 1em;
+  font-style: normal;
+  padding: 1em;
+  padding-bottom: 0.1em;
+  /* border: 3px dotted red; */
+  /* border-radius: 10px; */
+  /* margin-bottom: 40px !important; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* width: 90%; */
+  /* border-left: 0 !important; */
+  /* color: #333; */
+  /* text-align: left; */
+  /* box-shadow: */
+  /*   1px 1px 1px #999, */
+  /*   2px 2px 1px #999, */
+  /*   3px 3px 1px #999; */
+  /* transition-duration: 0.3s; */
+}
+
+.fourth-wall p {
+  color: #64737d;
+}
+
+
+
+/* ----------------------------------------------------------------------------            
+ * Navigation for palette pages
+---------------------------------------------------------------------------- */
+
+
+.internal-nav a {
+  color: #222;
+  text-decoration: none !important;
+}
+
 .internal-nav a:hover {
-	color: #ff5e14;
+  color: #ff5e14;
 }
 
 .internal-nav h2:hover {
-	color: #ff5e14;
+  color: #ff5e14;
 }
 
 .internal-nav a:active {
-	color: #ff5e14;
+  color: #ff5e14;
 }
 
-/*--------------------------------------------------------------
-# blockquote with big quote from NNT Darts article.
-# This one needs ONE paragraph and some specific HTML to look nice
-  <blockquote class="wp-block-quote">
-	  <p markdown="span">ONE paragraph here</p>
-	  <cite markdown="span">[WHOOP](https://www.whoop.com/)</cite>
-  </blockquote>
---------------------------------------------------------------*/
-
+/* ----------------------------------------------------------------------------            
+ * Short excerpts or examples for writing articles.
+---------------------------------------------------------------------------- */
 
 .large-quote {
-  font-size: 1.8em;
-  font-style: italic;
-  font-family: "Open Sans", serif;
-  padding: .3em 0em .1em 1.5em;
+  padding: 0.3em 0 0.1em 1.5em;
   margin: 0;
-  position: relative;
-  text-align: left;
-  border-left: 0px;
+  border-left: 0;
 }
 
 .large-quote p {
-	line-height: 1.5;
-	}
-
-.wp-block-quote,
-.pull-quote,
-.wp-block-quote.is-style-large,
-.wp-block-quote.has-text-align-right {
-	padding: 30px 30px 20px 45px !important;
-	margin-bottom: 20px;
-	background-color: #008181;
-	color: #fff;
-	border-radius: 5px;
-	border-left: 0;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  font-style: italic;
+  line-height: 1.5;
 }
 
-.wp-block-quote p,
-.pull-quote p,
-.wp-block-quote.is-style-large p,
-.wp-block-quote.has-text-align-right p {
-	font-size: larger;
-	font-family: "Open Sans", serif;
-	line-height: 1.4;
-	position: relative;
-	padding-top: 0;
-	padding-left: 15px;
-	color: #fff;
-}
 
-.pull-quote p {
-	font-size: 1.8em;
-  line-height: 1.8;
-}
+/* ----------------------------------------------------------------------------            
+ * Improve the look of equations.
+ *
+ * Use these explicity in markdown files.
+---------------------------------------------------------------------------- */
 
-.wp-block-quote p::before,
-.pull-quote p::before,
-.wp-block-quote.is-style-large p::before,
-.wp-block-quote.has-text-align-right p::before {
-	content: "\f10d";
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	text-decoration: inherit;
-	color: #fff;
-	font-size: 32px;
-	position: absolute;
-	top: -27px;
-	left: -27px;
-}
-
-.wp-block-quote a,
-.pull-quote a,
-.wp-block-quote.is-style-large a,
-.wp-block-quote.has-text-align-right a {
-	color: #fff;
-	text-decoration: underline;
-}
-
-.wp-block-quote em,
-.wp-block-quote i,
-.wp-block-quote cite,
-.pull-quote em,
-.pull-quote i,
-.pull-quote cite,
-.wp-block-quote.is-style-large em,
-.wp-block-quote.is-style-large i,
-.wp-block-quote.is-style-large cite,
-.wp-block-quote.has-text-align-right em,
-.wp-block-quote.has-text-align-right i,
-.wp-block-quote.has-text-align-right cite {
-	font-style: normal;
-}
-
-.wp-block-quote cite,
-.pull-quote cite,
-.wp-block-quote.is-style-large cite,
-.wp-block-quote.has-text-align-right cite {
-	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	letter-spacing: 0.05em;
-	float: right;
-}
-
-/* blockquote.wp-block-quote.has-text-align-right { */
-/* 	border-right: 0; */
-/* } */
-
-/* TODO: move classes from trade_endorsement.css */
 
 .math-par {
   text-align: left !important;
-  font-size: 130%
+  font-size: 130%;
 }
 
 .math-plus {
-  font-size: 130%
+  font-size: 130%;
 }
 
+/* ----------------------------------------------------------------------------            
+ * Position images and text
+ *
+ * Use these explicity in markdown files.
+---------------------------------------------------------------------------- */
+
 .center {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center-text {
-	text-align: center;
+  text-align: center;
 }
 
-
-ul.big-list {
-	margin-bottom: 1em;
-	font-size: 1.05em;
+.extra-bullet-spacing li {
+    list-style: inherit;
+    margin-bottom: 1em;
 }
 
-/* format the home button on shayallenhill. This is fine when it's on the right
+/* ----------------------------------------------------------------------------            
+ * format the home button on shayallenhill. This is fine when it's on the right
  * as on foundationsafety, but the text is blue and the spacing too tight on
  * shayallenhill. This class replaces top-btn for the big orange button on
- * shayallenhill */
+ * shayallenhill
+---------------------------------------------------------------------------- */
 
 .home-btn {
-	color: white !important;
-	margin-right: 15px;
+  color: white !important;
+  margin-right: 15px;
 }
 
 .home-btn a {
-	color: white !important;
+  color: white !important;
 }
 
 /* Put just a little space under the top-header for shayallenhill, because
  * there is no nav bar. */
 .top-header-nudge {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 /* A bit of space between the subscription form and Featured Articles. */
 .featured-articles-headspace {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
+/* ----------------------------------------------------------------------------            
+ * format the home button on shayallenhill. This is fine when it's on the right
+ * as on foundationsafety, but the text is blue and the spacing too tight on
+ * shayallenhill. This class replaces top-btn for the big orange button on
+ * shayallenhill
+---------------------------------------------------------------------------- */
 
-/* Colors for sharing links */
-
-/* .facebook-blue a { */
-/*     color: #0866ff !important; */
-/* } */
+/* ----------------------------------------------------------------------------            
+ * colors for sharing links
+---------------------------------------------------------------------------- */
 
 a.facebook-icon {
-	color: #0866ff !important;
+  color: #0866ff !important;
 }
 
 a.x-twitter-icon {
-	color: #878787 !important;
+  color: #878787 !important;
 }
 
 a.pinterest-icon {
-	color: #e60023 !important;
+  color: #e60023 !important;
 }
 
 a.linkedin-icon {
-	color: #3063c3 !important;
+  color: #3063c3 !important;
 }
 
 a.email-icon {
-	color: #f8bf00 !important;
+  color: #f8bf00 !important;
 }
 
-/* Give a little less space than the 40px default under the social-sharing
+/* ----------------------------------------------------------------------------            
+ * Give a little less space than the 40px default under the social-sharing
  * header in the footer. This is necessary because the connect icons are round
  * with zero space above them while the social-share icons behave more like
- * text. */
+ * text.
+---------------------------------------------------------------------------- */
 
 .social-sharing-footspace h3 {
-	margin-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+
+/* suggested by Sebastian to drop the logo in the top bar */
+.logo {
+    width: 120px;
+    margin-top: -43px;
+    z-index: 999;
 }

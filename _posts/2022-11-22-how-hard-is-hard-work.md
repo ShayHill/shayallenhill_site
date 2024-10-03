@@ -21,10 +21,7 @@ Let's look at that.
 
 The [WHOOP](https://www.whoop.com/) activity strap measures strain on a scale from 1 to 21. 21 is the max, and it would literally kill you. From the [WHOOP strain description](https://www.whoop.com/thelocker/how-does-whoop-strain-work-101/), which specifically mentions a marathon:
 
-<blockquote class="wp-block-quote">
-<p markdown="span">The WHOOP strain algorithm is logarithmic, meaning the higher your strain gets the harder it becomes to build more. ... It is much easier to go from a 0 to 10 strain than it is to go from a 10 to 20. Hypothetically, running a marathon might lift your day strain to 20.4 or 20.5.</p>
-<cite markdown="span">[WHOOP](https://www.whoop.com/)</cite>
-</blockquote>
+{% include sah_uag_blockquote.html content="The WHOOP strain algorithm is logarithmic, meaning the higher your strain gets the harder it becomes to build more. ... It is much easier to go from a 0 to 10 strain than it is to go from a 10 to 20. Hypothetically, running a marathon might lift your day strain to 20.4 or 20.5." author='<a href="https://www.whoop.com/">WHOOP</a>' %}
 
 No one has ever gotten a 21, not even after a marathon.
 

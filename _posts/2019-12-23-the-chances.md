@@ -68,8 +68,8 @@ Let’s set our variables.
 * $$n = 100$$ is the number of Saturdays.
 * $$k = 0$$ is the number of successes. Why $$0$$? That leads into the ungainly, but pretty much necessary explanation found in every probability article.
 
-<blockquote class="explanation" markdown="1">
-We’re not talking about it, but there is a small chance we could have *more than one* “impossible” Saturday. In that case, we’d have to figure out The Chances for exactly 1 impossible Saturday + The Chances for exactly 2 impossible Saturdays + … all the way up to 100. Instead, we’ll start with a 100% chance and subtract the chance of 0 “impossible” Saturdays.
+<blockquote class="fourth-wall" markdown="1">
+**Ungainly but pretty much necessary explanation:** We’re not talking about it, but there is a small chance we could have *more than one* “impossible” Saturday. In that case, we’d have to figure out The Chances for exactly 1 impossible Saturday + The Chances for exactly 2 impossible Saturdays + … all the way up to 100. Instead, we’ll start with a 100% chance and subtract the chance of 0 “impossible” Saturdays.
 </blockquote>
 
 {: style="font-size: 150%;"}

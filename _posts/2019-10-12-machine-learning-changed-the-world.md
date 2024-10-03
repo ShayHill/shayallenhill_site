@@ -69,7 +69,7 @@ If I put marbles into a glass, the volume is *discrete*. In other words, there a
 * 2 marbles
 * up to maybe 30 marbles depending on the size of my glass.
 
-<blockquote class="explanation" markdown="1">
+<blockquote class="fourth-wall" markdown="1">
 [1] Volume of water isn’t *strictly* continuous (it’s made of countable molecules). Only things like acceleration, bias, *and risk* are strictly continuous. But water of sufficient volume is *effectively* continuous, so we treat it that way–**even in equations**.
 
 And that’s the way I’m using continuous and discrete here: *effectively* continuous and *effectively* discrete. On the King Ranch (world’s largest ranch), cattle population is effectively continuous. In my back yard, cattle population is discrete.

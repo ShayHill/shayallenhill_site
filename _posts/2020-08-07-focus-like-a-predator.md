@@ -14,7 +14,7 @@ post_image: "/assets/img/blog/focus-like-a-predator/burrowing-3649048_1920.jpg"
 
 Have you ever been so intensely focused that someone had to shout, grab your shoulder, or even shut your laptop to "snap you out of it"? Through concentration, you'd taken your mind completely outside the room. We even talk about this as if it were a physical experience.
 
-<blockquote class="wp-block-quote">
+<blockquote class="large-quote">
     <p markdown="span">Where were you?</p>
     <p markdown="span">Sorry, I was miles away.</p>
     <p markdown="span">She's checked out.</p>

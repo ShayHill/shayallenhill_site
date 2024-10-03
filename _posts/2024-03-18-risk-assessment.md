@@ -11,21 +11,6 @@ post_image: "/assets/img/blog/risk-assessment/stool.png"
 
 <style>
 
-ul.tight-list {
-    margin-bottom: 1em;
-    font-size: 1.05em;
-}
-
-ul.big-list {
-    margin-bottom: 1em;
-    font-size: 1.05em;
-}
-
-.tight-list li {
-    list-style: inherit;
-    margin-bottom: 0;
-}
-
 </style>
 
 Chapter excerpted from my book, [Make Rules Without Making Enemies](https://www.barnesandnoble.com/w/make-rules-without-making-enemies-shay-hill/1143376217).
@@ -106,10 +91,8 @@ I selected mindfulness because it’s a bit squishy. It’s still kind of a nebu
 
 This squishiness makes mindfulness an excellent example of a principle. Most concepts have two parts:
 
-<ul class="tight-list">
-  <li>an aspirational component; and</li>
-  <li>a methodology</li>
-</ul>
+* an aspirational component; and
+* a methodology
 
 If you want mindfulness in your job plan, stick to methodology. If you can make something as aspirational and squishy as mindfulness visible from fifty feet, then you can “methodologize” pretty much anything into a series of actions that can be seen from fifty feet. Let’s get started.
 
@@ -146,16 +129,14 @@ These are often experienced personnel who have filled out hundreds of risk asses
 
 I’ve seen many hundred risk assessments that use the word “if.”
 
-<ul class="tight-list">
-  <li>“If the load won’t fit down the hatch …”</li>
-  <li>“If the board is too heavy …”</li>
-  <li>“If the ground is wet …”</li>
-  <li>“If the pipes are too hot …”</li>
-  <li>“If the weather is too cold …”</li>
-  <li>“If visibility is low …”</li>
-  <li>“If the bucket is too full …”</li>
-  <li>“If the shelf is too high …”</li>
-</ul>
+* “If the load won’t fit down the hatch …”
+* “If the board is too heavy …”
+* “If the ground is wet …”
+* “If the pipes are too hot …”
+* “If the weather is too cold …”
+* “If visibility is low …”
+* “If the bucket is too full …”
+* “If the shelf is too high …”
 
 Meanwhile, the load, board, ground, pipes, weather, visibility, bucket, shelf, etc. are RIGHT THERE. We don’t have to deal with “what if” when we already know. If something requires two people or a different tool or an additional step, why don’t we just go get it now instead of writing out this bowl of conditional spaghetti?
 
@@ -171,7 +152,7 @@ To facilitate cleaning, every floor, working place, and passageway shall be kept
 
 Every organization is different, but a nice example of distributed responsibility might go something like this:
 
-<ul class="big-list">
+<ul class="extra-bullet-spacing">
   <li>Before the contract is signed, the Corporate Safety Department makes an arrangement with the client to provide dumpsters or large-scale disposal of demolition waste.</li>
   <li>The Project Team has a good idea of how much demolition waste will be produced. The Project Team arranges for temporary storage and on-site transportation of demolition waste.</li>
   <li>The Site Safety Personnel create a waste management plan that describes the arrangements made by the Project Team and assigns responsibilities where required.</li>
@@ -181,7 +162,7 @@ Every organization is different, but a nice example of distributed responsibilit
 
 That’s the best case. The worst case is easier for *almost* everyone:
 
-<ul class="big-list">
+<ul class="extra-bullet-spacing">
   <li>The Corporate Safety Department pastes the requirement into the management system.</li>
   <li>Responsibility rolls down to the Project Team, who attach a copy of the entire management system to some site-specific document just to make sure the client signs it.</li>
   <li>Responsibility rolls down to the Site Safety Personnel, who copy some subset of the management system onto a smaller document, save it as “Waste Management Plan,” and upload it to the company SharePoint site.</li>

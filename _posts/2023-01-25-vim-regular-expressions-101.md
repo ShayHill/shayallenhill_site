@@ -459,11 +459,7 @@ After:
 
 "As few as possible" applied here means zero character replacements. However match **does occur** between characters! To explain this behavior I quote Bram himself:
 
-<blockquote class="wp-block-quote">
-<p markdown="span">Matching zero characters is still a match. Thus it will replace zero characters with a "_". And then go on to the next position, where it will match again.</p>
-<p markdown="span">It's true that using "\\{-}" is mostly useless. It works this way to be consistent with "\*", which also matches zero characters. There are more useless ones: "x\{-1,}" always matches one x. You could just use "x". More useful is something like "x\\{70}". The others are just consistent behavior: ..., "x\\{-3,}", "x\\{-2,}", "x\\{-1,}".</p>
-<cite markdown="span">Bram Moolenaar</cite>
-</blockquote>
+{% include sah_uag_blockquote.html content="Matching zero characters is still a match. Thus it will replace zero characters with a \"_\". And then go on to the next position, where it will match again.<br><br>It's true that using \"\\{-}\" is mostly useless. It works this way to be consistent with \"\*\", which also matches zero characters. There are more useless ones: \"x\{-1,}\" always matches one x. You could just use \"x\". More useful is something like \"x\\{70}\". The others are just consistent behavior: ..., \"x\\{-3,}\", \"x\\{-2,}\", \"x\\{-1,}\"." author='<a href="https://en.wikipedia.org/wiki/Bram_Moolenaar">Bram Moolenaar</a>' %}
 
 But what if we want to match only the second occurrence of quoted text? Or we want to replace only a part of the quoted text keeping the rest untouched? We will need *grouping* and *references* But before let's talk more about character ranges.
 

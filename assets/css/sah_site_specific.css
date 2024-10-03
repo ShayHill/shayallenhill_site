@@ -1,0 +1,11 @@
+/* CSS that specificly applies to foundationsafety.com */
+
+body {
+  --highlight-color: #008181;
+}
+
+/* Make the main menu (home probability programming ... ) thinner. */
+.main-menu ul li a {
+	padding: 15px 0;
+}
+
