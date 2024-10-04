@@ -80,7 +80,7 @@ Your strategy, as above:
 
 Starting with no information (prior = 50%), 1000 turns would give you a 69% chance of estimating within 3%.
 
----hat is, you’d have a reasonable chance at a decent guess---**after 1000 turns**. And you’d better have one Hell of a margin to come out ahead on a guess like that---**after 1000 turns**.
+That is, you’d have a reasonable chance at a decent guess---**after 1000 turns**. And you’d better have one Hell of a margin to come out ahead on a guess like that---**after 1000 turns**.
 
 If I were stingier with my special coin, your odds would be even worse.
 
