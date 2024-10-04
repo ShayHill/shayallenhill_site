@@ -9,7 +9,7 @@ excerpt: Pain, hunger, and cold.
 post_image: "/assets/img/blog/biohacking-notes/cold_spray.jpg"
 ---
 
-A biohack or “N=1” is taking–almost at random–one of the many “life changing” ideas on the Internet and trying it out on your own body.
+A biohack or “N=1” is taking---almost at random---one of the many “life changing” ideas on the Internet and trying it out on your own body.
 I’m not a dedicated biohacker. I don’t weight myself daily, keep journals, or document my heart-rate variability. For each subject here, there are dozens of books written, dozens more YouTube “challenges” (with swelling orchestral music) posted, and countless blogs filled.
 
 By those standards, I’ve compressed NINE conceivable online identities (have you come across the “intermittent-fasting guy” or the “standing all the time girl” yet?) into a few-hundred words. You’re welcome.
@@ -76,7 +76,7 @@ Update: Now 18 months in, I’ve added positions. I picked up a lap desk, so I c
 
 **Lesson 2**: I don’t feel any different during the day. I can usually sleep till Carrie Ann’s alarm goes off, and I’d probably sleep longer if the house stayed dark and quiet. I think a natural sleeping pattern requires a natural environment, and my house isn’t that. I’m looking for ways to make the bed less comfortable at night without effecting the other people in the house.
 
-**Update**: Sleeping got out of hand. The bed is comfortable, the curtains are thick, and I’m usually the first one up even when I do sleep 10 hours. I started setting a wristwatch alarm–slept through it. Now I’m setting a real alarm with a light every day. Works well.
+**Update**: Sleeping got out of hand. The bed is comfortable, the curtains are thick, and I’m usually the first one up even when I do sleep 10 hours. I started setting a wristwatch alarm---slept through it. Now I’m setting a real alarm with a light every day. Works well.
 
 # No Caffeine
 
@@ -100,7 +100,7 @@ Update: Now 18 months in, I’ve added positions. I picked up a lap desk, so I c
 
 # Pullups
 
-**duration 1 month**: 50 pullups a day in March (plus one to make it a palindrome–@Heinonmatti came up with that to satisfy a Scandinavian stereotype).
+**duration 1 month**: 50 pullups a day in March (plus one to make it a palindrome---@Heinonmatti came up with that to satisfy a Scandinavian stereotype).
 
 **Lesson 1**: I cheated (assisted reps), because people on YouTube told me I wouldn’t make progress without sets of 10+. I question that now, because cheating (unless you’ve got a strict way to measure it) means each rep is exactly as hard as it has to be. By cheating, I did less work and possibly left myself more fatigued in all the ways that *wouldn’t* strengthen me** **by doing more reps per set than I could otherwise handle. If I did it over, I’d do them one at a time if necessary. I’m home all day anyway.
 
@@ -108,7 +108,7 @@ Update: Now 18 months in, I’ve added positions. I picked up a lap desk, so I c
 
 # Whoop Strap
 
-**duration 1 year**: I wore a [Whoop](https://www.whoop.com/) fitness monitor for a year. The Whoop strap is a “headless” (no screen) biometric device–like a Fitbit or Apple watch without a screen. The Whoop is supposed to be for “serious athletes”. It uses heart-rate variability (HRV) and resting heart rate (RHR) to determine your state of recovery and readiness (for more training).
+**duration 1 year**: I wore a [Whoop](https://www.whoop.com/) fitness monitor for a year. The Whoop strap is a “headless” (no screen) biometric device---like a Fitbit or Apple watch without a screen. The Whoop is supposed to be for “serious athletes”. It uses heart-rate variability (HRV) and resting heart rate (RHR) to determine your state of recovery and readiness (for more training).
 
 I’m not at a point where I need a device to convince me to train *less*, but HRV and RHR (relative to your individual baseline) are supposed to be excellent health metrics, and the Whoop strap can help determine what lifestyle choices are affecting those metrics.
 
@@ -116,8 +116,8 @@ I’m not at a point where I need a device to convince me to train *less*, but H
 
 **Lesson 2: **Sugar is the devil! I knew this already, which is why I haven’t eaten much since Oliver was born, but it doesn’t take much to “put me in the red” (very low recovery score). I don’t drink alcohol, but other users have reported the same thing about alcohol.
 
-**Lesson 3:** Other big factors for me are sleep hygiene (getting up the same time every day) and eating just before bed. I have a tendency to focus on one thing, forget about food and sleep, and then catch up later. Not surprisingly–actually a little surprisingly, because the effect was stronger than I anticipated–these things aren’t good for me.
+**Lesson 3:** Other big factors for me are sleep hygiene (getting up the same time every day) and eating just before bed. I have a tendency to focus on one thing, forget about food and sleep, and then catch up later. Not surprisingly---actually a little surprisingly, because the effect was stronger than I anticipated---these things aren’t good for me.
 
-The big change I’ve made since getting the Whoop–this alone justifies the price–is reliably getting up early on the weekends. This has improved my health objectively (according to the strap) and subjectively.
+The big change I’ve made since getting the Whoop---this alone justifies the price---is reliably getting up early on the weekends. This has improved my health objectively (according to the strap) and subjectively.
 
 Contrary to most health advice I hear, I also try to find time for breakfast. My energy level and recovery score are better when I eat during the active parts of the day.

@@ -33,7 +33,7 @@ $$ {\frac{3\ or\ more\ darts\ in\ the\ same\ box}{all\ possible\ dart-throw\ com
 
 This is meant to be a solution at a middle-school reading level (starts just after add, subtract, multiply, and divide). In 4 languages: English, “Math”, Python 3, and Haskell.
 
-Coders will identify optimizations everywhere, I’ve tried to keep the code explanations as close as possible to the English-language explanations–*no skipped (“optimized away”) steps or hidden algebra*.
+Coders will identify optimizations everywhere, I’ve tried to keep the code explanations as close as possible to the English-language explanations---*no skipped (“optimized away”) steps or hidden algebra*.
 
 ## first, forget about the grid
 

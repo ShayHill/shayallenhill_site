@@ -9,8 +9,14 @@ excerpt: Install Vim in Windows and configure it for a nice experience.
 post_image: "/assets/img/blog/vim-in-windows/chemistry_set.png"
 ---
 
-<style>
-
+<style type="text/css">
+    p.toc-head,
+    p.toc-subhead {
+        margin-bottom: 0px;
+    }
+    p.toc-subhead {
+        margin-left: 2em;
+    }
 </style>
 
 If you intend to work your way through this article, go [here](https://github.com/ShayHill/article_install_vim_in_windows/tree/main) for the version-controlled source.
@@ -34,10 +40,161 @@ There's nothing difficult about putting this all together, but there are a few p
 There is a lot of code in this guide that you may wish to copy and paste into your Vim files. If you are very new to Vim, this is how you copy to and from the Windows clipboard:
 
 * Select text then `"+y` to copy to the Windows clipboard.
-
-* `"+p` to paste from the Windows clipboard. 
+* `"+p` to paste from the Windows clipboard.
 
 So, to copy code from this guide, just copy the code in Windows, then enter Normal mode (press `<ESC>`) then `"+p` to paste the code into Vim.
+
+# Table of Contents
+
+{: .toc-head}
+[Introduction](#introduction)
+
+{: .toc-subhead}
+[copy and paste](#copy-and-paste)
+
+{: .toc-head}
+[Install Vim](#install-vim)
+
+{: .toc-subhead}
+[editing the Path environment variable](#editing-the-path-environment-variable)
+
+{: .toc-subhead}
+[create a vimrc](#create-a-vimrc)
+
+{: .toc-head}
+[Install Cross-Platform PowerShell](#install-cross-platform-powershell)
+
+{: .toc-subhead}
+[configuration](#configuration)
+
+{: .toc-head}
+[Install Python](#install-python)
+
+{: .toc-subhead}
+[the Python Launcher](#the-python-launcher)
+
+{: .toc-subhead}
+[older Python versions](#older-python-versions)
+
+{: .toc-head}
+[Install Git](#install-git)
+
+{: .toc-subhead}
+[configure git from PowerShell](#configure-git-from-powershell)
+
+{: .toc-head}
+[Install Ripgrep](#install-ripgrep)
+
+{: .toc-subhead}
+[tell Vim to use ripgrep](#tell-vim-to-use-ripgrep)
+
+{: .toc-head}
+[Install Lua](#install-lua)
+
+{: .toc-subhead}
+[tell Vim where to find Lua](#tell-vim-where-to-find-lua)
+
+{: .toc-head}
+[Install Node](#install-node)
+
+{: .toc-subhead}
+[install yarn](#install-yarn)
+
+{: .toc-head}
+[gVim Fullscreen](#gvim-fullscreen)
+
+{: .toc-subhead}
+[tell Vim where to find the dll](#tell-vim-where-to-find-the-dll)
+
+{: .toc-head}
+[Install Visual Studio Build Tools](#install-visual-studio-build-tools)
+
+{: .toc-head}
+[Install Lazygit](#install-lazygit)
+
+{: .toc-subhead}
+[difftastic](#difftastic)
+
+{: .toc-head}
+[Install Vim Plugins](#install-vim-plugins)
+
+{: .toc-subhead}
+[enable Vim built-In plugins](#enable-vim-built-in-plugins)
+
+{: .toc-subhead}
+[external plugins](#external-plugins)
+
+{: .toc-subhead}
+[plugin configuration](#plugin-configuration)
+
+{: .toc-head}
+[Vim LSP and Completion](#vim-lsp-and-completion)
+
+{: .toc-subhead}
+[install a language server](#install-a-language-server)
+
+{: .toc-head}
+[Vim Artificial Intelligence](#vim-artificial-intelligence)
+
+{: .toc-head}
+[Vim Snippets](#vim-snippets)
+
+{: .toc-subhead}
+[create a snippet](#create-a-snippet)
+
+{: .toc-head}
+[Vim Debugging](#vim-debugging)
+
+{: .toc-subhead}
+[vimspector.json](#vimspectorjson)
+
+{: .toc-subhead}
+[run Vimspector](#run-vimspector)
+
+{: .toc-head}
+[Vim Fuzzy Finding](#vim-fuzzy-finding)
+
+{: .toc-head}
+[The Usual Suspects](#the-usual-suspects)
+
+{: .toc-head}
+[Vim Configuration](#vim-configuration)
+
+{: .toc-head}
+[gVim Configuration](#gvim-configuration)
+
+{: .toc-subhead}
+[set gVim guifont](#set-gvim-guifont)
+
+{: .toc-subhead}
+[renderoptions](#renderoptions)
+
+{: .toc-subhead}
+[window size](#window-size)
+
+{: .toc-subhead}
+[set the font in terminal Vim](#set-the-font-in-terminal-vim)
+
+{: .toc-subhead}
+[fullscreen gVim](#fullscreen-gvim)
+
+{: .toc-head}
+[The Vim After Directory](#the-vim-after-directory)
+
+{: .toc-subhead}
+[configure Vim for Python files](#configure-vim-for-python-files)
+
+{: .toc-subhead}
+[configure the aichat window](#configure-the-aichat-window)
+
+{: .toc-head}
+[The Vim Compiler Directory](#the-vim-compiler-directory)
+
+{: .toc-subhead}
+[asynchronous pre-commit](#asynchronous-pre-commit)
+
+{: .toc-head}
+[More](#more)
 
 # Install Vim
 
@@ -45,13 +202,13 @@ This is an obvious first step, and it's an easy one, because we're not going to 
 
 Go to [Releases · vim/vim-win32-installer (github.com)](https://github.com/vim/vim-win32-installer/releases), download the exe file for your architecture (32 or 64 bit), run it, and accept all the defaults. This will add a few icons to your desktop that you probably don't want, but it's easy to delete them later. Elsewhere in this guide, we're going to use `winget`, but Vim itself suggests downloading and installing from GitHub.
 
-The installer will not add `vim` and `gvim` to your Path environment variable. You can alias them in PowerShell as shown in the **Install Cross-Platform PowerShell** section below or add them to your Path.
+The installer will not add `vim` and `gvim` to your Path environment variable. You can alias them in PowerShell as shown in the [[Install Cross-Platform PowerShell]] section below or add them to your Path.
 
-## Editing the Path Environment Variable
+## editing the Path environment variable
 
-If you are completely unfamiliar with Windows, let's quickly go through this. You don't *have to* have Vim in your path, you could just use shell aliases. But if you'd like to have vim and gvim in your path, there are multiple ways to do it. I'll describe two. I prefer Option Two, because there's less room for error, and you'll probably end up there eventually to clean up mistakes made with Option One. Option One is for people who wish to script their entire device configuration.
+If you are completely unfamiliar with Windows, let's quickly go through this. You don't *have to* have Vim in your path, you could just use shell aliases. But if you'd like to have Vim and gVim in your path, there are multiple ways to do it. I'll describe two. I prefer Option Two, because there's less room for error, and you'll probably end up there eventually to clean up mistakes made with Option One. Option One is for people who wish to script their entire device configuration.
 
-### Option One, Command Line
+### option one - command line
 
 Open PowerShell and enter (If you've installed Vim91)
 
@@ -59,27 +216,21 @@ Open PowerShell and enter (If you've installed Vim91)
 [Environment]::SetEnvironmentVariable("PATH", "$($env:PATH);C:\Program Files\Vim\vim91", [EnvironmentVariableTarget]::User)
 ```
 
-### Option Two, GUI
+### option two - GUI
 
-* Press the Windows key
+- Press the Windows key
+- Search for "Environment Variables" and click the "Best Match"
+- This will bring up the System Properties dialog, which has a link, Environment Variables, near the lower-right corner. Click there.
+- The "User variables for username" are in the top half of the Environment Variables dialog. For now, you're interested in the Path variable
+- Double click the Path variable, and make sure you see the path to your current Vim installation.
+- If not, click "Edit" then "Browse" then navigate to `C:\Program Files\Vim\vim91` (or whatever the current version is) to add it.
 
-* Search for "Environment Variables" and click the "Best Match"
+### some nuance with environment variables
 
-* This will bring up the System Properties dialog, which has a link, Environment Variables, near the lower-right corner. Click there.
+- Environment variables are read when applications are opened, so changes to environment variables will not take effect until you open a new window. There are other ways, but that's the easy way.
+- You have to back out (click "OK") *twice*, going all the way back to the System Properties dialog, before the variable is actually changed. This one has gotten me many times.
 
-* The "User variables for username" are in the top half of the Environment Variables dialog. For now, you're interested in the Path variable
-
-* Double click the Path variable, and make sure you see the path to your current Vim installation.
-
-* If not, click "Edit" then "Browse" then navigate to `C:\Program Files\Vim\vim91` (or whatever the current version is) to add it.
-
-### Some Nuance with Environment Variables
-
-* Environment variables are read when applications are opened, so changes to environment variables will not take effect until you open a new window. There are other ways, but that's the easy way.
-
-* You have to back out (click "OK") *twice*, going all the way back to the System Properties dialog, before the variable is actually changed. This one has gotten me many times.
-
-## Create a Vimrc
+## create a vimrc
 
 If you open gVim now, you will have a fairly nice experience. Filetype detection and syntax highlighting will work, backspace will behave as you expect it to, and commands will autocomplete.
 
@@ -136,7 +287,7 @@ C:\Users\username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
 
 and delete `settings.json` and `state.json`. They will almost instantly regenerate, leaving your Windows Terminal in a default configuration (which should include PowerShell 7). Of course, you'll lose any configuration you've done, but it was probably broken anyway. Make a backup if you're worried about it.
 
-## Configuration
+## configuration
 
 If you don't already have a PowerShell config, create one by running
 
@@ -157,11 +308,11 @@ Set-Alias -Name black -Value 'C:\Users\USERNAME\AppData\Local\Programs\Python\Py
 Set-Alias -Name isort -Value 'C:\Users\USERNAME\AppData\Local\Programs\Python\Python312\Scripts\isort'
 ```
 
-### Open a New PowerShell Tab in the Same Directory
+### open a new PowerShell tab in the dame directory
 
 When you open a new tab in PowerShell, that tab will be open to a system folder or your home directory, depending on how you have it configured. If you're working on a project in Vim, and you want to open a tab to run git or pre-commit or something else, then you probably want to open a new tab in the project directory.
 
-[This page](https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory) explains how to configure PowerShell to open a new tab in the same directory as the current tab. It explains a few-dozen other approaches as well, so I'll excerpt the relevant information here.
+[This page](https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory) explains how to configure PowerShell to open a new tab in the same directory as the current tab. It explains a few-dozen other approaches as well, so I'll excerpt the relevant information here.
 
 Copy this code into your PowerShell profile:
 
@@ -179,9 +330,9 @@ function prompt
 }
 ```
 
-Now, close and reopen PowerShell, then press `Ctrl+Shift+D` (D for Duplicate) in PowerShell to to open a new tab in the same directory as the current tab.
+Now, close and reopen PowerShell, then press `Ctrl+Shift+D` (D for Duplicate) in PowerShell to to open a new tab in the same directory as the current tab.
 
-### Tell Vim About PowerShell
+### tell vim about PowerShell
 
 Start PowerShell (`winkey-x` then `i`), open Vim inside PowerShell, then add this to `~vimfiles\vimrc`.
 
@@ -210,7 +361,7 @@ If you're installing using winget, also install the Python Launcher. If you're i
 
 You may also want to install older versions, release candidates, or something else potentially not supported by Vim and it's plugins. **Don't do that yet!**
 
-First, select a relatively new and stable version of Python---no prereleases and no "month-of" releases. Vim doesn't ship with it's own version of Python. Vim and it's plugins will try to use the newest version of Python you have. To avoid any problems, we'll tell Vim *which* version of Python we want to use. Open your `~vimfiles\vimrc` file and add the following (if your "relatively new and stable" version of Python is 3.11):
+First, select a relatively new and stable version of Python—no prereleases and no "month-of" releases. Vim doesn't ship with it's own version of Python. Vim and it's plugins will try to use the newest version of Python you have. To avoid any problems, we'll tell Vim *which* version of Python we want to use. Open your `~vimfiles\vimrc` file and add the following (if your "relatively new and stable" version of Python is 3.11):
 
 ```vim
 if has("windows")
@@ -224,13 +375,13 @@ From Vim, run the command `:py3 print("test")` to make sure you have it set up c
 
 You may find that Vim and all your plugins "just work" without setting `pythonthreehome` and `pythonthreedll`. Vim knows where to look for a typical Python install. However, that could break at any time if you install a version of Python that Vim or one of your plugins does not support.
 
-As I write this, Python 13 is in prerelease, and Vim itself is not compatible. So not even `vim -u NONE` will get you past the errors. Go ahead and explicitly set these values in your vimrc.
+As I write this, Python 13 is in prerelease, and Vim itself is not compatible. So not even `vim -u NONE` will get you past the errors. Go ahead and explicitly set these values in your `vimrc`.
 
 ---
 
 **OK, NOW** install whatever exotic, specific, or decrepit versions of Python you'd like to have.
 
-## The Python Launcher
+## the Python Launcher
 
 If you install Python using winget, you will have a lot of new entries in your User Path environment variable.
 
@@ -251,46 +402,36 @@ C:\Users\shaya\AppData\Local\Programs\Python\Launcher\;
 Each of the `Programs\Python3n\` paths will contain a `python.exe`.
 
 * Running `python` from the command line will run the `python.exe` that was most recently installed. 
-
 * If you `pip install` an executable Python script like `black`, running `black` will start from the top of the list and run the first `Scripts\black` found.
-
 * You will also have the Python Launcher, which you run with `py` at the command line.
 
 If, however, you install Python by downloading and running `*.exe` files from [Download Python \| Python.org](https://www.python.org/downloads/), none of these `Python\Python3n\` or `Python\Python3n\Scripts` entries will be added to your path.
 
 * Running `python` from the command line will launch the Microsoft Store, offering to let you download and install the "missing" Python executable.
-
 * Running a pip-installed script will give you an error message: `The term 'black' is not recognized`.
-
 * You will only have the Python Launcher in your path.
 
 To use the Python Launcher ...
 
 * Run `py` to run the latest Python version.
-
 * Run `py -3.11` to run another version.
-
 * Run `py -m black` to run black from the Scripts folder of the latest Python version.
-
 * Run `py -3.11 -m black` to run black from the Scripts folder of another Python version.
-
 * To run another version by default, create a new User Environment Variable, `PY_PYTHON` and set the value to the default you'd like to run. For example, `3.11`.
-
 * `python` will run as expected from inside a virtual environment.
 
 I prefer the Python-Launcher-only setup, because `python` will *only* work from inside a virtual environment. So, any script you set up to run `python` will only work from a virtual environment, and you can run the latest version from inside a virtual environment by running 'py'.
 
 To accomplish this with a winget install, delete all the `Python\Python3.n` and `Python.n\Scripts` entries from your Path environment variable.
 
-## Older Python Versions
+## older Python versions
 
 Having the exact Python versions you intend to support installed on your machine is less important than it used to be, because we can test whatever versions we like with continuous integration. So, when it comes to older versions of Python, you don't *have* to compile the latest security release.
 
 If you visit [python.org/downloads](https://www.python.org/downloads/), you will see more recent minor versions of older major versions. For instance, right now, winget installs 3.8.10. The latest (source-only) security release for Python 3.8 is 3.8.20. If you navigate to the install page for one of these source-only releases, you will see a note like this one:
 
 > **No installers**
->
-> According to the release calendar specified in [PEP 569](https://www.python.org/dev/peps/pep-0569/), Python 3.8 is now in the "security fixes only" stage of its life cycle: 3.8 branch only accepts security fixes and releases of those are made irregularly in source-only form until October 2024. Python 3.8 isn't receiving regular bug fixes anymore, and binary installers are no longer provided for it. **Python 3.8.10** was the last full _bugfix release_ of Python 3.8 with binary installers.
+> According to the release calendar specified in [PEP 569](https://www.python.org/dev/peps/pep-0569/), Python 3.8 is now in the "security fixes only" stage of its life cycle: 3.8 branch only accepts security fixes and releases of those are made irregularly in source-only form until October 2024. Python 3.8 isn't receiving regular bug fixes anymore, and binary installers are no longer provided for it. **Python 3.8.10** was the last full _bugfix release_ of Python 3.8 with binary installers.
 
 ... which will direct you to the latest binary (which is probably the binary winget installed). If you're not comfortable *not* having the latest security releases for these older versions, you can just not install those at all and rely on ci for your tests. For what it's worth, my brother works at a company running Python 2.7 in 2024.
 
@@ -300,7 +441,7 @@ If you visit [python.org/downloads](https://www.python.org/downloads/), you will
 winget install Git.Git --source winget
 ```
 
-## Configure Git from PowerShell
+## configure git from PowerShell
 
 Open PowerShell and run the following commands:
 
@@ -316,11 +457,11 @@ git config --global init.defaultBranch main
 
 Don't let the `--global` flag misinform you. These are settings for one user. These commands update a file in your home directory called `.gitconfig`. You can edit this file later or re-run the commands if you don't like what I've put here, but these are the standard settings for Vim users.
 
-If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. GVim is a little quicker on Windows than Vim through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
+If you prefer, you can use `gvimdiff` instead of `vimdiff` for git tools. gVim is a little quicker on Windows than Vim through PowerShell. But usually you're working in Git through the terminal, and your heaviest "tool" usage will be opening up a quick instance for commit messages.
 
 You can also name your default branch whatever you like. If you don't configure it here, you'll get the default `master`. GitHub uses `main`, so if you're using GitHub, you'll save a bit of work by matching what they use there.
 
-### Other Things That Come With Git
+### other things that come with git
 
 The installer will add `git` to your "System environment" Path (not your "User variables" Path).
 
@@ -338,7 +479,7 @@ Set-Alias -Name bash -Value 'C:\Program Files\Git\bin\bash.exe'
 winget install BurntSushi.ripgrep.MSVC --source winget
 ```
 
-## Tell Vim to use Ripgrep
+## tell Vim to use ripgrep
 
 Add the following to your `~\vimfiles\vimrc` file. This will tell Vim to use Ripgrep when you use the `:grep` command.
 
@@ -370,7 +511,7 @@ This will install the file you need (`lua54.dll`) to
 ~\AppData\Local\Programs\Lua\bin\lua54.dll
 ```
 
-## Tell Vim Where to find Lua
+## tell Vim where to find Lua
 
 Edit `~\vimfiles\vimrc` and add the following:
 
@@ -387,7 +528,7 @@ run
 :lua print("test")
 ```
 
-to make sure everything is set up correctly. As with Python discussed previously, Vim will probably find your Lua without adding this line to the vimrc, but making it explicit can save surprises later on.
+to make sure everything is set up correctly. As with Python discussed previously, Vim will probably find your Lua without adding this line to the `vimrc`, but making it explicit can save surprises later on.
 
 # Install Node
 
@@ -405,17 +546,36 @@ node -v
 
 to check the install.
 
-# Gvim Fullscreen
+## install yarn
+
+Now that you have Node installed, optionally install the [Yarn (yarnpkg.com)](https://yarnpkg.com/) package manager if you want to run [vim-prettier](https://github.com/prettier/vim-prettier)  or other tools that require [Yarn (yarnpkg.com)](https://yarnpkg.com/). You can skip this installation for now and come back to it if you need [Yarn](https://yarnpkg.com/). It's not necessary for any Python dev tasks, as far as I recall, but may need to go deeper into the Node ecosystem if you end up working with common Python-adjacent filetypes like `html`, `css`, `markdown`, etc.
+
+Start `Administrator:PowerShell`. You may have been starting `PowerShell` with `Ctrl-Winkey i`. Start `Administrator:PowerShell` with `Ctrl-Winkey a`. That is, hold `Ctrl` and `Winkey`, release both, then press `a`.
+
+Enter the following command:
+
+```powershell
+corepack enable
+```
+
+Now, you can exit `Administrator:PowerShell` and open standard `PowerShell`. Enter the following command:
+
+```powershell
+yarn -v
+```
+
+You will be prompted to allow `corepack` to install `yarn`. Allow this, and PowerShell will install  [Yarn (yarnpkg.com)](https://yarnpkg.com/) then print a version number in the terminal window.
+
+# gVim Fullscreen
 
 This step is optional, but if you dislike the toolbar's intruding into your immersive coding experience, you might not feel that way. This executable will allow you to fullscreen gVim.
 
-* Compile from source: [https://github.com/movsb/gvim_fullscreen](https://github.com/movsb/gvim_fullscreen) ... or download [https://github.com/movsb/gvim_fullscreen/releases](https://github.com/movsb/gvim_fullscreen/releases).
+- Compile from source: [https://github.com/movsb/gvim_fullscreen](https://github.com/movsb/gvim_fullscreen) ... or download [https://github.com/movsb/gvim_fullscreen/releases](https://github.com/movsb/gvim_fullscreen/releases).
+- Copy gvimfullscreen.dll to `~/vimfiles/`.
 
-* Copy gvimfullscreen.dll to `~/vimfiles/`.
+## tell Vim where to find the dll
 
-## Tell Vim Where to Find the DLL
-
-Add the following line to your vimrc.
+Add the following line to your `vimrc`.
 
 ```vim
 g:GvimFullscreenDll = $MYVIMDIR .. 'gvim_fullscreen.dll'
@@ -427,7 +587,7 @@ if filereadable(g:GvimFullscreenDll)
 endif
 ```
 
-Now you can fullscreen gVim with `Ctrl+F11` and toggle transparency with `Ctrl+F12`. I always thought transparency was kind of tasteless, but I've found it nice for re-typing text from a PDF or other source.
+Now you can fullscreen gVim with `Ctrl+F11` and toggle transparency with `Ctrl+F12`.
 
 For what it's worth, PowerShell will fullscreen Vim when you press `F11` at the cost of stealing this mapping from [vimspector](https://github.com/puremourning/vimspector).
 
@@ -442,9 +602,7 @@ winget install Microsoft.VisualStudio.2022.BuildTools --source winget
 This takes several minutes, but only installs the Visual Studio Installer. Once that's done, run the Visual Studio Installer from the Windows menu.
 
 * Click 'Modify'.
-
 * Select "Desktop development with C++".
-
 * Click 'Modify' again.
 
 You could *probably* go into "Individual Components" and install "C++ CMake tools for Windows" and "Windows 11 SDK" only, but the entire "Workload" is only 1.75GB and it's not worth the hassle to figure out what you need and what you don't.
@@ -453,7 +611,7 @@ There's also a way, I'm sure to [Use command-line parameters to install Visual S
 
 # Install Lazygit
 
-This step is optional, but [Lazygit](https://github.com/jesseduffield/lazygit/) is fun and cool and useful. Like all Git interfaces, it's got [issues](https://github.com/jesseduffield/lazygit/issues)---as I write this, 666 open issues---but don't let the open issues put you off. As I said (and if you'll excuse a little fun with the coincidence), it's *the nature of the beast*---which may be a big part of the reason you're installing Vim in the first place (fewer interfaces).
+This step is optional, but [Lazygit](https://github.com/jesseduffield/lazygit/) is fun and cool and useful. Like all Git interfaces, it's got [issues](https://github.com/jesseduffield/lazygit/issues)—as I write this, 666 open issues—but don't let the open issues put you off. As I said (and if you'll excuse a little fun with the coincidence), it's *the nature of the beast*—which may be a big part of the reason you're installing Vim in the first place (fewer interfaces).
 
 ```powershell
 winget install JesseDuffield.lazygit --source winget
@@ -485,6 +643,20 @@ git:
 
 # Install Vim Plugins
 
+## enable Vim built-In plugins
+
+Vim comes with a few packages, disabled by default, that you can optionally enable and use. A subset of these will be our first packages. Add the following to your `vimrc`:
+
+```vim
+# load Vim internal plugins
+packadd! matchit  # jump between html tags with %
+packadd! comment  # (un)comment lines with gc, gcc
+```
+
+Vim has a few more disabled-by-default packages, but each one is non-default for a reason. `nohlsearch` plugin *will* break [vim-ai](https://github.com/madox2/vim-ai) and other plugins.
+
+## external plugins
+
 Vim comes with [package support](https://vim-jp.org/vimdoc-en/repeat.html#packages), but not a package *manager*. I won't go into the nuances of that distinction. For now, it's easier to use a package manager, and you have plenty of choices.
 
 We'll install [minpac](https://vim-jp.org/vimdoc-en/repeat.html#packages), because it's simple and easy to install.
@@ -512,11 +684,11 @@ command! PackStatus packadd minpac | minpac#status()
 
 Save and `:source %` your `vimrc` file, then `:PackUpdate` to check that everything is working.
 
-## Plugin Configuration
+## plugin configuration
 
 Some of the plugins we'll install offer quite a bit of configuration, and we'll need to source that configuration before loading our plugins when we start Vim. For those reasons, we'll put plugin configuration in a separate file to keep it from overwhelming our `vimrc`.
 
-Add this to your vimrc:
+Add this to your `vimrc`:
 
 ```vim
 source $MYVIMDIR/plugin_config.vim
@@ -612,7 +784,7 @@ endif
 
 That's quite a lot of text, but it is copied almost directly from [the GitHub README](https://github.com/prabirshrestha/vim-lsp).  This configuration should give you a nice idea of what the LSP is capable of and make things pretty intuitive. Not every language server will have the entire Language Server Protocol defined. So don't expect every `vim-lsp` command to work for every language server.
 
-## Install a Language Server
+## install a language server
 
 Open a Python file, and you should see this text on the bottom of you gVim window:
 
@@ -656,7 +828,6 @@ Have a close look at the second line. [Minpac](https://github.com/k-takata/minpa
 Run `PackUpdate` again to install these plugins. In this instance, I will refer you to the plugin pages for instructions on registering for these services and setting the required environment variables. The instructions on each are simple and clear. I couldn't improve them.
 
 * [github/copilot.vim](https://github.com/github/copilot.vim)
-
 * [madox2/vim-ai](https://github.com/madox2/vim-ai)
 
 Each provides several commands you can type at the command line or create a mapping for. That is the usual process in Vim: review the 100s of available commands and create mappings for the ones you use most frequently. You can browse these commands by typing `:Copilot<space><tab>` or `:AI<tab>` in Vim.
@@ -695,7 +866,7 @@ endif
 
 Now, you'll need some snippets. Plenty of documentation on this if you start at [SirVer/ultisnips: UltiSnips](https://github.com/SirVer/ultisnips). Let's walk through a simple example.
 
-## Creating a Snippet
+## create a snippet
 
 In Windows, you'll need to explicitly create a snippets folder at
 
@@ -706,11 +877,8 @@ In Windows, you'll need to explicitly create a snippets folder at
 Just to see how it works, let's do that with Vim's `netrw` file browser.
 
 * type `:Ex<enter>`
-
 * press `d`
-
 * type `ultisnips<enter>`
-
 * type `:bd<enter>` to exit netrw
 
 Now, UltiSnips will recognize this as your snippets directory. Open a Python file. If you don't have one handy, just `:e temp.py`. From the Python file, enter `:UltiSnipsEdit`. UltiSnips will open a file at
@@ -737,16 +905,16 @@ Save, return to your Python file, and try out the snippet using the mappings you
 
 Vim uses the same debugging engine as VS Code and probably several others. To use it, you'll need a plugin and a json configuration.
 
-Return to the `PackInit` function in your `vimrc`. Add this:
+Return to the `PackInit` function in your `vimrc`. Add this:
 
 ```vim
 	# -------- debugging
  	minpac#add('puremourning/vimspector', {do: '!py -m pip install setuptools'})
 ```
 
-Don't forget to run `:PackUpdate` and restart Vim to make sure the new plugin directory is sourced.
+Don't forget to run `:PackUpdate` and restart Vim to make sure the new plugin directory is sourced.
 
-Select a set of mappings in `~\vimfiles\plugin_config.vim` file.
+Select a set of mappings in `~\vimfiles\plugin_config.vim` file.
 
 ```vim
 if HasPlugin("vimspector")
@@ -755,7 +923,7 @@ if HasPlugin("vimspector")
 endif
 ```
 
-### vimspector.json
+## vimspector.json
 
 Vimspector will need a configuration file. Once you get accustomed to reading and editing this file, you will probably want to shape it in different ways for each project. I keep a template `.vimspector.json` file in each project directory. If I make changes that I want to keep, I commit `.vimspector.json`, otherwise I just copy it in again if I delete and re-clone my local project directory.
 
@@ -858,19 +1026,18 @@ Press Enter, and vimspector will install debugpy for you then launch the vimspec
 
 # Vim Fuzzy Finding
 
-By now, I suspect you know the steps. Return to the `PackInit` function in your `vimrc`. Add this:
+By now, I suspect you know the steps. Return to the `PackInit` function in your `vimrc`. Add this:
 
 ```vim
 	# -------- fuzzy finder
 	minpac#add('Donaldttt/fuzzyy')
 ```
 
-Don't forget to run `:PackUpdate` and restart Vim to make sure the new plugin directory is sourced.
+Don't forget to run `:PackUpdate` and restart Vim to make sure the new plugin directory is sourced.
 
 `:Fuzz<tab>` to see the commands. The most common may be `:FuzzyyGitFiles`. You likely want a mapping for it. Add this to `~\vimfiles\plugin_config.vim`:
 
-```
-vim
+```vim
 if HasPlugin("fuzzyy")
 	nnoremap <C-P> :FuzzyGitFiles<CR>
 endif
@@ -889,21 +1056,13 @@ There are several [Tim Pope](https://github.com/tpope) plugins that could qualif
 	minpac#add('tpope/vim-dispatch')  # async build
 	minpac#add('tpope/vim-fugitive')  # git integration
 	minpac#add('tpope/vim-obsession')  # session management
-	minpac#add('tpope/vim-commentary')  # commenting
-	minpac#add('tpope/vim-surround')  # surround text objects
 ```
 
 * [vim-dispatch](https://github.com/tpope/vim-dispatch)
-
 * [fugitive.vim](https://github.com/tpope/vim-fugitive)
-
 * [vim-obsession](https://github.com/tpope/vim-obsession)
 
-* [vim-commentary](https://github.com/tpope/vim-commentary)
-
-* [surround.vim](https://github.com/tpope/vim-surround)
-
-At some point, you'll want to review the documentation for all of these, but the only one we'll rely on for this guide is vim-dispatch.  [vim-dispatch](https://github.com/tpope/vim-dispatch) allows you to `make` (compile) programs asynchronously. This guide is focused on Python dev, and we don't compile Python programs, but we will use vim-dispatch's `Make` command to run `pre-commit` (a common Python tool) asynchronously. 
+At some point, you'll want to review the documentation for all of these, but the only one we'll rely on for this guide is vim-dispatch.  [vim-dispatch](https://github.com/tpope/vim-dispatch) allows you to `make` (compile) programs asynchronously. This guide is focused on Python dev, and we don't compile Python programs, but we will use vim-dispatch's `Make` command to run `pre-commit` (a common Python tool) asynchronously.
 
 # Vim Configuration
 
@@ -933,7 +1092,7 @@ nnoremap <leader>_ :%s/\s\+$//g<CR>
 
 These settings and mappings will apply to all filetypes, but can be overwritten with file-specific settings in the `after/ftplugin` folder.
 
-# Set Gvim Guifont
+# gVim Configuration
 
 We're going to do some light configuration in gVim, less to configure it, more to walk through a few concepts.
 
@@ -954,6 +1113,8 @@ set fillchars+=vert:│  # for a better looking windows separator
 ```
 
 The `listchars` value isn't the most important part of your gVim configuration, but we're starting here for a reason. Inside gVim, look at the line beginning with `set listchars` and chances are you won't be able to see all of the characters.
+
+## set gVim guifont
 
 gVim has a menu. Click `Edit > Select Font...` and browse through the available fonts. You  might find a font that shows the characters and looks nice to your tastes, but possibly not.
 
@@ -989,7 +1150,7 @@ set guifont=Consolas:h10:cANSI:qDRAFT,SimSun-ExtB:h11:cANSI:qDEFAULT,DejaVuSansM
 
 `:set list!` if you want to see your `listchars` in action. `:set list!` again to turn it off.
 
-## Renderoptions
+## renderoptions
 
 If you paste the following into Vim (running in PowerShell), you will see what you see in your browser: a colorful Unicode garden.
 
@@ -1011,7 +1172,7 @@ If you paste the following into Vim (running in PowerShell), you will see what y
 set renderoptions=type:directx,gamma:1.0,geom:0,renmode:5,taamode:1
 ```
 
-## Window Size
+## window size
 
 While we're here, let's add another common gVim configuration request. This one is passive, so you won't have any new commands to learn. Add this to your `gvim.vimrc`.
 
@@ -1024,9 +1185,9 @@ if !exists('g:vimrc_sourced')
 endif
 ```
 
-## How do I set the font in Vim?
+## set the font in terminal Vim
 
-You don't. Vim will use whatever font you are using in your terminal. You can use the same `listchars` and `fillchars` above and use a font that supports them, or you can use a simpler font for all of your terminal programs and set a simpler `listchars`.
+You don't set the font in terminal Vim. Vim will use whatever font you are using in your terminal. You can use the same `listchars` and `fillchars` above and use a font that supports them, or you can use a simpler font for all of your terminal programs and set a simpler `listchars`.
 
 ```vim
 if has('gui_running')
@@ -1036,9 +1197,9 @@ else
 endif
 ```
 
-## Fullscreen Gvim
+## fullscreen gVim
 
-If you followed the earlier instructions to download Gvim Fullscreen, here is the best spot to configure it. Add this to your `~\vimfiles\gvim.vimrc`:
+If you followed the earlier instructions to download gVim Fullscreen, here is the best spot to configure it. Add this to your `~\vimfiles\gvim.vimrc`:
 
 ```vim
 g:GvimFullscreenDll = $MYVIMDIR .. 'gvim_fullscreen.dll'
@@ -1061,10 +1222,10 @@ Naturally, Vim doesn't treat every filetype the same. Set specific configuration
 If you don't have them yet, create the `after` and `ftplugin` directories.
 
 * `:Ex`
-
 * press `d`
-
 * `after/ftplugin`
+
+## configure Vim for Python files
 
 ```vim
 :e $MYVIMDIR\after\ftplugin\python.vim
@@ -1094,34 +1255,38 @@ As an example, let's create a map to run our test suite in Vim's integrated term
 nnoremap <buffer> <leader>e :update<CR>:vert term python -m pytest<t_ku>
 ```
 
-This mapping will
+This mapping will - save the current buffer - start a command with `:!python -m pytest` - press up to reload the previous `:!python -m pytest` command - then nothing
 
-* save the current buffer
-
-* start a command with `:!python -m pytest`
-
-* press up to reload the previous `:!python -m pytest` command
-
-* then nothing
-
-The mapping will not run the command, but will wait for you to
-
-* press Enter
-
-* navigate through the history of commands starting with `:!python -m pytest` by using the arrow keys
+The mapping will not run the command, but will wait for you to - press Enter - navigate through the history of commands starting with `:!python -m pytest` by using the arrow keys
 
 There are several ways to navigate command history in Vim. This is just one given as an example.
 
-## Asynchronous pre-commit
+## configure the aichat window
+
+```vim
+:e $MYVIMDIR\after\ftplugin\aichat.vim
+```
+
+```vim
+vim9script
+
+setlocal wrap
+setlocal linebreak
+```
+
+# The Vim Compiler Directory
+
+Vim uses the `make` command to run compilers and other tools. `*.vim` files in the `complier` directory define how compilers are called and how the output is displayed.
+
+Python isn't a compiled language, but Python developers can can borrow `make` ( we'll use the asynchronous `Make` in [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch)) to lint and fix our Python files.
+
+## asynchronous pre-commit
 
 Set up a mapping to run `pre-commit` asynchronously in Vim's `quickfix` window. To do this, you will define a compiler in `$MYVIMDIR/compiler`.
 
 * open a terminal and cd to `~\vimfiles`
-
 * `:Ex`
-
 * `d`
-
 * `compiler`
 
 ```vim
@@ -1148,7 +1313,7 @@ Now add the mapping to the Python ftplugin.
 e: $MYVIMDIR\after\ftplugin\python.vim
 ```
 
-Add this content to `ftplugin/python.vim`:
+Add this content to `after/ftplugin/python.vim`:
 
 ```vim
 compiler precommit
@@ -1158,21 +1323,8 @@ imap <buffer> <leader>l <ESC>:update<CR>:vert Make<CR>:update<CR>
 
 Now you can press `<leader>l` from a Python module to run your pre-commit hooks. This requires [vim-dispatch](https://github.com/tpope/vim-dispatch).
 
-## configure the aichat window
-
-```vim
-:e $MYVIMDIR\after\ftplugin\aichat.vim
-```
-
-```vim
-vim9script
-
-setlocal wrap
-setlocal linebreak
-```
-
 # More
 
-At this point, *your OS and various APIs* are a high-functioning IDE. You may still want to put some work into your editor, but that will be the easy part. Vim has great documentation available with `:h topic` if you know what you're looking for, and `:FuzzyHelps` will help if you do not.
+At this point, *your OS and various APIs* are a high-functioning IDE. You may still want to put some work into your editor, but that will be the easy part. Vim has great documentation available with `:h topic` if you know what you're looking for, and the [fuzzyy](https://github.com/Donaldttt/fuzzyy) command, `:FuzzyHelps`, will help if you do not.
 
-It's a common thing to commit your Vim configuration and even to keep it public. Here's mine: [ShayHill/vimfiles](https://github.com/ShayHill/vimfiles) Here's famous Vimmer Tim Pope's config: [tpope/dotfiles](https://github.com/tpope/dotfiles). Remember that it's never finished. Enjoy the process.
+It's a common thing to commit your Vim configuration and even to keep it public. Here's mine: [ShayHill/vimfiles](https://github.com/ShayHill/vimfiles) Here's famous Vim user Tim Pope's config: [tpope/dotfiles](https://github.com/tpope/dotfiles). Remember that it's never finished. Enjoy the process.

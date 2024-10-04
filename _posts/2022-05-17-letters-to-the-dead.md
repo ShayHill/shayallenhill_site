@@ -10,7 +10,7 @@ post_image: "/assets/img/blog/letters-to-the-dead/duckling-5771202.jpg"
 ---
 
 I was a little late coming to the Internet. It wasn’t till around 2000 that I met my first online friend, Steve Paget.
-I spent a lot of time alone back then, and–as you do–I would see things and “take a mental note” to later share them with my friends. The next day, I might tell my *offline* friends that, “Dude, last night I saw some baby ducks,” after which I might have five seconds of attention to transition this into something more dramatic.
+I spent a lot of time alone back then, and---as you do---I would see things and “take a mental note” to later share them with my friends. The next day, I might tell my *offline* friends that, “Dude, last night I saw some baby ducks,” after which I might have five seconds of attention to transition this into something more dramatic.
 
 But communicating with Steve was different. Steve and I only knew each other through writing. I didn’t have to gain and maintain conversational momentum. With Steve, I wasn’t stuck with “Dude, last night I saw some baby ducks.” I could instead start off with something like, “Ever since I was a child, I’ve enjoyed the coming of Spring, and with it … blah blah.”
 
@@ -42,11 +42,11 @@ Not only that, but I could then cross out “~~Ever since I was a child … blah
 
 … all before ultimately crossing out the last and settling for “Dude, last night I saw some baby ducks … blah blah.”
 
-This was a lot easier than offline life, because conversation–and reputation!–were no longer about what I’d done, but what I’d felt. And, as anyone who’s tried both will know, feeling is a lot easier than doing.
+This was a lot easier than offline life, because conversation---and reputation!---were no longer about what I’d done, but what I’d felt. And, as anyone who’s tried both will know, feeling is a lot easier than doing.
 
 In truth, it was even easier than that, because I didn’t *really* have to feel it: I just had to sell it.
 
-To my credit (?), I usually crossed out the flourishes, but I did think about them. And as time went on, I thought about them too much. I began to forgot how to appreciate baby ducks–or anything else. Each notable thing I saw was auditioned as a metaphor for some lesson, proposition, or premise I might proffer to my online friends. There was a constant monologue in my head, pitching and pitching and pitching everything in sight as some gambit of persuasion or self aggrandizement.
+To my credit (?), I usually crossed out the flourishes, but I did think about them. And as time went on, I thought about them too much. I began to forgot how to appreciate baby ducks---or anything else. Each notable thing I saw was auditioned as a metaphor for some lesson, proposition, or premise I might proffer to my online friends. There was a constant monologue in my head, pitching and pitching and pitching everything in sight as some gambit of persuasion or self aggrandizement.
 
 Fortunately, I was pitching it to Steve.
 

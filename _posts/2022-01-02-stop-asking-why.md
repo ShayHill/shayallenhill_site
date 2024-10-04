@@ -23,9 +23,9 @@ This is the old [Lord Beaverbrook anecdote](https://quoteinvestigator.com/2012/0
 
 It’s also a favorite gambit of obnoxious party guests and persnickety playground pedants who pester the rest of us with, “Never, huh? Well what if [you were trapped on a desert island \| they were the last man or woman on Earth \| someone offered you a million dollars \| the mafia threatened your family \| you had a gun to your head]?”
 
-And it’s the character-defining trait of countless heroes who *never* take a life, break a promise, remove their helmet, have a drink, trust an outsider, or ride an elevator–until they do.
+And it’s the character-defining trait of countless heroes who *never* take a life, break a promise, remove their helmet, have a drink, trust an outsider, or ride an elevator---until they do.
 
-But it’s almost impossible to make it work. Your characters are defined by the choices they make, so you’ve got to build a world where not all characters–even all characters with the same objections–would make the same choices. That means, your protagonist needs to see two compelling paths in front of her. Let’s consider the Lord Beaverbrook story, in which a woman agrees to spend the night with a stranger for 1MM dollars, but not for 5 dollars.
+But it’s almost impossible to make it work. Your characters are defined by the choices they make, so you’ve got to build a world where not all characters---even all characters with the same objections---would make the same choices. That means, your protagonist needs to see two compelling paths in front of her. Let’s consider the Lord Beaverbrook story, in which a woman agrees to spend the night with a stranger for 1MM dollars, but not for 5 dollars.
 
 <div class="colleft" markdown="1">
 **If she says, "No"**

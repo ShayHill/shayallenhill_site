@@ -59,7 +59,7 @@ To review, I have a bag with somewhere between 1 and 100 consecutively numbered 
 
 We know there are at least 5, but we can’t “rule out” any number between 5 and 100. So where do we go from here?
 
-Let’s start with *how* we know there are at least 5. We know there are at least 5 tiles in the bag, because *if* there were only 1, 2, 3, or 4, there would not be a tile number 5. See what we did? We *questioned an answer*–four answers, in fact.
+Let’s start with *how* we know there are at least 5. We know there are at least 5 tiles in the bag, because *if* there were only 1, 2, 3, or 4, there would not be a tile number 5. See what we did? We *questioned an answer*---four answers, in fact.
 
 Here it is on a particularly boring graph.
 

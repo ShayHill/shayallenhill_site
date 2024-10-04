@@ -30,7 +30,7 @@ Here’s a small project of mine: [https://github.com/ShayHill/paragraphs](https
 * Approximate Bézier curves with circular arcs
 * `datetime` (datetime is a Python library; every language has an equivalent) output in some ancient or fictional calendar
 * Odds calculator for `2 * D20 + 4` style gaming rolls
-* Strip or replace all non-ASCII characters from a string–sorry, Björn
+* Strip or replace all non-ASCII characters from a string---sorry, Björn
 * Give max height and distance of a projectile given initial speed and trajectory
 * Integer to base-26 (Excel column numbering) converter
 * Approximate oxygen percentage at a given altitude.

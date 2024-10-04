@@ -24,7 +24,7 @@ Enjoy them in good health. Sugar Glider, Doctor Ouch, or American in Paris may b
 
 Want to see a palette in action? Here’s Corn Poppy starring in Introduction to Statistical Tests.
 
-PS: If you appreciate that I gave the hex codes in plain text, share this link with someone else who might appreciate it. Or keep these palettes as your “little secret”–I get that.
+PS: If you appreciate that I gave the hex codes in plain text, share this link with someone else who might appreciate it. Or keep these palettes as your “little secret”---I get that.
 
 PSS: If you use these in a project, let me know. I’ll link to it here.
 

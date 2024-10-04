@@ -41,7 +41,7 @@ my_root_element = etree.Element(
 )
 ~~~
 
-## Add some geometry–the easy way
+## Add some geometry---the easy way
 
 Lxml will translate Python-style keywords to valid xml. Here’s a nice shortcut for creating an xml/svg element.
 
@@ -69,7 +69,7 @@ my_rectangle.set("class", "some-css-class")
 my_rectangle.set("stroke-width", "10")
 ~~~
 
-## Add some geometry–the easier way
+## Add some geometry---the easier way
 
 SVG is it’s own language, and presumably you’re not trying to code SVG *through* Python unless you know both SVG and Python.
 

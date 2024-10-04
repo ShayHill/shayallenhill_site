@@ -1,5 +1,5 @@
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Override styles that came with the theme.
 ---------------------------------------------------------------------------- */
 
@@ -11,15 +11,19 @@ body {
 
 p {
   font-size: inherit;
+  line-height: 1.5;
+  color: inherit;
 }
 
 /* no style for aside exists outside this file */
-aside {
-  font-size: 1.75em; 
-  text-align: center; 
-  color: #0f5b53; 
-  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif; 
-  margin: 0 0.25em; 
+aside p {
+  font-size: 1.75em;
+  text-align: center;
+  color: #0f5b53;
+  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: 0 0.25em;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
 }
 
 
@@ -73,7 +77,7 @@ a.shayallenhill-link {
   color: #7e7e7e;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Improve the layout of the blog menu and sidebar.
 ---------------------------------------------------------------------------- */
 
@@ -104,7 +108,7 @@ a.linked-icon {
   margin-top: 0;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Trade jekyll wraps all blog content in a blog-content div.
 ---------------------------------------------------------------------------- */
 
@@ -113,13 +117,6 @@ a.linked-icon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* blog text was picking up too-light gray from trade-jekyll */
-.blog-content p {
-  /* font-size: 16px; */
-  color: #000;
-  font-weight: normal;
 }
 
 /* no bold text in blockquotes */
@@ -189,6 +186,7 @@ broken for articles. */
 
 .blog-content code {
   background-color: #818b981f;
+  font-size: inherit;
   color: #000;
   border-radius: 0.3em;
   padding: 0.25em 0.35em;
@@ -203,7 +201,7 @@ div.anchor {
   visibility: hidden;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Improve looks from syntax.css code theme. I added a border, which looks nice
  * but breaks the padding. Without `background-color: inherit`, every space
  * character is highlighted.
@@ -229,9 +227,9 @@ div .highlight {
 }
 
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Heading style names to hide in `responsive.css`.
- * 
+ *
  * `header-top-cta` has a right margin of 7px for text like phone numbers,
  * e-mail addresses, etc. Remove this margin to add FoundationSafety.com to my
  * e-mail address when there is room in the header, and hide it when there is
@@ -256,7 +254,7 @@ div .highlight {
 }
 
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Explicitly limit the size of images in blog posts.
 ---------------------------------------------------------------------------- */
 
@@ -282,7 +280,7 @@ div .highlight {
   margin-right: auto;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * always highlight-color (orange or teal) text for links to foundation safety
  * or personal blog
 ---------------------------------------------------------------------------- */
@@ -303,7 +301,7 @@ div .highlight {
   color: var(--highlight-color);
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Extra emphasis without headings.
 ---------------------------------------------------------------------------- */
 
@@ -313,7 +311,7 @@ p.ext-emphasis {
   font-weight: bold;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * A colorful header plus a line of bold text. Used in the secret-of-success
  * article.
 ---------------------------------------------------------------------------- */
@@ -337,7 +335,7 @@ p.section-summary-body {
   font-size: 1.25em;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Block sides for various quotes and asides. Only some of these are used.
 ---------------------------------------------------------------------------- */
 
@@ -386,7 +384,7 @@ p.section-summary-body {
 /* } */
 
 .explanation {
-  color: #4e4e4e; 
+  color: #4e4e4e;
   /* background: #0085f21a; */
   border-left: 8px solid #0085f2;
   padding: 1em;
@@ -409,11 +407,11 @@ p.section-summary-body {
 }
 
 .explanation p {
-  color: #4e4e4e; 
+  color: #4e4e4e;
 }
 
 .fourth-wall {
-  color: #4e4e4e; 
+  color: #4e4e4e;
   background: #ffe5644d;
   border-left: 8px solid #ffe564;
   padding: 1em;
@@ -442,7 +440,7 @@ p.section-summary-body {
 
 
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Navigation for palette pages
 ---------------------------------------------------------------------------- */
 
@@ -464,7 +462,7 @@ p.section-summary-body {
   color: var(--highlight-color);
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Short excerpts or examples for writing articles.
 ---------------------------------------------------------------------------- */
 
@@ -482,7 +480,7 @@ p.section-summary-body {
 }
 
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Improve the look of equations.
  *
  * Use these explicity in markdown files.
@@ -498,7 +496,7 @@ p.section-summary-body {
   font-size: 130%;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Position images and text
  *
  * Use these explicity in markdown files.
@@ -518,7 +516,7 @@ p.section-summary-body {
     margin-bottom: 1em;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * format the home button on shayallenhill. This is fine when it's on the right
  * as on foundationsafety, but the text is blue and the spacing too tight on
  * shayallenhill. This class replaces top-btn for the big orange button on
@@ -545,14 +543,14 @@ p.section-summary-body {
   margin-top: 30px;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * format the home button on shayallenhill. This is fine when it's on the right
  * as on foundationsafety, but the text is blue and the spacing too tight on
  * shayallenhill. This class replaces top-btn for the big orange button on
  * shayallenhill
 ---------------------------------------------------------------------------- */
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * colors for sharing links
 ---------------------------------------------------------------------------- */
 
@@ -576,7 +574,7 @@ a.email-icon {
   color: #f8bf00 !important;
 }
 
-/* ----------------------------------------------------------------------------            
+/* ----------------------------------------------------------------------------
  * Give a little less space than the 40px default under the social-sharing
  * header in the footer. This is necessary because the connect icons are round
  * with zero space above them while the social-share icons behave more like

@@ -25,7 +25,7 @@ I promise you, there’s plenty of time for blaming, stashing, cherry picking, a
 # Install Git
 
 1. If you’re on Windows, install [https://gitforwindows.org/](https://gitforwindows.org/), which will install the program “Git Bash” on your computer. Everyone else, just [install Git](https://git-scm.com/downloads) if it’s not already installed.
-2. Open a terminal (Windows users open “Git Bash”–which *is* a terminal).
+2. Open a terminal (Windows users open “Git Bash”---which *is* a terminal).
 3. “cd” to the directory of your coding project. If you’re just starting out, you might have all your code in one directory. That’s fine. “cd” to this directory by entering
 
 ~~~ Powershell

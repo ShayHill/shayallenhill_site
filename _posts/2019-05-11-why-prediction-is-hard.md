@@ -11,7 +11,7 @@ post_image: "/assets/img/blog/why-prediction-is-hard/crystal_ball.png"
 
 <style>
 p.huge-numbers {
-    font-size: 300%;
+    font-size: 200%;
     text-align: center;
     font-weight: bold;
     font-family: Georgia,Serif;

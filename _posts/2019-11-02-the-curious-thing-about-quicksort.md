@@ -57,7 +57,7 @@ Of course, any given corner in a rectangular box will have
 * a short side on the left and a long side on the right; or
 * a long side on the left and a short side on the right.
 
-But this didn’t help the rats. On average, the rats guessed correctly only 1 out of 4 tries–no better than random luck.
+But this didn’t help the rats. On average, the rats guessed correctly only 1 out of 4 tries---no better than random luck.
 
 ## Splash on a Little Paint
 
@@ -119,4 +119,4 @@ Despite a strong intuition to the contrary, quicksort is obviously less intuitiv
 
 # I’m Still Searching
 
-If you know of other such missing pieces–algorithms or relationships anyone *can* understand, but few people do (or historically few people have)–please let me know. I'm easy to reach.
+If you know of other such missing pieces---algorithms or relationships anyone *can* understand, but few people do (or historically few people have)---please let me know. I'm easy to reach.

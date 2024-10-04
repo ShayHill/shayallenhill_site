@@ -25,7 +25,7 @@ In a short story, this might be *all* we ever know about your character.
 
 I was motivated to write about this topic when I recently saw a particularly good example. I’m going to summarize (from memory) the story here to better show the mechanics, but I suspect the full version will be available shortly at [Bayou City Press](https://bayoucitypressbooks.com/).
 
-The example is particularly good because two characters have different motivations–each unknown to the other–and both are immediately identified. They behave very differently, and we don’t have to know their “back stories” to understand why.
+The example is particularly good because two characters have different motivations---each unknown to the other---and both are immediately identified. They behave very differently, and we don’t have to know their “back stories” to understand why.
 
 The second paragraph is where the short-term character motivation is revealed. Without that second paragraph, the *story* would just be a sequence of events. Try skipping it.
 
@@ -48,9 +48,9 @@ After some time, the three leave the home and complete their journey.
 
 The mother and son part ways with the stranger. The son, having enjoyed the day fully, asks why his mother had been so guarded.
 
-The mother recounts the events of the trip–the offer of assistance, the tour of the home, the imprudent discussion of business profits–and informs her “naive” son that the stranger had more interest in a rich American wife than in playing tour guide.
+The mother recounts the events of the trip---the offer of assistance, the tour of the home, the imprudent discussion of business profits---and informs her “naive” son that the stranger had more interest in a rich American wife than in playing tour guide.
 
-The son, incredulous–as sons are about the romantic appeal of their mothers–abandons the conversation.
+The son, incredulous---as sons are about the romantic appeal of their mothers---abandons the conversation.
 
 As the story ends, the mother regrets not touring the medieval church and wonders what might have been had she been more romantically inclined.
 
