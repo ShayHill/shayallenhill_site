@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/robert_mccloskey-boy_and_his_dog.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/robert_mccloskey-gulls.jpg"
 date: 191215 11:48:58 -0500
+excerpt: Robert McCloskey palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Robert McCloskey - Boy and His Dog
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/robert_mccloskey-boy_and_his_dog.jpg)</div>

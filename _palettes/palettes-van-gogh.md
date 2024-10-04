@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/van_gogh-the_old_mill.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/van_gogh-mountain_st_remy.jpg"
 date: 191207 11:48:58 -0500
+excerpt: Van Gogh palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Van Gogh - The Old Mill
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/van_gogh-the_old_mill.jpg)</div>

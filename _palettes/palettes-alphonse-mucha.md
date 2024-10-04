@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/alphonse_mucha-austria_1900.svg"
 alt_image: "/assets/img/blog/ai-generated-palettes/alphonse_mucha-devoted_wallflower.svg"
 date: 230509 06:00:00 -0500
+excerpt: Alphonse Mucha palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Alphonse Mucha - Austria 1900
 <div class="palette-image" markdown="span">[![Alphonse Mucha - Austria 1900](/assets/img/blog/ai-generated-palettes/alphonse_mucha-austria_1900.svg)](/assets/img/blog/ai-generated-palettes/alphonse_mucha-austria_1900.svg)</div>

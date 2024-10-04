@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/utagawa_hiroshige-bridge.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/utagawa_hiroshige-cherry_blossoms.jpg"
 date: 191212 11:48:58 -0500
+excerpt: Utagawa Hiroshige palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Utagawa Hiroshige - Bridge
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/utagawa_hiroshige-bridge.jpg)</div>

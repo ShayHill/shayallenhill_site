@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/american_novel-catch_22.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/american_novel-the_sun_also_rises.jpg"
 date: 191205 11:48:58 -0500
+excerpt: American Novel palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### American Novel - Catch 22
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/american_novel-catch_22.jpg)</div>

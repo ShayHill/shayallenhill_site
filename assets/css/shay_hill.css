@@ -453,15 +453,15 @@ p.section-summary-body {
 }
 
 .internal-nav a:hover {
-  color: #ff5e14;
+  color: var(--highlight-color);
 }
 
 .internal-nav h2:hover {
-  color: #ff5e14;
+  color: var(--highlight-color);
 }
 
 .internal-nav a:active {
-  color: #ff5e14;
+  color: var(--highlight-color);
 }
 
 /* ----------------------------------------------------------------------------            
@@ -593,4 +593,20 @@ a.email-icon {
     width: 120px;
     margin-top: -43px;
     z-index: 999;
+}
+
+/* Layout for the one-subject, paginated pallet pages. */
+
+div.palette-image {
+  display: inline-block;
+  width: 70%;
+  max-width: 100%;
+}
+
+div.palette-colors {
+  display: inline-block;
+  width: auto;
+  min-width: 100px;
+  margin-bottom: 40px;
+  font-size: 14px;
 }

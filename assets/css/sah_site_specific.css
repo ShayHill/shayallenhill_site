@@ -9,3 +9,19 @@ body {
 	padding: 15px 0;
 }
 
+/* The breadcrumb area is only ever seen at shayallenhill for paginated pallet
+ * pages. */
+
+.breadcrumb-title h2 {
+  color: #000;
+}
+
+.breadcrumb-title h3 {
+  color: #666;
+}
+
+.breadcrumb-area {
+  height: 100px;
+}
+
+

@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/rodent-fox_squirrel.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/rodent-hamster.jpg"
 date: 191213 11:48:58 -0500
+excerpt: Rodent palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Rodent - Fox Squirrel
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/rodent-fox_squirrel.jpg)</div>

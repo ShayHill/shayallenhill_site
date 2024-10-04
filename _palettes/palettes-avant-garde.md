@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/avant-garde-farbstudie.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/avant-garde-parnassum.jpg"
 date: 191217 11:48:58 -0500
+excerpt: Avant-Garde palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Avant-Garde - Farbstudie
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/avant-garde-farbstudie.jpg)</div>

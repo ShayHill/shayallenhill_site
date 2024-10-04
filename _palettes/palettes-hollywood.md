@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/hollywood-audrey_hepburn.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/hollywood-bette_davis.jpg"
 date: 191216 11:48:58 -0500
+excerpt: Hollywood palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Hollywood - Audrey Hepburn
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/hollywood-audrey_hepburn.jpg)</div>

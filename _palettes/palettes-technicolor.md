@@ -6,22 +6,9 @@ index: ai-generated-palettes
 post_image: "/assets/img/blog/ai-generated-palettes/technicolor-leslie_caron.jpg"
 alt_image: "/assets/img/blog/ai-generated-palettes/technicolor-yul_brynner.jpg"
 date: 191206 11:48:58 -0500
+excerpt: Technicolor palettes
 ---
 
-<style>
-div.palette-image {
-  display: inline-block;
-  width: 70%;
-  max-width: 100%;
-}
-
-div.palette-colors {
-  display: inline-block;
-  width: auto;
-  min-width: 100px;
-  margin-bottom: 40px;
-}
-</style>
 
 ### Technicolor - Leslie Caron
 <div class="palette-image" markdown="span">![](/assets/img/blog/ai-generated-palettes/technicolor-leslie_caron.jpg)</div>
