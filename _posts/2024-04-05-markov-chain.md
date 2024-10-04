@@ -59,7 +59,7 @@ cat: {and: 2, chased: 1, EoS: 1}
 dog: {played: 1, chased: 1, and: 1}
 played: {a: 1, the: 2}
 game: {EoS: 1, a: 1, yesterday: 1}
-the: {played: 1}
+they: {played: 1}
 the: {game: 2, cat: 2, squirrel: 1, dog: 1, friends: 2}
 lot: {EoS: 1}
 chased: {the: 2}
@@ -116,7 +116,7 @@ Nice sentences, but most of them are directly from the story, because most of th
 
 ## Will more data help?
 
-Yes. These sentences were produced by a Markov Chain trained on the novel [*Moby Dick*](https://www.barnesandnoble.com/w/moby-dick-herman-melville/1116670757?ean=9780142437247) (it's not a thin book), looking one word back:
+Yes, more data will help. The following sentences were produced by a Markov Chain trained on the novel [*Moby Dick*](https://www.barnesandnoble.com/w/moby-dick-herman-melville/1116670757?ean=9780142437247) (it's not a thin book), looking one word back:
 
 * Beware of classical engravings from him out the door to but the fishery.
 * Morning the special leviathanic proportions the mechanical I fill to dart it and fought my butter-boxes cried Stubb then so that had assured indeed they all legs and said no means of the whole affair.
@@ -132,10 +132,9 @@ And here's the same thing looking two words back:
 * Nor is it for a good start when the former that he should soon become my shipmate though but a combing wave hurled themselves bodily inboard again the third in the porch.
 * Upon this fleece holding his tongs in the far rush of the flood.
 
-These make a bit more sense---maybe---but we're already 43% deterministic. That's 43% of two-word strings found, not 43% of *unique* two-word strings, which would be much higher (82%).
+These make a bit more sense---maybe---but we're already 43% deterministic. That is, 43% of two-word strings will *always* be followed by a specific word. Bear in mind, that's 43% of two-word strings found, not 43% of *unique* two-word strings, which would be much higher (82%).
 
-Some of these are fine. The word pair `a sort` appears 53 times, always followed by `of`. It's not a terrible thing to copy such patterns verbatim, but our AI is nevertheless becoming more deterministic, and not all word triplets are canonical. `glided by as`, `sea fell over`, `of pale forked` and around 90 thousand other phrases are have now been "hard coded" into our AI.
-
+Some of these are fine. The word pair `a sort` appears 53 times, always followed by `of`. It's not a terrible thing to copy such patterns verbatim, but our AI is nevertheless becoming more deterministic, and not all word triplets are canonical. `glided by as`, `sea fell over`, `of pale forked` and around 90 thousand other phrases have now been "hard coded" into our AI.
 
 Here's the same thing looking three words back:
 
@@ -153,7 +152,7 @@ A big, thick book like Moby Dick looks like a lot of data, but it's not.
 
 ## So how many books is enough?
 
-You could make a nice start with ALL of the books. Not just all of the [Melville](https://en.wikipedia.org/wiki/Herman_Melville)[^1] books, all of the books. But even that would only get you so far. Once you'd exhausted all the available training data, you'd have to build a bit more by looking at synonyms of words. With a sophisticated program, you could use sentences about labradores, beagles, and terriers to teach your AI more about dogs. You could translate sentences about *perros*, *hunde*, or *cani*.
+You could make a nice start with ALL of the books. Not just all of the [Melville](https://en.wikipedia.org/wiki/Herman_Melville)[^1] books, all of the books. But even that would only get you so far. Once you'd exhausted all the available training data, you'd have to start making inferences by looking at synonyms of words. With a sophisticated program, you could use sentences about labradores, beagles, and terriers to teach your AI more about dogs. You could translate sentences about *perros*, *hunde*, or *cani* (all words that mean *dogs*).
 
 The Markov Chain is just one criterion you can use to select a next word. You can do more with the same amount of data if you leverage other criteria, but all such criteria will face the same data limitations. Your AI is **HUNGRY**, and no amount of processing power will ever change that. 
 

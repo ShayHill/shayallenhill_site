@@ -289,7 +289,7 @@ Having the exact Python versions you intend to support installed on your machine
 If you visit [python.org/downloads](https://www.python.org/downloads/), you will see more recent minor versions of older major versions. For instance, right now, winget installs 3.8.10. The latest (source-only) security release for Python 3.8 is 3.8.20. If you navigate to the install page for one of these source-only releases, you will see a note like this one:
 
 > **No installers**
-
+>
 > According to the release calendar specified in [PEP 569](https://www.python.org/dev/peps/pep-0569/), Python 3.8 is now in the "security fixes only" stage of its life cycle: 3.8 branch only accepts security fixes and releases of those are made irregularly in source-only form until October 2024. Python 3.8 isn't receiving regular bug fixes anymore, and binary installers are no longer provided for it. **Python 3.8.10** was the last full _bugfix release_ of Python 3.8 with binary installers.
 
 ... which will direct you to the latest binary (which is probably the binary winget installed). If you're not comfortable *not* having the latest security releases for these older versions, you can just not install those at all and rely on ci for your tests. For what it's worth, my brother works at a company running Python 2.7 in 2024.

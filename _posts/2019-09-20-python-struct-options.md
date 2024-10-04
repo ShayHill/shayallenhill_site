@@ -10,6 +10,7 @@ post_image: "/assets/img/blog/python-struct-options/binders.jpg"
 ---
 
 #### Or: Do we still need namedtuple? (spoiler: yes)
+
 Python has several composite types to hold, pass, and iterate over multiple values, and Python functions can take and return multiple arguments.
 
 But there’s still room for something like a [struct](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), a composite type to hold multiple values *with* a name for each.
@@ -21,8 +22,8 @@ Here, I’m comparing some of the better Python “struct” options in their ty
 from typing import TypedDict # This only works as of Python 3.8
 
 class ScoreGameDict(TypedDict):
- score: float
- game: str
+    score: float
+    game: str
 
 my_dictionary: ScoreGameDict = {"score": 3, "game": "piquet"}
 
@@ -35,10 +36,10 @@ my_namedtuple = ScoreGameNT(3, "piquet")
 
 # ---------------------------------------------------- object with slots
 class ScoreGameSlots:
- __slots__ = ["score", "game"]
- def __init__(self, score: float, game: str) -> None:
- self.score = score
- self.game = game
+    __slots__ = ["score", "game"]
+    def __init__(self, score: float, game: str) -> None:
+    self.score = score
+    self.game = game
 
 my_slots = ScoreGameSlots(3, "piquet")
 
@@ -47,8 +48,8 @@ from dataclasses import dataclass
 
 @dataclass
 class ScoreGameDC:
- score: float
- game: str
+    score: float
+    game: str
 
 my_dataclass = ScoreGameDC(3, "piquet")
 ~~~
@@ -116,10 +117,10 @@ Dictionary has an extra trick here. I won’t argue for it, but you *can *sneak 
 from xml.etree import ElementTree
 
 def new_line_element(**attributes: str) -> ElementTree.Element:
- element = ElementTree.Element("line")
- for attribute, value in attributes.items():
- element.set(attribute, value)
- return element
+    element = ElementTree.Element("line")
+    for attribute, value in attributes.items():
+    element.set(attribute, value)
+    return element
 
 # pass in illegal Python identifier "stroke-linecap"
 new_line_element(x1="0", x2="1", **{"stroke-linecap": "round"})
@@ -148,15 +149,15 @@ This is a short section, but it may be the most important section in the article
 The linter will let you get away with mis-typed dictionary keys.
 
 ~~~ python
-a = my_dict["scoer"] # this looks fine till you run it
+a = my_dict["scoer"]  # this looks fine till you run it
 ~~~
 
 The linter would pick this up for the other “struct” types.
 
 ~~~ python
-a = my_namedtuple.scoer # here the linter would start barking
-a = my_slots.scoer # here the linter would start barking
-a = my_dataclass.scoer # here the linter would start barking
+a = my_namedtuple.scoer  # here the linter would start barking
+a = my_slots.scoer  # here the linter would start barking
+a = my_dataclass.scoer  # here the linter would start barking
 ~~~
 
 With the extendable types (dictionary and mutable dataclass), you are vulnerable to mis-typing assignments.
